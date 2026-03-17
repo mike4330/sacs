@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cases — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,92,0.13) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,118,0.10) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="pending.html">Pending</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="missing.html">Missing Data</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+<h1>Cases <span class="dim">(262)</span></h1>
+
+
+<figure>
+<table>
+  <thead>
+    <tr>
+      <th data-col="0" data-type="num">#</th>
+      <th data-col="1">Name</th>
+      <th data-col="2">Jurisdiction</th>
+      <th data-col="3">Court</th>
+      <th data-col="4">Status</th>
+      <th data-col="5" data-type="num">Entries</th>
+      <th data-col="6">Created</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">3</td>
+      <td><a href="case_3.html">State v. Ana D&#39;Ettorre</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Butler County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">4</td>
+      <td><a href="case_4.html">State v. Hailey Clifton-Carmack</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Pulaski County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">5</td>
+      <td><a href="case_5.html">State v. Stephanie Peterson</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Volusia County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">6</td>
+      <td><a href="case_6.html">State v. Katherine Harper</a>
+        <br><span class="dim">Katherine Ruth Harper</span>
+      </td>
+      <td>Texas</td>
+      <td>Denton County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">7</td>
+      <td><a href="case_7.html">State v. Marka Lee Bodine</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Harris County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">8</td>
+      <td><a href="case_8.html">Commonwealth v. Kristen McAllister</a>
+        
+      </td>
+      <td>Virginia</td>
+      <td>York County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">9</td>
+      <td><a href="case_9.html">State v. Alexandria Vera</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Harris County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">10</td>
+      <td><a href="case_10.html">State v. Jennifer Fichter</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Polk County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">11</td>
+      <td><a href="case_11.html">State v. Emily Nutley</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Hamilton County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">12</td>
+      <td><a href="case_12.html">State v. Payton Shires</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Franklin County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">13</td>
+      <td><a href="case_13.html">State v. Allison Marchese</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>Connecticut Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">14</td>
+      <td><a href="case_14.html">State v. Brittany Zamora</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Maricopa County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">15</td>
+      <td><a href="case_15.html">People v. Kathryn Ronk</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Oakland County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">16</td>
+      <td><a href="case_16.html">State v. Kathryn Murray</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Harris County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">17</td>
+      <td><a href="case_17.html">State v. Meredith Hill</a>
+        
+      </td>
+      <td>Arkansas</td>
+      <td>Pope County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">18</td>
+      <td><a href="case_18.html">State v. Jacqueline Ma</a>
+        
+      </td>
+      <td>California</td>
+      <td>Chula Vista Superior Court (South Bay Courthouse)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">19</td>
+      <td><a href="case_19.html">State v. Stephanie Ragusa</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Hillsborough County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">20</td>
+      <td><a href="case_20.html">State v. Stacy Schuler</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Warren County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">21</td>
+      <td><a href="case_21.html">State v. Anna Crocker</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Kenosha County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">22</td>
+      <td><a href="case_22.html">State v. Madison Bergmann</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>St. Croix County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">24</td>
+      <td><a href="case_24.html">State v. McKenna Kindred</a>
+        
+      </td>
+      <td>Washington</td>
+      <td>Spokane County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">26</td>
+      <td><a href="case_26.html">State v. Lauren King</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Lee County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">27</td>
+      <td><a href="case_27.html">Michelle Christine Solis</a>
+        
+      </td>
+      <td>California</td>
+      <td>Butte County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">28</td>
+      <td><a href="case_28.html">Alyssa Todd</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Maricopa County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">29</td>
+      <td><a href="case_29.html">Emma Delaney Hancock</a>
+        
+      </td>
+      <td>Oklahoma</td>
+      <td>Lincoln County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">30</td>
+      <td><a href="case_30.html">Andie Rosafort</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>Superior Court, Danbury</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">31</td>
+      <td><a href="case_31.html">Kelly Ann Schutte</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Montgomery County Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">32</td>
+      <td><a href="case_32.html">Melissa Marie Curtis</a>
+        
+      </td>
+      <td>Maryland</td>
+      <td>Montgomery County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">33</td>
+      <td><a href="case_33.html">Cassidy Kraus</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Carroll County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">34</td>
+      <td><a href="case_34.html">Julie Rizzitello</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Monmouth County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">35</td>
+      <td><a href="case_35.html">Carissa Jane Smith</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Pulaski County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">36</td>
+      <td><a href="case_36.html">Elizabeth Blanchard</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>St. Johns County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">37</td>
+      <td><a href="case_37.html">Renee L. DeLeon</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>Meriden GA 7 (Geographical Area Court)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">38</td>
+      <td><a href="case_38.html">Rikki Laughlin</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Grundy County Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">39</td>
+      <td><a href="case_39.html">Linda Leann Wallace</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Jefferson County District Court, Beaumont</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">40</td>
+      <td><a href="case_40.html">Shannon Pavlansky-Wojtowicz</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Mahoning County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">41</td>
+      <td><a href="case_41.html">Reagan Anderson</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">42</td>
+      <td><a href="case_42.html">Alyson Cranick</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>U.S. District Court, District of Connecticut (Bridgeport)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">43</td>
+      <td><a href="case_43.html">Jane Shetterly</a>
+        
+      </td>
+      <td>California</td>
+      <td>Contra Costa County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">44</td>
+      <td><a href="case_44.html">Dominique Allinda Maynard</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>Meriden GA 7 (Meriden Superior Court)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">45</td>
+      <td><a href="case_45.html">Courtney Horn</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>Lee County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">46</td>
+      <td><a href="case_46.html">Alley Bardfield</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>Macon County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">47</td>
+      <td><a href="case_47.html">Melissa Rockensies</a>
+        
+      </td>
+      <td>New York</td>
+      <td>Queens County Supreme Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">48</td>
+      <td><a href="case_48.html">Jill Edstrom</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Ottawa County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">49</td>
+      <td><a href="case_49.html">Bridgette Doucette-Howell</a>
+        
+      </td>
+      <td>New Hampshire</td>
+      <td>Rockingham County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">50</td>
+      <td><a href="case_50.html">Kristin M. Bellinger</a>
+        
+      </td>
+      <td>New York</td>
+      <td>Montgomery County Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">51</td>
+      <td><a href="case_51.html">Rachel E. Lasecki</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Warren County Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">52</td>
+      <td><a href="case_52.html">Leeann Yammarino</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>Ascension Parish District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">53</td>
+      <td><a href="case_53.html">Stefanie Kellenberger</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Richland County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-07</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">54</td>
+      <td><a href="case_54.html">Stacy Michelle Walker</a>
+        
+      </td>
+      <td>California</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">55</td>
+      <td><a href="case_55.html">Ellen Phillips</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>U.S. District Court, Eastern District of Kentucky</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">56</td>
+      <td><a href="case_56.html">Heather Hare</a>
+        
+      </td>
+      <td>Arkansas</td>
+      <td>U.S. District Court, Eastern District of Arkansas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">57</td>
+      <td><a href="case_57.html">Kristen Gantt</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">58</td>
+      <td><a href="case_58.html">Michelle Schiffer</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">59</td>
+      <td><a href="case_59.html">Shelley Dufresne</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">60</td>
+      <td><a href="case_60.html">Kelly Aldinger</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">61</td>
+      <td><a href="case_61.html">Summer Hansen</a>
+        
+      </td>
+      <td>California</td>
+      <td>Riverside County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">62</td>
+      <td><a href="case_62.html">Laura Whitehurst</a>
+        
+      </td>
+      <td>California</td>
+      <td>San Bernardino Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">63</td>
+      <td><a href="case_63.html">Charli Jones Parker</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">64</td>
+      <td><a href="case_64.html">Lyndsey Sherrod Bates</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">65</td>
+      <td><a href="case_65.html">Carrie Cabri Witt</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>Morgan County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">66</td>
+      <td><a href="case_66.html">Susan Weddle</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">67</td>
+      <td><a href="case_67.html">Crystal Gilliland Clowdus</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">68</td>
+      <td><a href="case_68.html">Alicia Gray</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>Mobile County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">69</td>
+      <td><a href="case_69.html">Heather Daughdrill</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">70</td>
+      <td><a href="case_70.html">Jennifer Collins McNeill</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">71</td>
+      <td><a href="case_71.html">Heather Whitten</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">72</td>
+      <td><a href="case_72.html">Emily Marie Anderson</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>—</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">73</td>
+      <td><a href="case_73.html">Jakalyn Moore</a>
+        
+      </td>
+      <td>Mississippi</td>
+      <td>U.S. District Court, Northern District of Mississippi (Case 3:24-cr-00153-GHD-RP)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">74</td>
+      <td><a href="case_74.html">Kayla Tindall</a>
+        
+      </td>
+      <td>Mississippi</td>
+      <td>Webster County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">75</td>
+      <td><a href="case_75.html">Amber Turnage</a>
+        
+      </td>
+      <td>Mississippi</td>
+      <td>Hinds County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">76</td>
+      <td><a href="case_76.html">Bonnie Rose Guess-Mazock</a>
+        <br><span class="dim">Bonnie Guess-Mazock, Bonnie Mazock</span>
+      </td>
+      <td>Texas</td>
+      <td>Montgomery County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">77</td>
+      <td><a href="case_77.html">Annaleigh Andrews</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>420th District Court, Nacogdoches County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">78</td>
+      <td><a href="case_78.html">Jenny Christine Hipp</a>
+        
+      </td>
+      <td>Mississippi</td>
+      <td>Lamar County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">79</td>
+      <td><a href="case_79.html">Ramsey BethAnn Bearse</a>
+        
+      </td>
+      <td>West Virginia</td>
+      <td>Kanawha County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">80</td>
+      <td><a href="case_80.html">Katherine Folger Pelfrey</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Pickens County (13th Circuit)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">81</td>
+      <td><a href="case_81.html">Brianne Altice</a>
+        
+      </td>
+      <td>Utah</td>
+      <td>Davis County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">82</td>
+      <td><a href="case_82.html">Lauren Hill</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Berrien County Trial Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">83</td>
+      <td><a href="case_83.html">Mary Faith McCormick</a>
+        
+      </td>
+      <td>Arkansas</td>
+      <td>Benton County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">84</td>
+      <td><a href="case_84.html">Lillie Bowman</a>
+        
+      </td>
+      <td>Nebraska</td>
+      <td>Lancaster County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">85</td>
+      <td><a href="case_85.html">Sarah Fowlkes</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Caldwell County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">86</td>
+      <td><a href="case_86.html">Rebecca L. Kilps</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Manitowoc County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">87</td>
+      <td><a href="case_87.html">Jessica L. Sawicki</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Monmouth County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">88</td>
+      <td><a href="case_88.html">April Novak</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Waukesha County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">89</td>
+      <td><a href="case_89.html">Sara M. Domres</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Waukesha County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">90</td>
+      <td><a href="case_90.html">Camryn Zelinger</a>
+        
+      </td>
+      <td>California</td>
+      <td>Riverside County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">91</td>
+      <td><a href="case_91.html">Elizabeth Dillett</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Milwaukee County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">92</td>
+      <td><a href="case_92.html">Luisa Melchionne</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>Stamford Superior Court</td>
+      <td><span class="status-verdict">verdict</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">93</td>
+      <td><a href="case_93.html">Barbara Corbo</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Philadelphia County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">94</td>
+      <td><a href="case_94.html">Elena Bardin</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>Adair Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">96</td>
+      <td><a href="case_96.html">Jennifer Caswell</a>
+        
+      </td>
+      <td>Oklahoma</td>
+      <td>Harmon County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">97</td>
+      <td><a href="case_97.html">Aimee Palmitessa</a>
+        
+      </td>
+      <td>California</td>
+      <td>Los Angeles County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">98</td>
+      <td><a href="case_98.html">Nicole Renee Wooten</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Maricopa County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">99</td>
+      <td><a href="case_99.html">Katerina Bardos</a>
+        
+      </td>
+      <td>Colorado</td>
+      <td>Weld County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">100</td>
+      <td><a href="case_100.html">Brittni Nicole Colleps</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Tarrant County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">101</td>
+      <td><a href="case_101.html">Paige Morley</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Hillsborough County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-08</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">102</td>
+      <td><a href="case_102.html">Sarah Lindsay Lewis</a>
+        
+      </td>
+      <td>Utah</td>
+      <td>4th District Court (Utah County)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">103</td>
+      <td><a href="case_103.html">Olivia Ortz</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Lawrence County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">104</td>
+      <td><a href="case_104.html">Tracy Vanderhulst</a>
+        
+      </td>
+      <td>California</td>
+      <td>San Bernardino County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">105</td>
+      <td><a href="case_105.html">Christy Lee Smith</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Lancaster County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">106</td>
+      <td><a href="case_106.html">Jessica Langford</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Montgomery County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">107</td>
+      <td><a href="case_107.html">Julie Hautzenroeder</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Hamilton County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">108</td>
+      <td><a href="case_108.html">Victoria Fowler</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Howell County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">109</td>
+      <td><a href="case_109.html">Kaitlyn Wilkes</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Trumbull County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">111</td>
+      <td><a href="case_111.html">Tennille Whitaker</a>
+        
+      </td>
+      <td>Nevada</td>
+      <td>Elko County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">112</td>
+      <td><a href="case_112.html">Julie Ann Moore</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Potter/Randall County District Courts</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">113</td>
+      <td><a href="case_113.html">Shawnee Nicole Despain</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>20th State District Court (Milam County)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">115</td>
+      <td><a href="case_115.html">Caitlin Rock</a>
+        
+      </td>
+      <td>Nevada</td>
+      <td>Washoe County District Court</td>
+      <td><span class="status-verdict">verdict</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">116</td>
+      <td><a href="case_116.html">Allison Havemann-Niedrach</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Monmouth County Superior Court</td>
+      <td><span class="status-verdict">verdict</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">117</td>
+      <td><a href="case_117.html">Apryl Patterson</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Morgan County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">118</td>
+      <td><a href="case_118.html">Allenna Ward</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Laurens County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">120</td>
+      <td><a href="case_120.html">Justine Nelson</a>
+        
+      </td>
+      <td>California</td>
+      <td>Fresno County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>0</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">121</td>
+      <td><a href="case_121.html">Dayna Chidester</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>U.S. District Court, Northern District of Illinois</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">123</td>
+      <td><a href="case_123.html">Megan Jordan Swanson</a>
+        <br><span class="dim">Megan Pauline Jordan</span>
+      </td>
+      <td>Virginia</td>
+      <td>Henrico County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">124</td>
+      <td><a href="case_124.html">Mary Jo Spack</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Hillsborough County Circuit Court (13th Judicial Circuit)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">125</td>
+      <td><a href="case_125.html">Yessenia Navarro Garcia</a>
+        <br><span class="dim">Yesenia Garcia, Yessenia Garcia</span>
+      </td>
+      <td>California</td>
+      <td>Orange County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">128</td>
+      <td><a href="case_128.html">Stephanie L. Harmon</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>Iroquois County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">129</td>
+      <td><a href="case_129.html">Imagine Kay Ewer</a>
+        
+      </td>
+      <td>Colorado</td>
+      <td>First Judicial District Court (Jefferson County)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">130</td>
+      <td><a href="case_130.html">Chloe Rose Castro</a>
+        
+      </td>
+      <td>Colorado</td>
+      <td>Jefferson County District Court (First Judicial District)</td>
+      <td><span class="status-verdict">verdict</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">132</td>
+      <td><a href="case_132.html">Kristy Risell</a>
+        <br><span class="dim">Kristy Rissell</span>
+      </td>
+      <td>Pennsylvania</td>
+      <td>Berks County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">133</td>
+      <td><a href="case_133.html">Erica Lynne Mesa</a>
+        <br><span class="dim">Erica Lynn Mesa</span>
+      </td>
+      <td>Virginia</td>
+      <td>Stafford County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">134</td>
+      <td><a href="case_134.html">Felicia A. Smith</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Harris County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">135</td>
+      <td><a href="case_135.html">Lillian Sarah Cameron</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Fort Bend County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">136</td>
+      <td><a href="case_136.html">Christine McCallum</a>
+        
+      </td>
+      <td>Massachusetts</td>
+      <td>Brockton Superior Court (Plymouth County)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-09</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">138</td>
+      <td><a href="case_138.html">Kayla Alayne Sprinkles</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Cherokee Superior Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">139</td>
+      <td><a href="case_139.html">Camella Rodgers</a>
+        
+      </td>
+      <td>Indiana</td>
+      <td>Posey County Circuit Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">140</td>
+      <td><a href="case_140.html">Emily Michelle Rogers</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Comal County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">141</td>
+      <td><a href="case_141.html">Leticia Lowery</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Montgomery County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">142</td>
+      <td><a href="case_142.html">Alexandra E. Reiner</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Burlington County Superior Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">143</td>
+      <td><a href="case_143.html">Robyn-Lea Gentile</a>
+        
+      </td>
+      <td>Nevada</td>
+      <td>Clark County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">144</td>
+      <td><a href="case_144.html">Kisha Nuckols</a>
+        
+      </td>
+      <td>Indiana</td>
+      <td>Hancock County Superior Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">145</td>
+      <td><a href="case_145.html">Kari L. Buchanan</a>
+        
+      </td>
+      <td>Indiana</td>
+      <td>Orange Superior Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">148</td>
+      <td><a href="case_148.html">Shannon Cardinal</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Fond du Lac County Circuit Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">150</td>
+      <td><a href="case_150.html">Jennifer Walsh</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Hamilton County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">151</td>
+      <td><a href="case_151.html">Wendie Ann Schweikert</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Laurens County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">152</td>
+      <td><a href="case_152.html">Anna Elizabeth Jeanette Patton</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Darlington County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">153</td>
+      <td><a href="case_153.html">Caroline Johnson</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Scioto County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">154</td>
+      <td><a href="case_154.html">Allyson Moran</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Ingham County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">155</td>
+      <td><a href="case_155.html">Kathleen Boozer</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Oakland County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">156</td>
+      <td><a href="case_156.html">Heather Winfield</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Alpena County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">157</td>
+      <td><a href="case_157.html">Jamee Hiatt</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Ingham County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">158</td>
+      <td><a href="case_158.html">Kathryn Houghtaling</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Oakland County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">159</td>
+      <td><a href="case_159.html">Abigail Simon</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Kent County Circuit Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">160</td>
+      <td><a href="case_160.html">Marcie Rousseau</a>
+        
+      </td>
+      <td>Michigan</td>
+      <td>Saginaw County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">161</td>
+      <td><a href="case_161.html">Giovanna Yaranga</a>
+        
+      </td>
+      <td>Vermont</td>
+      <td>Chittenden Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">162</td>
+      <td><a href="case_162.html">Nicole DuFault</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Ocean County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">163</td>
+      <td><a href="case_163.html">Denise Keesee</a>
+        
+      </td>
+      <td>Oregon</td>
+      <td>Washington County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">164</td>
+      <td><a href="case_164.html">Andrea Baber</a>
+        
+      </td>
+      <td>Oregon</td>
+      <td>Douglas County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">165</td>
+      <td><a href="case_165.html">Sarah Huggins Logan</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>Madison County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">166</td>
+      <td><a href="case_166.html">Melissa Williams</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Angelina County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">168</td>
+      <td><a href="case_168.html">Ashley Blumenshine</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>Will County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">169</td>
+      <td><a href="case_169.html">Lindsey Jarvis</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>Hardin County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">170</td>
+      <td><a href="case_170.html">Lindsay Himmelspach</a>
+        
+      </td>
+      <td>California</td>
+      <td>Butte County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">171</td>
+      <td><a href="case_171.html">Meredith Kane</a>
+        
+      </td>
+      <td>Kansas</td>
+      <td>Douglas County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">172</td>
+      <td><a href="case_172.html">Brooke Dinkel</a>
+        
+      </td>
+      <td>Kansas</td>
+      <td>Saline County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-10</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">173</td>
+      <td><a href="case_173.html">Makenzie Johnson</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Polk County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">174</td>
+      <td><a href="case_174.html">Stefanie Regine Kelsey</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Sac County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">175</td>
+      <td><a href="case_175.html">Erin Ward</a>
+        
+      </td>
+      <td>Nebraska</td>
+      <td>Douglas County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">176</td>
+      <td><a href="case_176.html">Ashley Nicole Anderson</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Butler County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">177</td>
+      <td><a href="case_177.html">Ashley Nicole Anderson</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Scott County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">178</td>
+      <td><a href="case_178.html">Zobella Brazil Vinik</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Pima County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">179</td>
+      <td><a href="case_179.html">Amanda Hubble</a>
+        
+      </td>
+      <td>California</td>
+      <td>Fresno County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">181</td>
+      <td><a href="case_181.html">Trisha Phillippe</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>Woodford County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">182</td>
+      <td><a href="case_182.html">Ashley Wells</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>Christian Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">183</td>
+      <td><a href="case_183.html">Haley Reed</a>
+        
+      </td>
+      <td>Kentucky</td>
+      <td>Oldham Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">184</td>
+      <td><a href="case_184.html">Makana Masacayan</a>
+        
+      </td>
+      <td>New Mexico</td>
+      <td>Rio Arriba County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">185</td>
+      <td><a href="case_185.html">Sarah O. Shirey</a>
+        <br><span class="dim">Sarah Shirey</span>
+      </td>
+      <td>Pennsylvania</td>
+      <td>Crawford County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">186</td>
+      <td><a href="case_186.html">JoAnn Karel</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Brazoria County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">187</td>
+      <td><a href="case_187.html">Sarah Noel Suggs</a>
+        <br><span class="dim">Sarah Suggs</span>
+      </td>
+      <td>Texas</td>
+      <td>Harris County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">188</td>
+      <td><a href="case_188.html">Lindsey Rose Schneeberger</a>
+        <br><span class="dim">Lindsey Schneeberger</span>
+      </td>
+      <td>Minnesota</td>
+      <td>Olmsted County District Court</td>
+      <td><span class="status-appeal">appeal</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">189</td>
+      <td><a href="case_189.html">Leslie Nicole Rains</a>
+        <br><span class="dim">Leslie Rains</span>
+      </td>
+      <td>Alabama</td>
+      <td>Marshall County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">190</td>
+      <td><a href="case_190.html">Amber Nicole Prince</a>
+        <br><span class="dim">Amber Prince</span>
+      </td>
+      <td>Texas</td>
+      <td>Nueces County District Court (214th)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">191</td>
+      <td><a href="case_191.html">Megan Carlisle</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Lancaster County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">192</td>
+      <td><a href="case_192.html">Emalee Marga Kedzierski</a>
+        <br><span class="dim">Emalee M. Kedzierski</span>
+      </td>
+      <td>Pennsylvania</td>
+      <td>Erie County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">193</td>
+      <td><a href="case_193.html">Angela Leigh Stewart</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Circuit Court of Duval County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">194</td>
+      <td><a href="case_194.html">Lacey Brooke Oakes</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>Bossier Parish</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">195</td>
+      <td><a href="case_195.html">Allieh Kheradmand</a>
+        
+      </td>
+      <td>Virginia</td>
+      <td>Fairfax County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">197</td>
+      <td><a href="case_197.html">Emily Shay Walker</a>
+        
+      </td>
+      <td>Virginia</td>
+      <td>Frederick County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-11</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">198</td>
+      <td><a href="case_198.html">Ashley Nicole Waffle</a>
+        
+      </td>
+      <td>Oklahoma</td>
+      <td>District Court of Greer County, 3rd Judicial District</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">199</td>
+      <td><a href="case_199.html">Daena Coreas Delgado</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Matagorda County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">200</td>
+      <td><a href="case_200.html">Taylor Cruze</a>
+        
+      </td>
+      <td>Tennessee</td>
+      <td>Rutherford County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">201</td>
+      <td><a href="case_201.html">Jaime Corinna Melton</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Hillsborough County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">202</td>
+      <td><a href="case_202.html">Elizabeth Suzanne Bailey</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Iredell County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">203</td>
+      <td><a href="case_203.html">Alissa McCommon</a>
+        
+      </td>
+      <td>Tennessee</td>
+      <td>Tipton County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">204</td>
+      <td><a href="case_204.html">Casey McGrath</a>
+        
+      </td>
+      <td>Tennessee</td>
+      <td>Hamilton County Criminal Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">206</td>
+      <td><a href="case_206.html">DaNita Wilson</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>Charlton County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">207</td>
+      <td><a href="case_207.html">Jennifer McCall Hubert</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>McDuffie County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">210</td>
+      <td><a href="case_210.html">Laura Dunker</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Cuyahoga County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">211</td>
+      <td><a href="case_211.html">Laura V. Bucy</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Summit County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">212</td>
+      <td><a href="case_212.html">Brooke L. Rosendale</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Hancock County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">213</td>
+      <td><a href="case_213.html">Brooke M. Wright</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Franklin County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">214</td>
+      <td><a href="case_214.html">Suzanne Lea Owen</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Lee County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">215</td>
+      <td><a href="case_215.html">Heidi Monroy</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Pitt County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">216</td>
+      <td><a href="case_216.html">Mackenzie Matthews</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Licking County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">217</td>
+      <td><a href="case_217.html">Tiffany Eichler</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Stark County Common Pleas Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">218</td>
+      <td><a href="case_218.html">Marie-Jo Gordo</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>US District Court, Middle District of Florida</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">219</td>
+      <td><a href="case_219.html">Melissa Bonkoski</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Chester County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">220</td>
+      <td><a href="case_220.html">Katie Rufener</a>
+        
+      </td>
+      <td>Kansas</td>
+      <td>Finney County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">221</td>
+      <td><a href="case_221.html">Stephanie Amato</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Philadelphia County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-12</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">222</td>
+      <td><a href="case_222.html">Lisa Kelly</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Allegheny County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">223</td>
+      <td><a href="case_223.html">Christine Towers</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Chester County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">224</td>
+      <td><a href="case_224.html">Nikki Varney</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Blair County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">225</td>
+      <td><a href="case_225.html">Megan Batykefer</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Allegheny County Court of Common Pleas</td>
+      <td><span class="status-appeal">appeal</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">226</td>
+      <td><a href="case_226.html">Keri Ann Brekne</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Northampton County Court of Common Pleas (PA)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">227</td>
+      <td><a href="case_227.html">Cheryl B. Bremble</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Montgomery County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">228</td>
+      <td><a href="case_228.html">Commonwealth v. Kimberly Race - Catasauqua Middle School Sexual Assault</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Lehigh County Court of Common Pleas</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>0</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">231</td>
+      <td><a href="case_231.html">Rebecca Mason-Cales</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>Ada County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">232</td>
+      <td><a href="case_232.html">Jessica Lawson</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>Fremont County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">233</td>
+      <td><a href="case_233.html">Zenna Galeria</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>Power County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">234</td>
+      <td><a href="case_234.html">Ann Kuroki</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>Gooding County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">236</td>
+      <td><a href="case_236.html">Montana Joan Davis</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Limestone County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">237</td>
+      <td><a href="case_237.html">Rene Elena Carter</a>
+        
+      </td>
+      <td>Montana</td>
+      <td>Lewis and Clark County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">238</td>
+      <td><a href="case_238.html">Teika Helton</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Gaston County Superior Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">239</td>
+      <td><a href="case_239.html">Samantha Ciotta</a>
+        
+      </td>
+      <td>California</td>
+      <td>Riverside County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">240</td>
+      <td><a href="case_240.html">Amber Stroda</a>
+        
+      </td>
+      <td>Kansas</td>
+      <td>Dickinson County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">241</td>
+      <td><a href="case_241.html">Christen Hayes</a>
+        
+      </td>
+      <td>New York</td>
+      <td>Onondaga County Supreme Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">242</td>
+      <td><a href="case_242.html">Julia Engle</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>Houston County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">243</td>
+      <td><a href="case_243.html">Janae Nunnelly</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Audrain County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">244</td>
+      <td><a href="case_244.html">Lena Stewart</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Christian County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">245</td>
+      <td><a href="case_245.html">Brynn Larsen</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Oconto County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">246</td>
+      <td><a href="case_246.html">United States v. Meyer-Davis</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>U.S. District Court, Northern District of Iowa</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">247</td>
+      <td><a href="case_247.html">State v. Whiteside</a>
+        
+      </td>
+      <td>Iowa</td>
+      <td>Iowa District Court, Polk County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">248</td>
+      <td><a href="case_248.html">State v. Rogers</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Mohave County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">249</td>
+      <td><a href="case_249.html">People v. Damyan</a>
+        
+      </td>
+      <td>Illinois</td>
+      <td>Cook County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-13</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">251</td>
+      <td><a href="case_251.html">State v. Lopez-Murray</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Miami-Dade Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">252</td>
+      <td><a href="case_252.html">State v. Valle-Tejeda</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Miami-Dade Circuit Court, Eleventh Judicial Circuit, Div. F009</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">253</td>
+      <td><a href="case_253.html">State v. Moser</a>
+        
+      </td>
+      <td>North Dakota</td>
+      <td>Cass County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">254</td>
+      <td><a href="case_254.html">State v. McCrea</a>
+        
+      </td>
+      <td>Washington</td>
+      <td>Clark County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">255</td>
+      <td><a href="case_255.html">United States v. Carazas-Pinez</a>
+        
+      </td>
+      <td>New York</td>
+      <td>U.S. District Court, Southern District of New York</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">256</td>
+      <td><a href="case_256.html">Wisconsin v. Allemang-Reinke</a>
+        
+      </td>
+      <td>Wisconsin</td>
+      <td>Milwaukee County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">257</td>
+      <td><a href="case_257.html">North Carolina v. Doll</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Johnston County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">258</td>
+      <td><a href="case_258.html">Idaho v. Beach</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>Ada County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">259</td>
+      <td><a href="case_259.html">New Jersey v. Leahey</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Morris County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">260</td>
+      <td><a href="case_260.html">South Carolina v. McClure</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Spartanburg County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">261</td>
+      <td><a href="case_261.html">South Carolina v. Wentzky</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Richland County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">263</td>
+      <td><a href="case_263.html">Louisiana v. Odom</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>Calcasieu Parish District Court (14th JDC)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">264</td>
+      <td><a href="case_264.html">South Carolina v. Hope</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Horry County Court of General Sessions (Conway)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">265</td>
+      <td><a href="case_265.html">Oklahoma v. Day</a>
+        
+      </td>
+      <td>Oklahoma</td>
+      <td>Canadian County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">266</td>
+      <td><a href="case_266.html">Missouri v. Barclay</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Barry County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">267</td>
+      <td><a href="case_267.html">Missouri v. Kirker</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Scott County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">268</td>
+      <td><a href="case_268.html">Texas v. Ferguson</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Collin County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">269</td>
+      <td><a href="case_269.html">Florida v. Hinckley</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>St. Johns County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">270</td>
+      <td><a href="case_270.html">Florida v. Geliga</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>St. Lucie County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">271</td>
+      <td><a href="case_271.html">Former English teacher at Stamford High School, Stamford, CT. Age 32 at arrest (July 2014). Began sexual relationship with a male student who was 17 at the start of the relationship (September 2013); victim was 18 when he reported to police in June 2014. Also provided marijuana to the same student and to a second, 15-year-old male student. Threatened to fail the older student if he attempted to break off the relationship. Approximately 2,000 text messages recovered, including nude photos sent to the student&#39;s phone.</a>
+        
+      </td>
+      <td>Connecticut</td>
+      <td>State Superior Court, Stamford</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">273</td>
+      <td><a href="case_273.html">Former vice principal at Burley High School, Burley, ID (Cassia County). Age 40 at start of offenses (July 2011); 41 at arrest. Had sexual contact with two female students over approximately 18 months, from July 2011 through December 2012. Victims were 16–17 years old. Fled to Utah; arrested near St. George on approximately December 22, 2012 on seven felony charges. Waived extradition December 27, 2012 and returned to Idaho.</a>
+        
+      </td>
+      <td>Idaho</td>
+      <td>5th District Court, Cassia County</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">274</td>
+      <td><a href="case_274.html">Former student teacher at Lamar Middle School, Lamar, MO (Barton County), placed while a senior at Missouri Southern State University. Age approximately 36 at time of offenses (2017); 39 at sentencing. Had received the top award for middle school education from MSSU&#39;s School of Arts and Sciences shortly before her arrest.</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Barton County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">275</td>
+      <td><a href="case_275.html">Former 4th grade teacher at Woodland Elementary, Bollinger County, MO (Marble Hill). Age 23 at time of offense. Admitted to having sex with a 17-year-old male high school student multiple times; victim confirmed the details. Missouri State Highway Patrol opened the investigation on March 25, 2022; offense date per sex offender registry March 5, 2022. Placed on administrative leave by the school district.</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Cape Girardeau County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">276</td>
+      <td><a href="case_276.html">Former drama teacher at Lebanon High School, Lebanon, MO (Laclede County). Age 30 at arrest. Developed an inappropriate relationship with a male high school student. Lebanon Police Department became aware of the investigation on January 5, 2018; investigators spoke with the student and witnesses and gathered electronic evidence.</a>
+        
+      </td>
+      <td>Missouri</td>
+      <td>Laclede County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">277</td>
+      <td><a href="case_277.html">Former teacher at The Broach School, a private school for students with learning disabilities and autism in Bradenton, FL (Manatee County). Age 30 at start of offenses (2018-2019 school year); 31 at arrest. Initiated a sexual relationship with A.R., a 15-year-old male ninth grader. Sent him provocative lingerie images (some exposing her body) via text and met him at G.T. Bray Park on multiple occasions for sex. Investigation began April 2019 after a complaint about flirtatious text messages.</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Manatee County Circuit Court</td>
+      <td><span class="status-appeal">appeal</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">278</td>
+      <td><a href="case_278.html">Former special education teacher at Douglas High School, Converse County School District #1, Douglas, WY. Age approximately 32 at time of offense (2013); 34 at arrest. After a basketball game in 2013, Marcus approached a 17-year-old male student and began exchanging picture messages with him. She invited him to her home under the pretext of doing chores; upon arrival she provided him with wine and they had sex. They had sex again approximately one week later. Marcus&#39;s contract with Converse County School District #1 was terminated in July 2013; no public reason was given.</a>
+        
+      </td>
+      <td>Wyoming</td>
+      <td>Converse County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>0</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">279</td>
+      <td><a href="case_279.html">Katie Marcus</a>
+        
+      </td>
+      <td>Wyoming</td>
+      <td>Converse County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">280</td>
+      <td><a href="case_280.html">Lauren Harrington-Cooper</a>
+        
+      </td>
+      <td>Pennsylvania</td>
+      <td>Luzerne County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">281</td>
+      <td><a href="case_281.html">Anna Andersen</a>
+        <br><span class="dim">Anna-Maria Andersen</span>
+      </td>
+      <td>Wyoming</td>
+      <td>Laramie County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">282</td>
+      <td><a href="case_282.html">Mary Jahn</a>
+        
+      </td>
+      <td>California</td>
+      <td>Los Angeles County Superior Court (Long Beach)</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">283</td>
+      <td><a href="case_283.html">Liliana Alvarez</a>
+        <br><span class="dim">Liliana Martiza Alvarez</span>
+      </td>
+      <td>Tennessee</td>
+      <td>Montgomery County Criminal Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">284</td>
+      <td><a href="case_284.html">Kendahl Coode</a>
+        <br><span class="dim">Kendahl Erin Coode</span>
+      </td>
+      <td>Tennessee</td>
+      <td>Montgomery County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">285</td>
+      <td><a href="case_285.html">Rumah Byrapaka</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>Richmond County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">286</td>
+      <td><a href="case_286.html">Reagan Gray</a>
+        
+      </td>
+      <td>Arkansas</td>
+      <td>Pulaski County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">287</td>
+      <td><a href="case_287.html">Madeleine Schmaltz</a>
+        
+      </td>
+      <td>Minnesota</td>
+      <td>St. Louis County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">288</td>
+      <td><a href="case_288.html">Shari Herrs</a>
+        <br><span class="dim">Shari Lee Herrs</span>
+      </td>
+      <td>Kansas</td>
+      <td>Sedgwick County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">289</td>
+      <td><a href="case_289.html">Therese Gunn</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>Gwinnett County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">290</td>
+      <td><a href="case_290.html">Noelle Devlin</a>
+        
+      </td>
+      <td>Ohio</td>
+      <td>Richland County Court of Common Pleas</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-14</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<style>
+th[data-col] { cursor: pointer; user-select: none; white-space: nowrap; }
+th[data-col]:hover { opacity: 0.75; }
+th[data-col]::after { content: " ⇅"; opacity: 0.3; font-size: 0.8em; }
+th[data-col].asc::after { content: " ▲"; opacity: 1; }
+th[data-col].desc::after { content: " ▼"; opacity: 1; }
+</style>
+<script>
+(function () {
+  const table = document.querySelector("table");
+  if (!table) return;
+  let lastCol = null, asc = true;
+
+  table.querySelectorAll("th[data-col]").forEach(th => {
+    th.addEventListener("click", () => {
+      const col = +th.dataset.col;
+      const numeric = th.dataset.type === "num";
+      asc = (lastCol === col) ? !asc : true;
+      lastCol = col;
+
+      table.querySelectorAll("th[data-col]").forEach(h => h.classList.remove("asc", "desc"));
+      th.classList.add(asc ? "asc" : "desc");
+
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      rows.sort((a, b) => {
+        const va = a.cells[col]?.innerText.trim() ?? "";
+        const vb = b.cells[col]?.innerText.trim() ?? "";
+        const cmp = numeric
+          ? (+va.replace(/\D/g, "") || 0) - (+vb.replace(/\D/g, "") || 0)
+          : va.localeCompare(vb);
+        return asc ? cmp : -cmp;
+      });
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  });
+})();
+</script>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-15 02:06 UTC</p>
+  </footer>
+</body>
+</html>

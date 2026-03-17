@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="sacsicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="512px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.5554293"
+     inkscape:cx="319.84739"
+     inkscape:cy="349.74267"
+     inkscape:window-width="2480"
+     inkscape:window-height="1384"
+     inkscape:window-x="80"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1438" />
+    <sodipodi:guide
+       position="67.360821,74.399658"
+       orientation="1,0"
+       id="guide3745" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect910"
+       style="fill:#44aa00;stroke:#008000;stroke-width:0.973;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 2.64583,1.6424633 H 132.29167 V 80.733863 L 67.468744,132.29167 2.64583,80.733863 Z"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:41.7529px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;fill-opacity:1;stroke:#445016;stroke-width:1.04382"
+       x="15.018183"
+       y="63.440922"
+       id="text3179"><tspan
+         sodipodi:role="line"
+         id="tspan3177"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Delta BQ';-inkscape-font-specification:'Delta BQ';fill:#f9f9f9;stroke:#445016;stroke-width:1.04382"
+         x="15.018183"
+         y="63.440922">SACS</tspan></text>
+  </g>
+</svg>
