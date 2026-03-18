@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hilary Dattilo — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="../../index.html" style="text-decoration:none; line-height:0;"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="../../cases.html">Cases</a></li>
+        
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../search.html">Search</a></li>
+        <li><a href="../../insights.html">Insights</a></li>
+        
+        <li><a href="../../topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Hilary Dattilo
+  <span class="dim" style="font-size:0.6em">#403</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Ohio</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Butler County Common Pleas Court</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2017-11-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">30</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">0.0 yrs</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former assistant varsity girls volleyball coach and JV head volleyball coach at Hamilton High School, Hamilton, Ohio (Butler County). Also employed as a teacher in the district. Age 30 at time of offense.</p><p>Victim was a female high school student; exact age not reported in sources. The relationship developed between approximately August and December 2017. The student&#39;s mother discovered the relationship and reported it to school administrators, who alerted Hamilton police. The specific sexual offense was alleged on November 1, 2017; police stated the criminal conduct occurred November 1-22, 2017, with a related contributing to delinquency charge covering October 1 through December 18.</p><p>Arraigned January 9, 2018 in Butler County Common Pleas Court on one count of third-degree felony sexual battery and one count of first-degree misdemeanor contributing to the delinquency of a minor. Pleaded not guilty; posted 10% of a $5,000 bond. Placed on unpaid administrative leave; the district initiated termination proceedings and reported the arrest to the Ohio Department of Education&#39;s Office of Professional Conduct for possible license revocation.</p><p>Pleaded guilty May 30, 2018 to gross sexual imposition; original sexual battery charge reduced in plea. Sentenced July 31, 2018 to five years probation, rehab, and community service; no jail time. Required to register as a sex offender.</p><p>NOTE: Charge reduced from third-degree felony sexual battery to gross sexual imposition. Female victim; relationship discovered by victim&#39;s mother. Victim age not reported in any located source.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">probation</span>
+    
+      <span class="tag">no-prison</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+      <span class="tag">female-victim</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Dattilo, Hilary</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">898</td>
+      <td>Gross sexual imposition</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">899</td>
+      <td>Sexual battery (3rd-degree felony); contributing to delinquency of a minor (1st-degree misdemeanor)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2018-01-09</td>
+      <td>arraignment</td>
+      <td>Arraigned; charged with sexual battery and contributing to delinquency of minor; not guilty plea; 10% of $5,000 bond; placed on unpaid administrative leave</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2018-05-30</td>
+      <td>other</td>
+      <td>Pleaded guilty to gross sexual imposition; sexual battery charge reduced</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2018-07-31</td>
+      <td>sentencing</td>
+      <td>Sentenced to 5 years probation, rehab, community service; no jail; sex offender registration required</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_624.html">624</a></td>
+      <td class="dim">2018-01-10</td>
+      <td>Law&amp;Crime</td>
+      <td><a href="entry_624.html">Hilary Dattilo, a 30-year-old teacher and volleyball coach in Butler County, Ohio, is being charged </a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">female-victim</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_625.html">625</a></td>
+      <td class="dim">2018-07-31</td>
+      <td>FOX19 (WXIX)</td>
+      <td><a href="entry_625.html">A former Hamilton volleyball coach who pleaded guilty to a sex crime with a student will not get jai</a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+          <span class="tag">probation</span>
+        
+          <span class="tag">no-prison</span>
+        
+          <span class="tag">charge-reduction</span>
+        
+          <span class="tag">female-victim</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:46 UTC</p>
+  </footer>
+</body>
+</html>

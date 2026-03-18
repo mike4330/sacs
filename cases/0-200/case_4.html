@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>State v. Hailey Clifton-Carmack — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="../../index.html" style="text-decoration:none; line-height:0;"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="../../cases.html">Cases</a></li>
+        
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../search.html">Search</a></li>
+        <li><a href="../../insights.html">Insights</a></li>
+        
+        <li><a href="../../topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>State v. Hailey Clifton-Carmack
+  <span class="dim" style="font-size:0.6em">#4</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Missouri</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Pulaski County Circuit Court</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">John Beger</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2023-11-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">26</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">16</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">4.0 yrs</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former high school teacher at Laquey School District, Laquey, Missouri (Pulaski County). Age 26 at arrest. Male victim aged 16.</p><p>The sexual relationship occurred between November and December 2023. The victim told a classmate they had sex in the classmate&#39;s driveway; the victim showed that student photographs of scratches on his back left by Clifton-Carmack. Students were allegedly used as look-outs while Clifton-Carmack and the victim had sex during school. The school superintendent had previously spoken privately with her about her student interactions after the administration flagged her for being &#34;too close with students.&#34; Clifton-Carmack had discussed this warning openly with her class. The victim told the classmate that he was &#34;the reason&#34; her divorce &#34;was pushed through&#34; — her husband had filed for divorce in August 2023 and the dissolution was finalized in September 2023. The couple had a child together.</p><p>Clifton-Carmack was confronted by Detective Sergeant Bryan Gibbs on December 8, 2023 and voluntarily handed over her phone; investigators recovered messages between her and the victim discussing their relationship. She continued contact with the victim until December 23, then left for Texas. She was arrested in January 2024 by Garden Ridge (TX) police and extradited to Pulaski County. Original charges included statutory rape, child molestation, endangering the welfare of a child, and felony sexual contact with a student.</p><p>Pleaded guilty September 6, 2024 to felony sexual contact with a student; all other charges dismissed. Sentenced October 11, 2024: four years under Missouri&#39;s Sex Offender Assessment Program. Defense attorney Charles Theodore Frahm; Pulaski County Prosecuting Attorney Kevin S. Hillman.</p><p>NOTE: Prior warning documented — administration had addressed her closeness with students before the offense, and she discussed this with her class. The victim&#39;s father was separately charged with child endangerment after witnesses alleged he knew of the relationship and permitted it, stating &#34;they are going to do it behind my back so I may as well let it happen.&#34; His case was held pending Clifton-Carmack&#39;s sentencing in exchange for his cooperation. The use of student look-outs during on-campus sex is a distinctive detail.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">guilty</span>
+    
+      <span class="tag">felony</span>
+    
+      <span class="tag">juvenile</span>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">prior-warning-ignored</span>
+    
+      <span class="tag">physical-evidence</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+      <span class="tag">on-campus</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Clifton-Carmack, Hailey</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Frahm, Charles Theodore</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Gibbs, Bryan</td>
+      <td class="dim">investigator</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Beger, John</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Creighton, Mark</td>
+      <td class="dim">other</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Hillman, Kevin S.</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">9</td>
+      <td>Sexual abuse of a student (plea charge; specific statute not named in article)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">10</td>
+      <td>Endangering the welfare of a child</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">11</td>
+      <td>Second-degree statutory rape</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">12</td>
+      <td>Fourth-degree child molestation</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2023-12-08</td>
+      <td>other</td>
+      <td>Confronted by Det. Sgt. Bryan Gibbs; voluntarily handed over phone; investigators recovered messages with victim; contact continued until Dec 23 then fled to Texas</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2024-01-01</td>
+      <td>arrest</td>
+      <td>Arrested in Garden Ridge TX by local police; extradited to Pulaski County MO</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2024-09-06</td>
+      <td>other</td>
+      <td>Guilty plea to felony sexual contact with a student; statutory rape, molestation, endangering welfare charges dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2024-10-11</td>
+      <td>sentencing</td>
+      <td>4 years under Missouri Sex Offender Assessment Program (SOAP)</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_4.html">4</a></td>
+      <td class="dim">2026-03-01</td>
+      <td>WKRC/New York Post/KJLU</td>
+      <td><a href="entry_4.html">PULASKI COUNTY, Mo. (WKRC) - A teacher who pleaded guilty to sexually abusing a student was sentence</a>…</td>
+      <td>
+        
+          <span class="tag">felony</span>
+        
+          <span class="tag">juvenile</span>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_125.html">125</a></td>
+      <td class="dim">2024-09-10</td>
+      <td>PEOPLE Magazine (Emily Palmer, Sep 10 2024)</td>
+      <td><a href="entry_125.html">How Scratches Found on a Teenage Boy Led to a Sex Crime Conviction for His Teacher (PEOPLE, Sep 10 2</a>…</td>
+      <td>
+        
+          <span class="tag">guilty</span>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">prior-warning-ignored</span>
+        
+          <span class="tag">physical-evidence</span>
+        
+          <span class="tag">charge-reduction</span>
+        
+          <span class="tag">on-campus</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:46 UTC</p>
+  </footer>
+</body>
+</html>

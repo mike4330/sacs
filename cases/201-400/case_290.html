@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noelle Devlin — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="../../index.html" style="text-decoration:none; line-height:0;"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="../../cases.html">Cases</a></li>
+        
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../search.html">Search</a></li>
+        <li><a href="../../insights.html">Insights</a></li>
+        
+        <li><a href="../../topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Noelle Devlin
+  <span class="dim" style="font-size:0.6em">#290</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Ohio</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Richland County Court of Common Pleas</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">James DeWeese</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2014-10</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">30</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">16</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">1.0 yr</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former third-grade teacher at Mansfield Choice Academies (Interactive Media and Construction School), a public charter school housed at Ocie Hill Neighborhood Center, Mansfield, Ohio (employed since 2014). One male victim, age 16, enrolled at the school. Sexual relationship occurred October 1, 2014 through June 5, 2015. Age approximately 30 at time of offense. Devlin was also described as a mother.</p><p>Fired October 2015 after Mansfield Police Department began an investigation. Arrested December 7, 2015 on a warrant; transported to Richland County Jail on $15,000 bond. Indicted November 16, 2015 on 15 counts of sexual battery and 14 counts of child endangering. Pleaded guilty to three counts of sexual battery and three counts of child endangering; 12 counts of each were dismissed as part of the plea agreement. Sentenced April 25, 2016 by Judge James DeWeese to one year in prison followed by four years of probation. Required to register as a Tier III sex offender for life. No-contact order with victim.</p><p>At sentencing, Devlin submitted an eight- or nine-page letter to the court in which she claimed she was not thinking clearly and stated she felt the victim &#39;was in charge of the relationship.&#39; Judge DeWeese stated he did not believe she was taking responsibility and read excerpts of the letter in open court. &#39;In your letter you substantially blame him. I have a hard time believing you are taking responsibility,&#39; DeWeese said, noting Devlin took advantage of the victim&#39;s age, mental state, and her position of trust as a teacher. The victim&#39;s father submitted a written statement: &#39;You took a vulnerable, impressionable mind and twisted it to believe this was a normal and adult-style relationship.&#39;</p><p>NOTE: Explicit victim-blaming by defendant in a court submission — one of the more documented examples of this pattern in the DB. Judge DeWeese specifically rejected the remorse framing on the record. Tier III classification (Ohio&#39;s highest) reflects the seriousness of the conduct. Notable that Devlin was a 3rd-grade teacher with a 16-year-old victim — consistent with a charter school serving non-traditional or multi-age enrollment.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">no-remorse</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+      <span class="tag">long-term-relationship</span>
+    
+      <span class="tag">victim-blaming</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Devlin, Noelle</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">669</td>
+      <td>Sexual battery (Ohio Rev. Code § 2907.03)</td>
+      <td>3</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">670</td>
+      <td>Child endangering (Ohio Rev. Code § 2919.22)</td>
+      <td>3</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">671</td>
+      <td>Sexual battery (Ohio Rev. Code § 2907.03)</td>
+      <td>12</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">672</td>
+      <td>Child endangering (Ohio Rev. Code § 2919.22)</td>
+      <td>12</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2015-10-01</td>
+      <td>other</td>
+      <td>Fired from Mansfield Choice Academies; police investigation begins</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2015-11-16</td>
+      <td>indictment</td>
+      <td>Indicted on 15 counts sexual battery and 14 counts child endangering</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2015-12-07</td>
+      <td>arrest</td>
+      <td>Arrested on warrant; held on $15,000 bond at Richland County Jail</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2016-03-01</td>
+      <td>verdict</td>
+      <td>Pleaded guilty to 3 counts sexual battery and 3 counts child endangering; 24 counts dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2016-04-25</td>
+      <td>sentencing</td>
+      <td>Sentenced to 1 year prison + 4 years probation; Tier III sex offender registration for life; judge rejected remorse claim on record</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_389.html">389</a></td>
+      <td class="dim">2015-12-08</td>
+      <td>Richland Source / local news</td>
+      <td><a href="entry_389.html">MOUNT VERNON – A former Mansfield area third-grade teacher was arrested Monday morning at a home on </a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">long-term-relationship</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_390.html">390</a></td>
+      <td class="dim">2016-04-25</td>
+      <td>Mansfield News Journal (Courtney McNaull)</td>
+      <td><a href="entry_390.html">MANSFIELD - Former Mansfield Choice Academies teacher Noelle Devlin was sentenced to one year in pri</a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+          <span class="tag">no-remorse</span>
+        
+          <span class="tag">charge-reduction</span>
+        
+          <span class="tag">long-term-relationship</span>
+        
+          <span class="tag">victim-blaming</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:46 UTC</p>
+  </footer>
+</body>
+</html>
