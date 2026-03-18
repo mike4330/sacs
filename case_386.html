@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Janet Barnes — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="cases.html">Cases</a></li>
+        
+        <li><a href="people.html">People</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        
+        <li><a href="topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="index.html">← Cases</a></p>
+
+<div style="float:right; margin: 0 0 1rem 1.5rem; text-align:center;">
+  <img src="images/barnes.jpg" alt="Janet Barnes" style="max-width:180px; max-height:220px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.18);">
+</div>
+
+<h1>Janet Barnes
+  <span class="dim" style="font-size:0.6em">#386</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Oklahoma</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Leflore County District Court</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2014-01-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">39</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">16</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">15.0 yrs</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former teacher at Pocola High School, Pocola, Leflore County, Oklahoma (rural area near Arkansas border). Previously employed at Smithville Public Schools. Married at time of offense.</p><p>Victims were three male students at Pocola High School, ages 16-19. Two were minors (victims of second-degree rape in separate incidents between January 2014 and November 2016); the third was an adult student (victim of sexual battery in a separate incident). Under Oklahoma law, teachers may not have sexual contact with students regardless of age.</p><p>An investigation began in late 2016 after police received a tip alleging inappropriate conduct with multiple students. Barnes was suspended; her contract was not renewed and her Oklahoma teaching certificate lapsed.</p><p>Grand jury indicted Barnes in Leflore County in May 2019 on two counts of second-degree rape and one count of sexual battery; warrant issued and bond set at $250,000. Pleaded guilty December 3, 2019 to all three counts. Sentenced to 40 years total: two 15-year rape sentences running concurrently, plus a 10-year sexual battery sentence suspended as part of probation terms. Expected to serve 15 years at Mabel Bassett Correctional Center, McCloud, Oklahoma. Required to register as a sex offender.</p><p>Prior record: In 2010, while at Smithville Public Schools, a student under 16 reported Barnes had propositioned him for sex over months and sent him nude photos; he told police he feared she was &#39;stalking him.&#39; Barnes pleaded guilty to outraging public decency involving a minor, receiving a 9-month suspended sentence and fine. Approximately 2012: pleaded guilty to violating a protection order (no jail time). She continued teaching and offending for approximately 6 more years after the 2010 conviction.</p><p>NOTE: Three victims across the same school (at least); prior conviction at a different school in 2010 did not end her teaching career. Explicit-photos and prior-warning-ignored pattern from the 2010 incident. Two concurrent 15-year rape sentences; sexual battery term suspended. sentence_years = 15.</p></blockquote>
+
+
+<div style="clear:both;"></div>
+
+
+  <p>
+    
+      <span class="tag">multiple-victims</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">explicit-photos</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">prior-warning-ignored</span>
+    
+      <span class="tag">long-term-relationship</span>
+    
+      <span class="tag">adult-victim</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Barnes, Janet</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">864</td>
+      <td>Rape in the Second Degree — 2 counts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">865</td>
+      <td>Sexual Battery (adult victim)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2019-05-17</td>
+      <td>indictment</td>
+      <td>Grand jury indicted on 2 counts second-degree rape and 1 count sexual battery; $250,000 bond</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2019-12-03</td>
+      <td>sentencing</td>
+      <td>Guilty plea to all 3 counts; 40 years total (15+15 concurrent rape + 10 suspended); 15 years at Mabel Bassett CC; sex offender registration</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_592.html">592</a></td>
+      <td class="dim">2019-05-20</td>
+      <td>People</td>
+      <td><a href="entry_592.html">A former Oklahoma high school teacher faces multiple rape and sexual battery charges after she alleg</a>…</td>
+      <td>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">adult-victim</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_593.html">593</a></td>
+      <td class="dim">2019-12-06</td>
+      <td>Oxygen / M.L. Nestel</td>
+      <td><a href="entry_593.html">An Oklahoma high school teacher has pled guilty to having sex with two teenage students for almost t</a>…</td>
+      <td>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">explicit-photos</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+          <span class="tag">prior-warning-ignored</span>
+        
+          <span class="tag">long-term-relationship</span>
+        
+          <span class="tag">adult-victim</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:29 UTC</p>
+  </footer>
+</body>
+</html>

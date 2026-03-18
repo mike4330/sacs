@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colleen McGarry — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="cases.html">Cases</a></li>
+        
+        <li><a href="people.html">People</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        
+        <li><a href="topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="index.html">← Cases</a></p>
+
+<h1>Colleen McGarry
+  <span class="dim" style="font-size:0.6em">#355</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Pennsylvania</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Luzerne County Court</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Joseph F. Sklarosky Jr.</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2015-12-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">44</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">17</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">0.33 yrs</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former calculus and math teacher at Pittston Area High School, Pittston, Luzerne County, Pennsylvania. Victim was a 17-year-old female student from McGarry&#39;s calculus class. Age 44 at time of offense.</p><p>McGarry began texting the student and discussing her sexual orientation; the teen told her she had a &#39;crush&#39; on the teacher. In December 2015, McGarry kissed the teen in a car several times. The relationship escalated when McGarry stayed at the girl&#39;s house for three nights while the father was on vacation; McGarry admitted to making out while partially undressed. McGarry also purchased alcohol for a party at the girl&#39;s house attended by multiple underage students. She continued contact with the victim after police began investigating.</p><p>McGarry was charged in September 2016 and fired in May 2016. She surrendered her teaching license to the Pennsylvania Department of Education in November 2016. She pleaded guilty in March 2017 to sexual contact with a student, corruption of minors, and furnishing liquor to a minor. Three counts of furnishing liquor to a minor and one count of unlawful contact with a minor were withdrawn at the preliminary hearing.</p><p>Sentenced August 1, 2017 by Judge Joseph F. Sklarosky Jr. to 4 to 24 months less a day in the Luzerne County Correctional Facility plus 3 years probation. Required to register as a sex offender for 25 years. Sentence years reflects the 4-month minimum; actual time served unknown.</p><p>NOTE: Victim wrote a letter seeking leniency, as did her father — described as &#39;atypical&#39; by the judge. Prosecutor noted the victim was still emotionally involved and might later change her view. McGarry continued contact with the victim after police began investigating. Defense cited self-esteem problems.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">probation</span>
+    
+      <span class="tag">alcohol</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+      <span class="tag">female-victim</span>
+    
+      <span class="tag">long-term-relationship</span>
+    
+      <span class="tag">victim-in-home</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>McGarry, Colleen</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Nocito, Frank</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Violi, Nancy</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">802</td>
+      <td>Sexual contact with a student</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">803</td>
+      <td>Corruption of minors</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">804</td>
+      <td>Furnishing liquor to a minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">805</td>
+      <td>Furnishing liquor to a minor (3 counts)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">806</td>
+      <td>Unlawful contact with a minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2015-12-01</td>
+      <td>other</td>
+      <td>First sexual contact (kissing in car)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2016-09-01</td>
+      <td>arrest</td>
+      <td>Charged; exact date in September 2016</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2016-10-11</td>
+      <td>arraignment</td>
+      <td>Preliminary hearing; several charges withdrawn; waived to county court</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2017-01-05</td>
+      <td>arraignment</td>
+      <td>Formal arraignment, Luzerne County Court</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2017-03-01</td>
+      <td>verdict</td>
+      <td>Guilty plea (exact date in March 2017)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2017-08-01</td>
+      <td>sentencing</td>
+      <td>4 to 24 months less a day + 3 years probation; 25-year SORN</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_522.html">522</a></td>
+      <td class="dim">2017-08-01</td>
+      <td>The Citizens&#39; Voice</td>
+      <td><a href="entry_522.html">Former Pittston Area High School teacher Colleen McGarry stood before the judge Tuesday hardly able </a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+          <span class="tag">probation</span>
+        
+          <span class="tag">alcohol</span>
+        
+          <span class="tag">female-victim</span>
+        
+          <span class="tag">long-term-relationship</span>
+        
+          <span class="tag">victim-in-home</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_523.html">523</a></td>
+      <td class="dim">2016-10-11</td>
+      <td>The Citizens&#39; Voice</td>
+      <td><a href="entry_523.html">A former Pittston Area High School teacher accused of having a relationship with a 17-year-old femal</a>…</td>
+      <td>
+        
+          <span class="tag">alcohol</span>
+        
+          <span class="tag">charge-reduction</span>
+        
+          <span class="tag">female-victim</span>
+        
+          <span class="tag">victim-in-home</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:29 UTC</p>
+  </footer>
+</body>
+</html>

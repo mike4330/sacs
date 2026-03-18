@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amelia Ressler — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="cases.html">Cases</a></li>
+        
+        <li><a href="people.html">People</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        
+        <li><a href="topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="index.html">← Cases</a></p>
+
+<h1>Amelia Ressler
+  <span class="dim" style="font-size:0.6em">#312</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Georgia</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Carroll County Superior Court</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">John Simpson</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2021-02-01</td>
+  </tr>
+  
+  
+  
+  
+</table>
+
+
+  <blockquote><p>Former substitute teacher at Mt. Zion Elementary School, Carroll County, Georgia. Age unknown.</p><p>Arrested February 5, 2021 after staff at Mt. Zion Elementary reported a video she allegedly created and spread. The Carroll County Sheriff&#39;s Office confirmed allegations of video and photographic evidence of Ressler masturbating in front of an elementary school class. Charged with 19 counts of child molestation.</p><p>Initial bond denied March 25, 2021 by Judge Bill Hamrick (found Defendant a danger to commit new felonies and a danger to the community). Over the following two years, the defense requested multiple continuances; prosecutors continuously opposed them and sought to specially set the case for trial. In May 2023 — two weeks before the case was specially set — defense filed a motion to continue and a special plea of insanity, triggering a mandatory evaluation by the Georgia Department of Behavioral Health and Developmental Disabilities (DBHDD). After 901 days in jail, bond was set at 0,000 on July 27, 2023 by Judge John Simpson with conditions including GPS monitoring, drug testing, no contact with minors (except her own children when supervised), therapy, and DBH/DD assessment. State opposed the bond, arguing the change of circumstances was solely the length of pretrial detention.</p><p>A co-defendant, Brent Vadovsky, was acquitted after being accused of initiating the sexual conversation with Ressler in the classroom incident.</p><p>As of July 2023, case awaited trial on 19 counts of child molestation; outcome unknown from available reporting (case filed March 2026).</p><p>NOTE: Victim ages not specified; elementary school students likely ages 5–11. &#39;Created and spread&#39; video language suggests CSAM distribution component. 19 counts suggests multiple incidents or multiple victims across the class. Defense-generated delays were extensively documented by prosecution. ADA Maggie Meetze opposed bond.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">multiple-victims</span>
+    
+      <span class="tag">physical-evidence</span>
+    
+      <span class="tag">csam</span>
+    
+      <span class="tag">possible-additional-victims</span>
+    
+      <span class="tag">on-campus</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Ressler, Amelia</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">724</td>
+      <td>Child molestation</td>
+      <td>19</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2021-02-05</td>
+      <td>arrest</td>
+      <td>Arrested after school staff reported video of alleged masturbation in front of class</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2021-03-25</td>
+      <td>bail</td>
+      <td>Bond denied by Judge Bill Hamrick — danger to commit felonies and danger to community</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2023-05-19</td>
+      <td>other</td>
+      <td>Defense filed motion to continue + special plea of insanity; DBHDD evaluation triggered</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2023-07-27</td>
+      <td>bail</td>
+      <td>0,000 bond set by Judge John Simpson after 901 days in pretrial detention; GPS monitor, no minor contact conditions</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_431.html">431</a></td>
+      <td class="dim">2023-07-27</td>
+      <td>Times-Georgian</td>
+      <td><a href="entry_431.html">Amelia Ressler, a former Mt. Zion substitute teacher, was granted a 0,000 bond during a hearing Wedn</a>…</td>
+      <td>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">physical-evidence</span>
+        
+          <span class="tag">csam</span>
+        
+          <span class="tag">possible-additional-victims</span>
+        
+          <span class="tag">on-campus</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:29 UTC</p>
+  </footer>
+</body>
+</html>

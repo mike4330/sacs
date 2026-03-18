@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kathryn Hagan — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="cases.html">Cases</a></li>
+        
+        <li><a href="people.html">People</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        
+        <li><a href="topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="index.html">← Cases</a></p>
+
+<h1>Kathryn Hagan
+  <span class="dim" style="font-size:0.6em">#352</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Indiana</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Marion Superior Criminal Court</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2016-09-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">37</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">17</td>
+  </tr>
+  
+  
+  <tr>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
+    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2.0 yrs</td>
+  </tr>
+  
+</table>
+
+
+  <blockquote><p>Former algebra teacher at Franklin Central High School, Indianapolis, Marion County, Indiana (Franklin Township Community School Corp.). Age approximately 37 at time of offense (age 38 at arrest May 2017; age 40 at sentencing November 2019). Employed at the school for only a few months prior to her arrest; had cleared a full criminal history check. Victim was a 17-year-old male student.</p><p>Hagan provided the victim with Xanax and had a sexual relationship with him. She also supplied a gun to a different student whom she knew planned to use it to commit crimes — specifically, allegedly to rob other students who may have had incriminating evidence on their phones.</p><p>Franklin Central administrators received an anonymous tip April 7, 2017; alerted police and the Department of Child Services. Hagan was suspended, then resigned. Arrested May 2, 2017 on two counts of child seduction, one count each of dealing in a controlled substance, conspiracy to commit armed robbery, and dangerous control of a firearm.</p><p>Pleaded guilty November 8, 2019 in Marion Superior Criminal Court to: child seduction (Level 5 felony); dangerous control of a firearm (Level 5 felony); dealing in Schedule IV controlled substance / Xanax (Level 6 felony); child seduction (Level 6 felony). State dismissed conspiracy to commit armed robbery and one additional child seduction count in exchange. Sentence: 10 years total; 2 years in the Department of Correction (actual prison); 8 years home detention; sex offender registration for 10 years.</p><p>NOTE: Provision of a gun to a second student to facilitate robbery of peers who might have incriminating evidence on their phones is a highly unusual criminal scheme — among the most complex aggravating conduct in this DB. Xanax provision to primary victim adds a drug-grooming dimension.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">drugs</span>
+    
+      <span class="tag">evidence-tampering</span>
+    
+      <span class="tag">home-confinement</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Hagan, Kathryn</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">793</td>
+      <td>Child seduction</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">794</td>
+      <td>Child seduction</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">795</td>
+      <td>Dangerous control of a firearm</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">796</td>
+      <td>Dealing in Schedule IV controlled substance (Xanax)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">797</td>
+      <td>Conspiracy to commit armed robbery</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2017-05-02</td>
+      <td>arrest</td>
+      <td>Arrested on child seduction, dealing in controlled substance, conspiracy to commit armed robbery, dangerous control of firearm</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2019-11-08</td>
+      <td>sentencing</td>
+      <td>Guilty plea; sentenced 10 years (2 years DOC + 8 years home detention); 10-year sex offender registration</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(3)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_516.html">516</a></td>
+      <td class="dim">2019-11-08</td>
+      <td>RTV6 / Tom Maccabe</td>
+      <td><a href="entry_516.html">Kathryn Hagan, 40, former Franklin Central High School math teacher, sentenced to two years in priso</a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+          <span class="tag">drugs</span>
+        
+          <span class="tag">home-confinement</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_517.html">517</a></td>
+      <td class="dim">2017-05-02</td>
+      <td>AP</td>
+      <td><a href="entry_517.html">Kathryn Hagan, 38, arrested for providing anti-anxiety drug Xanax to a 17-year-old student with whom</a>…</td>
+      <td>
+        
+          <span class="tag">drugs</span>
+        
+          <span class="tag">evidence-tampering</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_518.html">518</a></td>
+      <td class="dim">2019-11-08</td>
+      <td>FOX59</td>
+      <td><a href="entry_518.html">Kathryn Hagan plea agreement in Marion Superior Criminal Court: guilty to child seduction (Level 5 f</a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">drugs</span>
+        
+          <span class="tag">evidence-tampering</span>
+        
+          <span class="tag">home-confinement</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-18 00:29 UTC</p>
+  </footer>
+</body>
+</html>
