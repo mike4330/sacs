@@ -77,6 +77,10 @@
           background: #f5f5f5; padding: 1rem; border-radius: 6px; }
     .dim { color: #888; font-size: 0.9em; }
     .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
   </style>
 </head>
 <body>
@@ -108,49 +112,30 @@
 
 
 
-<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>New Jersey</td><td class="lbl">Court</td><td>Cape May County Superior Court</td></tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">New Jersey</td>
+    <td class="lbl">Judge</td><td>Jeffrey J. Waldman</td>
+    <td class="lbl">Incident Date</td><td>2018-01-01</td>
   </tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Cape May County Superior Court</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Jeffrey J. Waldman</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2018-01-01</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">27</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">11</td>
+    <td class="lbl">Defendant Age</td><td>27</td>
+    <td class="lbl">Victim Age</td><td>11</td>
   </tr>
   
   
 </table>
 
 
-  <blockquote><p>Teacher at Middle Township Elementary School, Middle Township, New Jersey. Residence: Cape May Court House, NJ. DOB 1990; age 27 at offense date (January 2018). Male victim; abuse began at age 11 (~2018). Victim&#39;s family became friends with Caron; children began visiting her home 1-2 nights/week, then stayed with her permanently 2016-2020. Caron identified in court as a &#34;resource family parent&#34; for the children. Victim was 13 and living with then-28-year-old Caron when they had a child together in 2019 (child ~5 years old as of Jan 2025). Case came to light December 2024 when victim&#39;s father posted on social media that Caron&#39;s child resembled his son. Victim confirmed sexual relationship in police interview January 3, 2025. Arrested January 15, 2025. Indicted June 17, 2025 (true bill, indictment 25-06-00331-I): Count 1: 2C:14-2B (sexual assault, victim &lt;13, 2nd deg); Count 2: 2C:24-4A(1) (endangering welfare, 2nd deg); Count 3: 2C:14-2A(2)(C) (aggravated sexual assault, victim ≥13/supervisory role, 1st deg). Judge: Jeffrey J. Waldman. Defense: John W. Tumelty. Prosecutor: Dara Paley. Pretrial conference March 9, 2026. Middle Township School District placed Caron on paid administrative leave immediately upon learning of allegations. SBI: 138119G. NOTE: Child born of the relationship provides biological evidence. Victim lived in Caron&#39;s home ~4 years (2016-2020). Caron exploited both teacher and resource-parent guardian roles. Discovery via social media paternity post is unique in the DB.</p></blockquote>
+  <blockquote><p>Former teacher at Middle Township Elementary School, Middle Township, New Jersey. DOB 1990; age 27 at time of initial abuse (January 2018).</p><p>Victim was a male student whose family became friends with Caron. The children began visiting her home one to two nights per week, then in 2016 moved in with her permanently, living in her home through 2020. Caron was identified in court as a &#39;resource family parent&#39; for the children — exploiting both her teacher role and her informal guardian role. The victim was 11 when the abuse began (~2018) and 13 when Caron, then 28, became pregnant. A child was born of the relationship in 2019 (approximately 5 years old as of January 2025).</p><p>The case came to light in December 2024 when the victim&#39;s father posted on social media noting that Caron&#39;s child resembled his son. The victim confirmed the sexual relationship in a police interview on January 3, 2025. Caron was arrested January 15, 2025. Middle Township School District placed her on paid administrative leave immediately upon learning of the allegations. SBI: 138119G.</p><p>Grand jury returned a true bill June 17, 2025 (indictment no. 25-06-00331-I). Counts: (1) sexual assault, victim under 13 (2C:14-2B, 2nd deg); (2) endangering welfare of a child — sexual conduct (2C:24-4A(1), 2nd deg); (3) aggravated sexual assault, victim ≥13/supervisory role (2C:14-2A(2)(C), 1st deg). Judge: Jeffrey J. Waldman, Superior Court. Defense: John W. Tumelty. Prosecutor: Dara Paley. Case review August 24, 2026; trial set September 8, 2026.</p><p>NOTE: Child born of the relationship constitutes biological evidence. Victim lived in Caron&#39;s home approximately four years (2016–2020). Case surfaced via social media paternity identification — unique mechanism in this DB.</p></blockquote>
 
 
 
@@ -283,6 +268,18 @@
       <td class="dim">2026-03-09</td>
       <td>other</td>
       <td>Pretrial conference before Judge Jeffrey J. Waldman (in-person, Courtroom D)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2026-08-24</td>
+      <td>other</td>
+      <td>Case review before Judge Jeffrey J. Waldman, Superior Court Courtroom D (in-person)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2026-09-08</td>
+      <td>trial_start</td>
+      <td>Trial before Judge Jeffrey J. Waldman, Superior Court Courtroom D (in-person); defense John W. Tumelty; prosecutor Dara Paley</td>
     </tr>
   
   </tbody>

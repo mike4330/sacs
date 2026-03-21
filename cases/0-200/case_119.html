@@ -77,6 +77,10 @@
           background: #f5f5f5; padding: 1rem; border-radius: 6px; }
     .dim { color: #888; font-size: 0.9em; }
     .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
   </style>
 </head>
 <body>
@@ -112,30 +116,30 @@
 
 
 
-<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+<table class="datablock">
   
   
   
   
-  <tr><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Wisconsin</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">St. Croix County Circuit Court</td></tr>
+  <tr><td class="lbl">State</td><td>Wisconsin</td><td class="lbl">Court</td><td>St. Croix County Circuit Court</td></tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; background:#f7f8fa;"></td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem;"></td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">2023-09-01</td>
+    <td class="lbl">Judge</td><td>R. Michael Waterman</td>
+    <td class="lbl">Incident Date</td><td>2023-09-01</td>
   </tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">24</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">11</td>
+    <td class="lbl">Defendant Age</td><td>24</td>
+    <td class="lbl">Victim Age</td><td>11</td>
   </tr>
   
   
 </table>
 
 
-  <blockquote><p>Former fifth-grade teacher at an elementary school in Hudson, Wisconsin (St. Croix County). Age 24 at charge. Male victim; age approximately 11 (5th grade, per CLAUDE.md inference).</p><p>Faust is accused of keeping the student after class, pushing him against the wall, and kissing him on the cheek. Court documents also show that Faust and fellow Hudson 5th-grade teacher Madison Bergmann (#22) were friends, and that the two had exchanged text messages about their respective relationships with students.</p><p>The Hudson School District learned of concerns in early May 2024. Faust resigned in early May 2024 and was immediately removed from the classroom; the district investigated her for alleged failure to report child abuse as required by state law. Charges were filed August 2025. Charged with four felonies: failure to protect a child, causing mental harm to a child, child enticement, and sexual misconduct by school staff. Released on a $10,000 signature bond. Next court date October 2025.</p><p>NOTE: The &#39;failure to protect a child&#39; and &#39;failure to report&#39; framing suggests Faust may have had knowledge of Bergmann&#39;s misconduct with a student and failed to report it as a mandated reporter, in addition to her own conduct. The text exchanges about their respective student relationships are a significant evidentiary link. Cross-reference Bergmann #22 (same school, same grade, same arrest period, friends).</p></blockquote>
+  <blockquote><p>Former fifth-grade teacher at an elementary school in Hudson, Wisconsin (St. Croix County). Age 24 at charge. Cases consolidated: 25CF452 &amp; 25CF498, indicating at least two victims or incidents.</p><p>Faust is accused of keeping a student after class, pushing him against the wall, and kissing him on the cheek. Court documents also show that Faust and fellow Hudson 5th-grade teacher Madison Bergmann (#22) were friends, and that the two had exchanged text messages about their respective relationships with students. At least two victims have appeared in court proceedings.</p><p>The Hudson School District learned of concerns in early May 2024. Faust resigned and was immediately removed from the classroom; the district investigated her for alleged failure to report child abuse as required by state law. Charges filed August 2025: four felonies — failure to protect a child, causing mental harm to a child, child enticement, and sexual misconduct by school staff. Released on a $10,000 signature bond. Defense: Aaron A. Nelson. ADA: Alysja Otten. Judge: R. Michael Waterman.</p><p>March 20, 2026 status conference: defense reported case unresolved, requested another STC in 60 days; parties still in negotiations and believe resolution is achievable. All discovery received by defense. State&#39;s Motion to Modify bond denied. Victim #1 made a statement. Next status conference: May 19, 2026.</p><p>NOTE: Two consolidated case numbers (25CF452 &amp; 25CF498) suggest at least two separate victims or charging instruments. The &#39;failure to protect a child&#39; framing suggests Faust may also have had knowledge of Bergmann&#39;s misconduct and failed to report it as a mandated reporter. The text exchanges about their respective student relationships are a significant evidentiary link. Cross-reference Bergmann #22 (same school, same grade, same arrest period, friends).</p></blockquote>
 
 
 <div style="clear:both;"></div>
@@ -161,6 +165,18 @@
     <tr>
       <td>Faust, Abigail</td>
       <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Nelson, Aaron A.</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Otten, Alysja</td>
+      <td class="dim">prosecutor</td>
       <td class="dim"></td>
     </tr>
   
@@ -232,6 +248,18 @@
       <td class="dim">2025-08-18</td>
       <td>arrest</td>
       <td>Charged with 4 felonies; released on $10,000 signature bond; next court date October 2025</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2026-03-20</td>
+      <td>other</td>
+      <td>Status conference before Judge Waterman; defense Aaron Nelson, ADA Alysja Otten. Cases 25CF452 &amp; 25CF498 consolidated. Defense states case unresolved, requests another STC in 60 days; negotiations ongoing, resolution expected. All discovery received. State&#39;s Motion to Modify bond DENIED. Victim #1 makes statement; victims approved to appear by Zoom for future hearings. Bond continues.</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2026-05-19</td>
+      <td>other</td>
+      <td>Status conference scheduled, 2:00 PM (victims to appear by Zoom)</td>
     </tr>
   
   </tbody>
