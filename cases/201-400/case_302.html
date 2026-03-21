@@ -77,6 +77,10 @@
           background: #f5f5f5; padding: 1rem; border-radius: 6px; }
     .dim { color: #888; font-size: 0.9em; }
     .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
   </style>
 </head>
 <body>
@@ -110,44 +114,27 @@
   <p class="dim">Also known as: Jessica Marie Boyers, Jay Boyers, Jessica Cochran, Jessica Young</p>
 
 
-<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Kentucky</td><td class="lbl">Court</td><td>Jefferson County Circuit Court</td></tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Kentucky</td>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2013-03-01</td>
   </tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">Jefferson County Circuit Court</td>
+    <td class="lbl">Defendant Age</td><td>24</td>
+    <td class="lbl">Victim Age</td><td>13</td>
   </tr>
   
   
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">2013-03-01</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">24</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">13</td>
-  </tr>
-  
-  
-  <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem;">12.0 yrs</td>
-  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>12.0 yrs</td><td class="lbl"></td><td></td></tr>
   
 </table>
 
