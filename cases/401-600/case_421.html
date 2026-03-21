@@ -77,6 +77,10 @@
           background: #f5f5f5; padding: 1rem; border-radius: 6px; }
     .dim { color: #888; font-size: 0.9em; }
     .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
   </style>
 </head>
 <body>
@@ -103,35 +107,37 @@
 
 <h1>Megan Rose Porter
   <span class="dim" style="font-size:0.6em">#421</span>
-  <span class="status-active" style="font-size:0.55em">active</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
 </h1>
 
 
 
-<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+<table class="datablock">
   
   
   
   
-  <tr><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Oklahoma</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Tulsa County District Court</td></tr>
+  <tr><td class="lbl">State</td><td>Oklahoma</td><td class="lbl">Court</td><td>Tulsa County District Court</td></tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Sharon Holmes</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">2022-01-08</td>
+    <td class="lbl">Judge</td><td>Sharon Holmes</td>
+    <td class="lbl">Incident Date</td><td>2022-01-08</td>
   </tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">23</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">13</td>
+    <td class="lbl">Defendant Age</td><td>23</td>
+    <td class="lbl">Victim Age</td><td>13</td>
   </tr>
   
+  
+  <tr><td class="lbl">Prison Sentence</td><td>10.0 yrs</td><td class="lbl"></td><td></td></tr>
   
 </table>
 
 
-  <blockquote><p>Former teacher at Catoosa Middle School, Catoosa (Rogers County), Oklahoma. Age 23 at time of offense. Subsequently joined the U.S. Air Force.</p><p>One student victim, age 13, gender unspecified in available sources. Porter began communicating with the student via email and Snapchat, sharing videos of herself using drugs (cocaine, marijuana) and photos of her bare breasts. On January 8, 2022, she instructed the student to lie to their guardian and claim to be staying at a friend&#39;s house; she picked them up from a nearby skate park and took them to her apartment in Owasso, where the molestation occurred. Investigators later found web searches on her devices including &#34;paraphilia disorder in women,&#34; &#34;fetishes,&#34; and &#34;consent vs. coercion.&#34; Phone data showed no messages backed up before November 2022, several months after the offense.</p><p>The student disclosed to a therapist in January 2023; therapist notified police. Catoosa Police notified Owasso Police February 8, 2023. Porter had by then joined the Air Force; during a Defense Counter Intelligence Security Agency background check in May 2025 she initially denied any contact, then admitted to the messages and molestation. Owasso Police were notified July 2025. Warrant issued and case filed August 7, 2025; arrested August 12, 2025 on $75,000 bond.</p><p>Charged with 1 count of lewd molestation (21 O.S. § 1123(A)). Pled not guilty August 18, 2025. Waived jury trial December 1, 2025. Pled guilty February 2, 2026; court withheld a finding pending pre-sentencing investigation. Denied for mental health court March 5, 2026. Sentencing scheduled March 16, 2026 before Judge Sharon Holmes.</p><p>NOTE: Admission during military security clearance background check is the investigative trigger — unusual vector. Porter stated the contact &#34;wasn&#39;t illegal anymore since the child was no longer her student&#34; and that she &#34;wasn&#39;t a pedophile since there was no coercion.&#34; Defense Counter Intelligence Security Agency involvement. Case filed in Tulsa County (offense location — Owasso) rather than Rogers County (school location).</p></blockquote>
+  <blockquote><p>Former teacher at Catoosa Middle School, Catoosa (Rogers County), Oklahoma. Age 23 at time of offense. Subsequently joined the U.S. Air Force.</p><p>One student victim, age 13, gender unspecified in available sources. Porter began communicating with the student via email and Snapchat, sharing videos of herself using drugs (cocaine, marijuana) and photos of her bare breasts. On January 8, 2022, she instructed the student to lie to their guardian and claim to be staying at a friend&#39;s house; she picked them up from a nearby skate park and took them to her apartment in Owasso, where the molestation occurred. Investigators later found web searches on her devices including &#39;paraphilia disorder in women,&#39; &#39;fetishes,&#39; and &#39;consent vs. coercion.&#39; Phone data showed no messages backed up before November 2022, several months after the offense.</p><p>The student disclosed to a therapist in January 2023; therapist notified police. Catoosa Police notified Owasso Police February 8, 2023. Porter had by then joined the Air Force; during a Defense Counter Intelligence Security Agency background check in May 2025 she initially denied any contact, then admitted to the messages and molestation. Owasso Police were notified July 2025. Warrant issued and case filed August 7, 2025; arrested August 12, 2025 on $75,000 bond.</p><p>Charged with 1 count of lewd molestation (21 O.S. § 1123(A)). Pled not guilty August 18, 2025. Waived jury trial December 1, 2025. Pled guilty February 2, 2026 without a state recommendation; court withheld a finding pending PSI. Denied for mental health court March 5, 2026. Sentenced March 16, 2026 by Judge Sharon Holmes: 20 years DOC, first 10 years in custody, remaining 10 suspended. Fine $600 + $300 VCA + costs. Mental health treatment ordered. 3-year post-imprisonment supervision under sex offender registration conditions. No contact with victim. Oklahoma 85% rule applies. Judicial review request denied; may apply in future. Restitution to be ordered on application. Defense: Rob Henson. Prosecutor: Leyna Churchill.</p><p>NOTE: Admission during military security clearance background check is the investigative trigger — unusual vector. Porter stated the contact &#39;wasn&#39;t illegal anymore since the child was no longer her student&#39; and that she &#39;wasn&#39;t a pedophile since there was no coercion.&#39; Defense Counter Intelligence Security Agency involvement. Case filed in Tulsa County (offense location — Owasso) rather than Rogers County (school location). Oklahoma 85% rule: must serve at least 85% of the 10-year active term before parole eligibility.</p></blockquote>
 
 
 
@@ -190,7 +196,7 @@
       <td>Lewd molestation (21 O.S. § 1123(A))</td>
       <td>1</td>
       <td>felony</td>
-      <td>plea</td>
+      <td>guilty</td>
     </tr>
   
   </tbody>
@@ -227,7 +233,7 @@
     <tr>
       <td class="dim">2026-03-16</td>
       <td>sentencing</td>
-      <td>Sentencing scheduled before Judge Holmes — outcome pending</td>
+      <td>Sentenced by Judge Sharon Holmes: 20 years DOC, first 10 years in custody, remaining 10 suspended. Fine $600 + $300 VCA + costs. Mental health treatment ordered. 3-year post-imprisonment supervision under sex offender registration conditions. No contact with victim. Oklahoma 85% rule applies. Judicial review request denied. Restitution to be ordered on application.</td>
     </tr>
   
   </tbody>

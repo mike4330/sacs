@@ -77,6 +77,10 @@
           background: #f5f5f5; padding: 1rem; border-radius: 6px; }
     .dim { color: #888; font-size: 0.9em; }
     .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
   </style>
 </head>
 <body>
@@ -108,27 +112,27 @@
 
 
 
-<table style="border-collapse:collapse; margin-bottom:1rem; font-size:0.88em; width:auto;">
+<table class="datablock">
   
   
   
   
-  <tr><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">State</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Texas</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Court</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">339th District Court, Harris County</td></tr>
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>339th District Court, Harris County</td></tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Judge</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">Belinda Hill</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Incident Date</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">2018-08-01</td>
+    <td class="lbl">Judge</td><td>Belinda Hill</td>
+    <td class="lbl">Incident Date</td><td>2018-08-01</td>
   </tr>
   
   
   <tr>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Defendant Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">32</td>
-    <td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Victim Age</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">14</td>
+    <td class="lbl">Defendant Age</td><td>32</td>
+    <td class="lbl">Victim Age</td><td>14</td>
   </tr>
   
   
-  <tr><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; font-weight:600; color:#555; white-space:nowrap; background:#f7f8fa;">Prison Sentence</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; white-space:nowrap;">0.0 yrs</td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem; background:#f7f8fa;"></td><td style="border:1px solid #ccc; padding:0.2rem 0.6rem;"></td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
   
 </table>
 
