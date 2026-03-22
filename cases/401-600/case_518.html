@@ -40,12 +40,15 @@
       position: sticky; top: 0; z-index: 100;
       background: #fff;
       border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
       margin-bottom: 1.5rem;
       padding-top: 0.3rem;
       padding-bottom: 0.3rem;
     }
     header nav { align-items: center; }
-    nav > ul:last-child { gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child { flex: 1; min-width: 0; gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
     nav > ul:last-child a {
       display: inline-block;
       padding: 0.2rem 0.55rem;
@@ -119,6 +122,11 @@
   
   <tr><td class="lbl">State</td><td>Illinois</td><td class="lbl">Court</td><td>Tazewell County Circuit Court</td></tr>
   
+  
+  <tr>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2019-07-01</td>
+  </tr>
   
   
   <tr>
