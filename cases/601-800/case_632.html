@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samantha McFerrin — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Nav / header ──────────────────────────────────────────────────── */
+    nav ul { margin: 0; padding: 0; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+      margin-bottom: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    header nav { align-items: center; }
+    nav > ul:last-child { flex: 1; min-width: 0; gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
+    nav > ul:last-child a {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav > ul:last-child a:hover {
+      background: #4a90d9;
+      color: #fff;
+      border-color: #4a90d9;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><a href="../../index.html" style="text-decoration:none; line-height:0;"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
+      <ul>
+        <li><a href="../../cases.html">Cases</a></li>
+        
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../search.html">Search</a></li>
+        <li><a href="../../insights.html">Insights</a></li>
+        
+        <li><a href="../../topics.html">Topics</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<div style="float:right; margin: 0 0 1rem 1.5rem; text-align:center;">
+  <img src="../../images/mcferrin.jpg" alt="Samantha McFerrin" style="max-width:180px; max-height:220px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.18);">
+</div>
+
+<h1>Samantha McFerrin
+  <span class="dim" style="font-size:0.6em">#632</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+  <p class="dim">Also known as: Samantha Ashley McFerrin</p>
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>Harris County 180th District Court</td></tr>
+  
+  
+  <tr>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2018-08</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>27</td>
+    <td class="lbl">Victim Age</td><td>13</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>15.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former math teacher at Space Center Intermediate School (Clear Creek ISD), Texas. Age approximately 27–28 at time of first offense (August 2018); age 29 at arrest. Married at time of arrest. Had worked at the school since 2016.</p><p>Two male victims. Victim 1, age 14: a former 8th grade student who had moved to 9th grade. McFerrin obtained his Snapchat username and in August 2018 began messaging him that she missed him. The relationship escalated to exchanging nude photographs via Snapchat and sexual intercourse in her truck at least 15 times. McFerrin purchased the victim a computer, reportedly to keep the relationship quiet. She also confided in a female student about the relationship. Victim 2, age 13: McFerrin invited him to her classroom and performed oral sex on him there. She subsequently texted him that &#39;next time we should kiss.&#39; The victim had nude photographs of McFerrin on his phone.</p><p>Investigators were contacted February 11, 2020 about an inappropriate relationship between McFerrin and a former student. McFerrin resigned during the initial interview. Arrested March 3, 2020 (Galveston County Sheriff, Offense No. 2000000571); initial bond $35,000 per count ($70,000 total across two charges). Emergency protection order issued. Bond revoked November 9, 2021 for condition violation; rebonded at $70,000 on December 8, 2021. Grand jury indictment returned July 22, 2020. Charged with aggravated sexual assault of a child (F1, victim under 14) and sexual assault of a child (F2, victim 14–17). Defense attorney Chris Tritico; ADA Janna Oswald prosecuted for the Harris County DA Child Abuse Division. Superintendent Greg Smith informed parents and referred the case to the State Board of Educator Certification. Protective order granted February 26, 2021.</p><p>Entered guilty plea on September 1, 2022 (no jury); convicted of aggravated sexual assault of a child (F1). Sentenced to 15 years TDC. The sexual assault of a child count (victim 1, age 14) does not appear on this docket — likely resolved separately or dismissed as part of plea.</p><p>NOTE: Two distinct contact types across victims: oral-on-victim (victim 2, age 13, classroom) and penetrative intercourse (victim 1, age 14, truck). Grooming of victim 1 was digital (Snapchat/nude photos) progressing to transactional (computer purchase as concealment). Case originated with Galveston County Sheriff despite school (Space Center Intermediate) being in Harris County — likely reflects offense location or arrest jurisdiction. Defendant age at offense is approximate — age 29 at March 2020 arrest, so 27–28 in August 2018.</p></blockquote>
+
+
+<div style="clear:both;"></div>
+
+
+  <p>
+    
+      <span class="tag">guilty</span>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">snapchat</span>
+    
+      <span class="tag">multiple-victims</span>
+    
+      <span class="tag">explicit-photos</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">sexting</span>
+    
+      <span class="tag">long-term-relationship</span>
+    
+      <span class="tag">possible-additional-victims</span>
+    
+      <span class="tag">gifts</span>
+    
+      <span class="tag">on-campus</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>McFerrin, Samantha</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Tritico, Chris</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Oswald, Janna</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1399</td>
+      <td>Aggravated Sexual Assault of a Child</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1400</td>
+      <td>Sexual Assault of a Child</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2020-02-11</td>
+      <td>other</td>
+      <td>Harris County investigators contacted about inappropriate relationship between McFerrin and a former student; investigation opened, two victims identified</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2020-03-03</td>
+      <td>arrest</td>
+      <td>McFerrin turned herself in; charged with aggravated sexual assault of a child and sexual assault of a child; bond set at $70,000 with ankle monitor</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2020-07-22</td>
+      <td>indictment</td>
+      <td>Grand jury indictment returned; Court 180; Galveston County Sheriff Offense No. 2000000571</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2021-11-09</td>
+      <td>other</td>
+      <td>Bond revoked for bond condition violation; original $35,000 bond rescinded</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2021-12-08</td>
+      <td>bail</td>
+      <td>New surety bond filed at $70,000 (bondsman Burns-Pena, Shannon); released 12/08/2021</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2022-09-01</td>
+      <td>sentencing</td>
+      <td>Guilty plea entered (no jury); convicted of Aggravated Sexual Assault of a Child under 14 (F1); sentenced to 15 years TDC. Galveston County Sheriff Offense No. 2000000571.</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(4)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_979.html">979</a></td>
+      <td class="dim">2020-03-10</td>
+      <td>PEOPLE</td>
+      <td><a href="entry_979.html">Samantha McFerrin, 29, was charged with a first-degree felony of aggravated sexual assault of a chil</a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">snapchat</span>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">explicit-photos</span>
+        
+          <span class="tag">sexting</span>
+        
+          <span class="tag">possible-additional-victims</span>
+        
+          <span class="tag">gifts</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_980.html">980</a></td>
+      <td class="dim">2020-03-05</td>
+      <td>KTRK/ABC13</td>
+      <td><a href="entry_980.html">A former Clear Creek ISD teacher is charged with sexually assaulting two students, ages 13 and 14, w</a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">snapchat</span>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">explicit-photos</span>
+        
+          <span class="tag">gifts</span>
+        
+          <span class="tag">on-campus</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_981.html">981</a></td>
+      <td class="dim">2020-01-01</td>
+      <td>Harris County DA (Twitter/X)</td>
+      <td><a href="entry_981.html">Samantha McFerrin was sentenced to 15 yrs after being found guilty to Agg Sex Assault of a Child. We</a>…</td>
+      <td>
+        
+          <span class="tag">verdict</span>
+        
+          <span class="tag">guilty</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_982.html">982</a></td>
+      <td class="dim">2022-09-01</td>
+      <td>Harris County 180th District Court docket</td>
+      <td><a href="entry_982.html">Docket for Galveston County Sheriff Offense No. 2000000571, Court 180. Charge: AGG SEX ASSLT CHILD-U</a>…</td>
+      <td>
+        
+          <span class="tag">guilty</span>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">sex-offender-registration</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>
