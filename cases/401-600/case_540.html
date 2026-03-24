@@ -28,28 +28,34 @@
       margin-left: -0.4em;
     }
     main h1 {
-      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
     }
     main h2 {
       background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
     }
 
-    /* ── Nav / header ──────────────────────────────────────────────────── */
-    nav ul { margin: 0; padding: 0; }
-    header {
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
       position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       background: #fff;
       border-bottom: 1px solid #ddd;
       border-radius: 10px;
-      margin-left: 4px;
-      margin-right: 4px;
-      margin-bottom: 1.5rem;
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
     }
-    header nav { align-items: center; }
-    nav > ul:last-child { flex: 1; min-width: 0; gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
-    nav > ul:last-child a {
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
       display: inline-block;
       padding: 0.2rem 0.55rem;
       border-radius: 5px;
@@ -61,11 +67,36 @@
       border: 1px solid #dde0e5;
       transition: background 0.15s, color 0.15s;
     }
-    nav > ul:last-child a:hover {
-      background: #4a90d9;
-      color: #fff;
-      border-color: #4a90d9;
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
     }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
 
     /* ── Misc ──────────────────────────────────────────────────────────── */
     .status-active     { color: #2d7a2d; font-weight: bold; }
@@ -87,19 +118,22 @@
   </style>
 </head>
 <body>
-  <header class="container">
-    <nav>
-      <ul><li><a href="../../index.html" style="text-decoration:none; line-height:0;"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
-      <ul>
-        <li><a href="../../cases.html">Cases</a></li>
-        
-        <li><a href="../../people.html">People</a></li>
-        <li><a href="../../search.html">Search</a></li>
-        <li><a href="../../insights.html">Insights</a></li>
-        
-        <li><a href="../../topics.html">Topics</a></li>
-        
-      </ul>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
     </nav>
   </header>
   <main class="container">
@@ -130,7 +164,7 @@
   
   
   <tr>
-    <td class="lbl"></td><td></td>
+    <td class="lbl">Defendant Age</td><td>46</td>
     <td class="lbl">Victim Age</td><td>17</td>
   </tr>
   

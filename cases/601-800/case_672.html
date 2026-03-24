@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ellen Lindsay Niemiec — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Ellen Lindsay Niemiec
+  <span class="dim" style="font-size:0.6em">#672</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>South Carolina</td><td class="lbl">Court</td><td>Berkeley County Court of General Sessions</td></tr>
+  
+  
+  <tr>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2014-04-11</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>29</td>
+    <td class="lbl">Victim Age</td><td>17</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former teacher at Cross High School, Cross, Berkeley County, South Carolina. Age 29 at time of offense. Married with three children.</p><p>On April 11, 2014, Niemiec engaged in sexual conduct with three of her students at a house party in Berkeley County. Two victims were 17 years old; the third was 18. The conduct had been going on for several weeks prior to the school principal notifying law enforcement, according to the Berkeley County Sheriff&#39;s Office. Niemiec was placed on administrative leave when school administration learned of concerns; Berkeley School District reported the matter to law enforcement and cooperated fully.</p><p>On April 28, 2014, the sheriff&#39;s office received a formal complaint. Niemiec turned herself in on May 8, 2014. Bond was set at $21,092 with house arrest conditions. She was terminated from the Berkeley School District and barred from Cross High School campus with a no-contact order for all students.</p><p>Charged with 3 counts of sexual battery of a student (SC § 59-25-47). Two counts were felonies (victims age 17) and one was a misdemeanor (victim age 18). Sentenced November 13, 2015 to 5-year suspended sentence and 3 years probation (concurrent). No incarceration.</p><p>NOTE: sentence_years = 0; suspended sentence. The incident occurred at an off-campus house party, not at the school. The three-victim party context is analytically significant — whether encounters were simultaneous or sequential is not established in available records. The prior weeks of unreported conduct before the principal notified law enforcement is a prior-warning-ignored pattern.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">multiple-victims</span>
+    
+      <span class="tag">prior-warning-ignored</span>
+    
+      <span class="tag">no-prison</span>
+    
+      <span class="tag">adult-victim</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Niemiec, Ellen Lindsay</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1515</td>
+      <td>Sexual battery of a student (SC § 59-25-47, felony) — victim age 17, Count 1</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1516</td>
+      <td>Sexual battery of a student (SC § 59-25-47, felony) — victim age 17, Count 2</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1517</td>
+      <td>Sexual battery of a student (SC § 59-25-47, misdemeanor) — victim age 18, Count 3</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2014-05-08</td>
+      <td>arrest</td>
+      <td></td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2015-11-13</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_1072.html">1072</a></td>
+      <td class="dim">2014-05-08</td>
+      <td>WCSC / Live 5 News (Patrick Phillips)</td>
+      <td><a href="entry_1072.html">Bond was set at $21,092 for a 29-year-old teacher at Cross High School accused of sexual battery wit</a>…</td>
+      <td>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">prior-warning-ignored</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_1073.html">1073</a></td>
+      <td class="dim">2014-05-11</td>
+      <td>FOX8 / Post and Courier</td>
+      <td><a href="entry_1073.html">A South Carolina teacher is accused of having sex with three students at a house party. Ellen Lindsa</a>…</td>
+      <td>
+        
+          <span class="tag">multiple-victims</span>
+        
+          <span class="tag">adult-victim</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>

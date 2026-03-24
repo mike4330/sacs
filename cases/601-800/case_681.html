@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelsie Rochelle Koepke — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Kelsie Rochelle Koepke
+  <span class="dim" style="font-size:0.6em">#681</span>
+  <span class="status-closed" style="font-size:0.55em">closed</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>Fort Bend County District Court</td></tr>
+  
+  
+  <tr>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2017-10-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>25</td>
+    <td class="lbl">Victim Age</td><td>15</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Paraprofessional (&#34;Ms. K&#34;) at Paetow High School, Katy ISD, Fort Bend County, Texas. Age approximately 25 at time of charges. Not a classroom teacher; supervised students during lunch period.</p><p>Victim was a 15-year-old male student. Koepke met the victim at a school event in October 2017 and gave him her Snapchat username (&#34;Momma K&#34;), telling him not to save any of their chats. On homecoming night shortly after, she sent him nude photos of her breasts and two explicit videos of herself. The following day she approached the student at school, said &#34;I can&#39;t believe I did that,&#34; and apologized. A few days later she sent additional nude photos and videos.</p><p>When questioned by investigators, Koepke claimed she initially thought the student was a person from a dating site to whom she had already been sending explicit material. She acknowledged that when she realized it was the student, she continued sending photos to &#34;keep the peace.&#34; She admitted knowing the victim from school because she supervised his lunch period.</p><p>Charged with improper relationship between educator and student (Tex. Penal Code § 21.12, F2) and online solicitation of a minor. On September 3, 2020, Koepke received deferred adjudication: 4 years community supervision ending September 2, 2024. A motion for early termination was filed November 7, 2023; early termination was granted and the deferred adjudication was terminated September 17, 2024. No formal conviction entered.</p><p>NOTE: Deferred adjudication in Texas is not a conviction; successful completion results in case dismissal. The online solicitation charge does not appear in the available docket entries and may have been resolved separately or dismissed. Incident date is approximate (October 2017 homecoming).</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">snapchat</span>
+    
+      <span class="tag">explicit-photos</span>
+    
+      <span class="tag">sexting</span>
+    
+      <span class="tag">probation</span>
+    
+      <span class="tag">no-prison</span>
+    
+      <span class="tag">concealment</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Koepke, Kelsie Rochelle</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1541</td>
+      <td>Improper relationship between educator and student (Tex. Penal Code § 21.12, F2)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1542</td>
+      <td>Online solicitation of a minor</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2020-09-03</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_1088.html">1088</a></td>
+      <td class="dim">2019-03-22</td>
+      <td>KPRC2 (Click2Houston)</td>
+      <td><a href="entry_1088.html">A high school employee is facing charges after authorities said she sent inappropriate videos and ph</a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">snapchat</span>
+        
+          <span class="tag">explicit-photos</span>
+        
+          <span class="tag">sexting</span>
+        
+          <span class="tag">no-prison</span>
+        
+          <span class="tag">concealment</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_1089.html">1089</a></td>
+      <td class="dim">2020-09-03</td>
+      <td>Texas court docket</td>
+      <td><a href="entry_1089.html">Improper relationship between educator/student (F2, Tex. Penal Code § 21.12). September 3, 2020: def</a>…</td>
+      <td>
+        
+          <span class="tag">probation</span>
+        
+          <span class="tag">no-prison</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>

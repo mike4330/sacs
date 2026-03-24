@@ -28,28 +28,34 @@
       margin-left: -0.4em;
     }
     main h1 {
-      background-image: linear-gradient(90deg, rgba(26,58,196,0.09) 0%, rgba(26,58,92,0) 85%);
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
     }
     main h2 {
       background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
     }
 
-    /* ── Nav / header ──────────────────────────────────────────────────── */
-    nav ul { margin: 0; padding: 0; }
-    header {
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
       position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       background: #fff;
       border-bottom: 1px solid #ddd;
       border-radius: 10px;
-      margin-left: 4px;
-      margin-right: 4px;
-      margin-bottom: 1.5rem;
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
     }
-    header nav { align-items: center; }
-    nav > ul:last-child { flex: 1; min-width: 0; gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
-    nav > ul:last-child a {
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
       display: inline-block;
       padding: 0.2rem 0.55rem;
       border-radius: 5px;
@@ -61,11 +67,36 @@
       border: 1px solid #dde0e5;
       transition: background 0.15s, color 0.15s;
     }
-    nav > ul:last-child a:hover {
-      background: #4a90d9;
-      color: #fff;
-      border-color: #4a90d9;
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
     }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
 
     /* ── Misc ──────────────────────────────────────────────────────────── */
     .status-active     { color: #2d7a2d; font-weight: bold; }
@@ -87,24 +118,27 @@
   </style>
 </head>
 <body>
-  <header class="container">
-    <nav>
-      <ul><li><a href="index.html" style="text-decoration:none; line-height:0;"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS" style="display:block;"></a></li></ul>
-      <ul>
-        <li><a href="cases.html">Cases</a></li>
-        
-        <li><a href="people.html">People</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="insights.html">Insights</a></li>
-        
-        <li><a href="topics.html">Topics</a></li>
-        
-      </ul>
+  <header id="site-header">
+    <a href="index.html" id="site-logo"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="cases.html" class="nav-btn">Cases</a>
+      
+      <a href="people.html" class="nav-btn">People</a>
+      <a href="search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
     </nav>
   </header>
   <main class="container">
     
-<h1>Cases <span class="dim">(604)</span></h1>
+<h1>Cases <span class="dim">(649)</span></h1>
 
 
 <figure>
@@ -7370,6 +7404,546 @@
       <td class="dim">2026-03-23</td>
     </tr>
   
+    <tr>
+      <td class="dim">655</td>
+      <td><a href="cases/601-800/case_655.html">Alisha Renee Largent</a>
+        
+      </td>
+      <td>Virginia</td>
+      <td>Rockingham County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">656</td>
+      <td><a href="cases/601-800/case_656.html">Meaghan White</a>
+        
+      </td>
+      <td>New York</td>
+      <td>Westchester County Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">657</td>
+      <td><a href="cases/601-800/case_657.html">Brandyn Martin Hargrove</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Brazoria County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">658</td>
+      <td><a href="cases/601-800/case_658.html">Kristen Nicole Sullivan</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Broward County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">659</td>
+      <td><a href="cases/601-800/case_659.html">Dionne Marie Younce</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>St. Johns County Circuit Court, 7th Circuit</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">660</td>
+      <td><a href="cases/601-800/case_660.html">Cecelie Diane Loy</a>
+        
+      </td>
+      <td>Arkansas</td>
+      <td>White County Circuit Court, 17th Judicial District</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">661</td>
+      <td><a href="cases/601-800/case_661.html">Angela Csader</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Maricopa County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">662</td>
+      <td><a href="cases/601-800/case_662.html">Amie Lou Neely</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>St. Lucie County Circuit Court, 19th Circuit</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">663</td>
+      <td><a href="cases/601-800/case_663.html">Lydia Pinto</a>
+        
+      </td>
+      <td>New Jersey</td>
+      <td>Somerset County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">664</td>
+      <td><a href="cases/601-800/case_664.html">Shannon Handy Wood</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Davie County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">665</td>
+      <td><a href="cases/601-800/case_665.html">Jessica Welch Greene</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Davie County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">666</td>
+      <td><a href="cases/601-800/case_666.html">Laura Nicole Lasek</a>
+        
+      </td>
+      <td>California</td>
+      <td>Yuba County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">667</td>
+      <td><a href="cases/601-800/case_667.html">Meghan Mary Rodriguez</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Santa Rosa County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">668</td>
+      <td><a href="cases/601-800/case_668.html">Jessica Bailey Wishnask</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>New Hanover County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">669</td>
+      <td><a href="cases/601-800/case_669.html">Alyson Nicole London</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Orange County Circuit Court, 9th Judicial Circuit</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">670</td>
+      <td><a href="cases/601-800/case_670.html">Maggie Christine Stastny</a>
+        
+      </td>
+      <td>Colorado</td>
+      <td>Arapahoe County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">671</td>
+      <td><a href="cases/601-800/case_671.html">Wendy L. Hickman</a>
+        
+      </td>
+      <td>Oklahoma</td>
+      <td>Pottawatomie County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">672</td>
+      <td><a href="cases/601-800/case_672.html">Ellen Lindsay Niemiec</a>
+        
+      </td>
+      <td>South Carolina</td>
+      <td>Berkeley County Court of General Sessions</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">673</td>
+      <td><a href="cases/601-800/case_673.html">Rebecca Carol Swinson</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Forsyth County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">674</td>
+      <td><a href="cases/601-800/case_674.html">Jennifer Ann Pike</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Forsyth County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">675</td>
+      <td><a href="cases/601-800/case_675.html">Angela Barbosa</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Nueces County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">676</td>
+      <td><a href="cases/601-800/case_676.html">Shaundra Florence Cartwright</a>
+        
+      </td>
+      <td>Tennessee</td>
+      <td>Sumner County Criminal Court</td>
+      <td><span class="status-verdict">verdict</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">677</td>
+      <td><a href="cases/601-800/case_677.html">Rachelle Louise Terry</a>
+        
+      </td>
+      <td>Georgia</td>
+      <td>Murray County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">678</td>
+      <td><a href="cases/601-800/case_678.html">Tiffany Ann Blair</a>
+        
+      </td>
+      <td>Alabama</td>
+      <td>Covington County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">679</td>
+      <td><a href="cases/601-800/case_679.html">Kimberly Lynne Umphlett</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Currituck Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">680</td>
+      <td><a href="cases/601-800/case_680.html">Laura Michelle Lozano</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>341st District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">681</td>
+      <td><a href="cases/601-800/case_681.html">Kelsie Rochelle Koepke</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Fort Bend County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">682</td>
+      <td><a href="cases/601-800/case_682.html">Christie David</a>
+        
+      </td>
+      <td>Tennessee</td>
+      <td>Bradley County Criminal Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">683</td>
+      <td><a href="cases/601-800/case_683.html">Rachel Marie Gillespie</a>
+        <br><span class="dim">Rachel Marie Bourne</span>
+      </td>
+      <td>Louisiana</td>
+      <td>31st Judicial District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">684</td>
+      <td><a href="cases/601-800/case_684.html">Amanda Kay Miller</a>
+        
+      </td>
+      <td>Maryland</td>
+      <td>Harford County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">685</td>
+      <td><a href="cases/601-800/case_685.html">Jenna Tarabelsi</a>
+        
+      </td>
+      <td>Massachusetts</td>
+      <td>Middlesex Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">686</td>
+      <td><a href="cases/601-800/case_686.html">Jessica Fuchs</a>
+        
+      </td>
+      <td>Washington</td>
+      <td>Kitsap County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">687</td>
+      <td><a href="cases/601-800/case_687.html">Nicole Hebner</a>
+        
+      </td>
+      <td>Washington</td>
+      <td>Kitsap County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">688</td>
+      <td><a href="cases/601-800/case_688.html">Marlena Nichole Mints</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>265th Judicial District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>3</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">689</td>
+      <td><a href="cases/601-800/case_689.html">Summer Sparrow</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Gaston County District Court</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">690</td>
+      <td><a href="cases/601-800/case_690.html">Stephanie Adams</a>
+        
+      </td>
+      <td>Mississippi</td>
+      <td>Adams County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">691</td>
+      <td><a href="cases/601-800/case_691.html">Jaimie Dominy Page</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Galveston County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-23</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">692</td>
+      <td><a href="cases/601-800/case_692.html">Katie Leigh Carsey</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Marion County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">693</td>
+      <td><a href="cases/601-800/case_693.html">Melissa Lee Borsch</a>
+        
+      </td>
+      <td>Florida</td>
+      <td>Pasco County Circuit Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">694</td>
+      <td><a href="cases/601-800/case_694.html">Jennifer Lynn Whiting</a>
+        
+      </td>
+      <td>Arizona</td>
+      <td>Pima County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">695</td>
+      <td><a href="cases/601-800/case_695.html">Kelly Ann Garcia</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>337th District Court, Harris County</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">696</td>
+      <td><a href="cases/601-800/case_696.html">Caron Elizabeth Blanton</a>
+        
+      </td>
+      <td>North Carolina</td>
+      <td>Cleveland County Superior Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">697</td>
+      <td><a href="cases/601-800/case_697.html">Saralyn Gayle Portwood</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>296th District Court, Collin County</td>
+      <td><span class="status-closed">closed</span></td>
+      <td>1</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">698</td>
+      <td><a href="cases/601-800/case_698.html">Tracy Marie Barras</a>
+        
+      </td>
+      <td>Louisiana</td>
+      <td>Acadia Parish District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">699</td>
+      <td><a href="cases/601-800/case_699.html">Maris Alexandra Gonzalez</a>
+        
+      </td>
+      <td>Texas</td>
+      <td>Bexar County District Court</td>
+      <td><span class="status-sentenced">sentenced</span></td>
+      <td>2</td>
+      <td class="dim">2026-03-24</td>
+    </tr>
+  
   </tbody>
 </table>
 </figure>
@@ -7416,7 +7990,7 @@ th[data-col].desc::after { content: " ▼"; opacity: 1; }
 
   </main>
   <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
-    <p class="dim">Generated by <code>sacs render</code> — 2026-03-23 11:04 UTC</p>
+    <p class="dim">Generated by <code>sacs render</code> — 2026-03-24 10:34 UTC</p>
   </footer>
 </body>
 </html>

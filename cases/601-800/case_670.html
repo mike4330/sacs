@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maggie Christine Stastny — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Maggie Christine Stastny
+  <span class="dim" style="font-size:0.6em">#670</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Colorado</td><td class="lbl">Court</td><td>Arapahoe County District Court</td></tr>
+  
+  
+  <tr>
+    <td class="lbl"></td><td></td>
+    <td class="lbl">Incident Date</td><td>2019-05-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>32</td>
+    <td class="lbl">Victim Age</td><td>16</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>7.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former teacher employed by Cherry Creek School District and assigned to teach inmates at the Marvin W. Foote Youth Services Center (juvenile detention facility for youth ages 10-17), located at 13500 East Fremont Place, Englewood, Colorado (Arapahoe County). Age 32 at time of offense (2019). Stastny also had prior teaching assignments with Adams County, Aurora Public Schools, and Jefferson County Schools.</p><p>Victim was an underage male inmate at the Foote Center (exact age not reported; facility houses youth 10-17). Stastny gave the victim money and arranged meetings outside the facility. In May 2019, she met him at the Denver Public Library off Quebec Street, where they had sex in a car and in a library bathroom. According to the probable cause affidavit, they had sex in a car on multiple occasions and once in the library bathroom.</p><p>Discovery came through a Facebook Messenger conversation Stastny had with a former coworker, in which she wrote: &#34;Let&#39;s just say I fu**ed up a bit&#34; and &#34;I definitely slept with him.&#34; Screenshots of this conversation were included in the arrest affidavit. Cherry Creek School District had already decided in April not to renew Stastny&#39;s contract for unrelated reasons. In May 2019, the district learned of an allegation of inappropriate contact and placed her on administrative leave, cooperating with law enforcement throughout their investigation. Stastny was arrested September 19, 2019 on a charge of sexual assault on a child by a person in a position of trust. Bond was set at $25,000. Investigators noted there may be additional victims.</p><p>Pleaded guilty March 2021 to sexual exploitation of a child (Colorado). Other charges dismissed as part of plea. Sentenced May 10, 2021 to 7 years Colorado state prison.</p><p>NOTE: Victim age is not stated in available articles; recorded as 16 (mid-range estimate for a Foote Center inmate). This case falls under court-ordered-victims and behavioral-health tags given the juvenile detention setting. Cash grooming (giving money to victim) is a confirmed element. The off-site nature of the physical encounters (library, car) distinguishes this from on-campus assault patterns. Facebook messenger evidence is the primary discovery mechanism — unusual compared to the more typical Snapchat/text discovery pattern in this DB.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">behavioral-health</span>
+    
+      <span class="tag">court-ordered-victims</span>
+    
+      <span class="tag">possible-additional-victims</span>
+    
+      <span class="tag">cash</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Stastny, Maggie Christine</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1510</td>
+      <td>Sexual exploitation of a child (CRS § 18-6-403) — plea</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1511</td>
+      <td>Sexual assault on a child by a person in a position of trust (CRS § 18-3-405.3) — original charge, dismissed</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2019-09-19</td>
+      <td>arrest</td>
+      <td></td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2021-05-10</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_1068.html">1068</a></td>
+      <td class="dim">2019-09-20</td>
+      <td>FOX31 / Colorado&#39;s Own Channel 2 (Dara Bitler)</td>
+      <td><a href="entry_1068.html">A former teacher who worked at the Marvin W. Foote Youth Services Center in Centennial was arrested </a>…</td>
+      <td>
+        
+          <span class="tag">grooming</span>
+        
+          <span class="tag">behavioral-health</span>
+        
+          <span class="tag">court-ordered-victims</span>
+        
+          <span class="tag">possible-additional-victims</span>
+        
+          <span class="tag">cash</span>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="dim"><a href="entry_1069.html">1069</a></td>
+      <td class="dim">2021-05-11</td>
+      <td>CBS Colorado / CBS4</td>
+      <td><a href="entry_1069.html">A 33-year-old woman who worked for the Cherry Creek School District and taught inmates at a juvenile</a>…</td>
+      <td>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">behavioral-health</span>
+        
+          <span class="tag">court-ordered-victims</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>
