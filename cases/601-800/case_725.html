@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emma Jean Alexander Hardy — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Emma Jean Alexander Hardy
+  <span class="dim" style="font-size:0.6em">#725</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>252nd District Court, Jefferson County</td></tr>
+  
+  
+  <tr>
+    <td class="lbl">Judge</td><td>Layne Walker</td>
+    <td class="lbl">Incident Date</td><td>2012-01-08</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>57</td>
+    <td class="lbl">Victim Age</td><td>17</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>6.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former registrar at Port Arthur Memorial High School, Port Arthur ISD, Port Arthur, Texas (Jefferson County). Age 57 at time of offense. Not a classroom teacher — Hardy worked in the school&#39;s registration office; however, Texas Penal Code § 21.12 covers all school employees, not only teachers.</p><p>On January 8, 2012, around 8 p.m., a Port Arthur police officer found Hardy and a 17-year-old male student engaged in a sex act — Hardy performing oral sex on the student — in a car parked near the downtown seawall in a publicly accessible parking lot. The student was a football player at Memorial High School. Both were arrested: Hardy was released January 9 on a $75,000 bond; the student was charged with Class A misdemeanor public lewdness and released on a $250 bond. Hardy was no longer employed with Port Arthur ISD following her arrest.</p><p>On February 2, 2012, a Jefferson County grand jury indicted Hardy on one count of improper relationship between an educator and a student (Texas Penal Code § 21.12), a second-degree felony carrying up to 20 years in prison.</p><p>On September 17, 2012, Hardy was sentenced to six years in prison — the maximum under her plea deal — by 252nd District Court Judge Layne Walker. Hardy was taken into custody immediately after sentencing. Reporting at the time stated she would not be eligible for parole. Judge Walker had harsh words at sentencing: &#34;Maybe you have been a really good person up to this point. I will never bat an eye at holding people like you accountable.&#34; He told Hardy that parents &#34;trust people like you to take care of their babies&#34; and called her conduct &#34;despicable.&#34;</p><p>NOTE: Hardy was a school registrar, not a classroom teacher. contact_type = 2 (performed oral sex on victim per arrest report). sentence_years = 6 (flat; plea capped at 6 years, reported no parole eligibility). In-flagrante discovery — officer observed the sex act directly. Victim was concurrently charged with public lewdness. Hardy&#39;s age (57) is among the oldest defendants in this DB. Plea deal capped maximum at 6 years (well below the 20-year statutory maximum); judge imposed the plea maximum.</p></blockquote>
+
+
+
+
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Hardy, Emma Jean Alexander</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1637</td>
+      <td>Texas Penal Code § 21.12 — Improper relationship between educator and student, 2nd degree felony</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2012-01-08</td>
+      <td>arrest</td>
+      <td>Port Arthur police officer found Hardy and 17-year-old male student engaged in sex act (oral sex) in car parked near downtown seawall, approximately 8 PM. Both arrested: Hardy held on $75,000 bond (released Jan. 9); student charged with Class A misdemeanor public lewdness ($250 bond)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2012-02-02</td>
+      <td>indictment</td>
+      <td>Jefferson County grand jury indicted Hardy on one count of improper relationship between an educator and a student (Texas Penal Code § 21.12), 2nd degree felony; faces up to 20 years</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2012-09-17</td>
+      <td>sentencing</td>
+      <td>Sentenced to 6 years in prison (maximum under plea deal) by Judge Layne Walker; taken into custody immediately; reported not eligible for parole. Judge: &#39;I will never bat an eye at holding people like you accountable&#39;</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim"><a href="entry_1166.html">1166</a></td>
+      <td class="dim">2012-09-17</td>
+      <td>KBMT 12News / Beaumont Enterprise</td>
+      <td><a href="entry_1166.html">Former PAISD employee gets 6 years for improper relationship with student
+
+A former Port Arthur Memo</a>…</td>
+      <td>
+        
+          <span class="tag">guilty</span>
+        
+          <span class="tag">plea</span>
+        
+          <span class="tag">physical-evidence</span>
+        
+          <span class="tag">maximum-sentence</span>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>

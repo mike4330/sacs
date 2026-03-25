@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tammy Clinton — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Tammy Clinton
+  <span class="dim" style="font-size:0.6em">#752</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>Hillsborough County Circuit Court</td></tr>
+  
+  
+  <tr>
+    <td class="lbl">Judge</td><td>Chet Tharpe</td>
+    <td class="lbl"></td><td></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>39</td>
+    <td class="lbl">Victim Age</td><td>14</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former eighth-grade geography teacher at Farnell Middle School, Hillsborough County, Florida (employed for approximately 8 years). Age 39 at time of arrest. Married, with two children; one child has special needs requiring 24-hour care. Resided at 15613 Eastbourn Drive, Odessa, Florida.</p><p>Victim was a 14-year-old boy with learning disabilities who struggled with communication. Clinton was not his assigned teacher but served as his mentor during seventh and eighth grade. She cultivated the relationship through persistent attentiveness — appearing at parent-teacher conferences for a student not in her classes, sharing intimate details of her marriage with the boy, and encouraging him to touch her. The victim&#39;s mother noticed Clinton&#39;s unusual proximity and prompted her son to speak up. He reported Clinton&#39;s advances to a school official before disclosing everything to his mother. Clinton forced the boy to touch her breasts while she groped his buttocks, and propositioned him twice for off-campus meetings for sexual activity. There were no other known victims.</p><p>Arrested approximately February 4, 2010 by the Hillsborough County Sheriff&#39;s Office on two counts of lewd and lascivious molestation and two counts of lewd and lascivious conduct; released on $30,000 bail; suspended with pay. The molestation counts were dropped at plea — ASA Rita Peters stated the touching did not legally constitute molestation. On May 10, 2011, Clinton pleaded guilty to one count of lewd and lascivious conduct before Judge Chet Tharpe and was sentenced to 10 years of sex offender probation. No prison time. Special probation conditions: prohibited from living near a school; sex offender treatment required; may only be around her own children; may not distribute Halloween candy or wear Easter Bunny or Santa Claus costumes.</p><p>NOTE: sentence_years = 0.0 (probation only; no incarceration). contact_type = 1 (non-penetrative — breast touching and groping). The molestation charge was dropped on the basis that the physical contact did not legally satisfy the molestation threshold; the conduct supporting the conviction was the solicitation/touching that fell under lewd conduct. Contrast with Ragusa (same judge Tharpe, same court, April 2010): Ragusa received 10 years prison on comparable charges — Tharpe explicitly referenced Ragusa at Clinton&#39;s sentencing. Mitigating factors cited by ASA: no intercourse; mental health history with unmonitored medication; good teaching record; special-needs child requiring full-time care; victim family declined to pursue trial.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">guilty</span>
+    
+      <span class="tag">grooming</span>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">sex-offender-registration</span>
+    
+      <span class="tag">probation</span>
+    
+      <span class="tag">no-prison</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+      <span class="tag">emotional-manipulation</span>
+    
+      <span class="tag">special-needs-victim</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Tharpe, Chet</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Peters, Rita</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1744</td>
+      <td>Lewd and Lascivious Conduct (Fla. Stat. § 800.04)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1745</td>
+      <td>Lewd and Lascivious Molestation (Fla. Stat. § 800.04)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">1746</td>
+      <td>Lewd and Lascivious Conduct (Fla. Stat. § 800.04)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2010-02-04</td>
+      <td>arrest</td>
+      <td>Arrested by Hillsborough County Sheriff&#39;s Office on two counts lewd and lascivious molestation and two counts lewd and lascivious conduct; released on $30,000 bail; suspended with pay</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2011-05-10</td>
+      <td>sentencing</td>
+      <td>Guilty plea to one count lewd and lascivious conduct; 10 years sex offender probation; molestation counts dropped. Judge: Chet Tharpe. Prosecutor: Rita Peters (ASA).</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+
+  <p class="dim">No entries yet.</p>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>
