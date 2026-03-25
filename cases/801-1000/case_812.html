@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amanda Sotelo — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+      
+      <a href="../../people.html" class="nav-btn">People</a>
+      <a href="../../search.html" class="nav-btn">Search</a>
+      <div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../topics.html">Topics</a>
+          
+          
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main class="container">
+    
+
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+
+<h1>Amanda Sotelo
+  <span class="dim" style="font-size:0.6em">#812</span>
+  <span class="status-closed" style="font-size:0.55em">closed</span>
+</h1>
+
+
+
+<table class="datablock">
+  
+  
+  
+  
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>379th District Court</td></tr>
+  
+  
+  <tr>
+    <td class="lbl">Judge</td><td>Ron Rangel</td>
+    <td class="lbl">Incident Date</td><td>2012-10-01</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="lbl">Defendant Age</td><td>35</td>
+    <td class="lbl">Victim Age</td><td>14</td>
+  </tr>
+  
+  
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+  
+</table>
+
+
+  <blockquote><p>Former substitute teacher in several San Antonio-area school districts, Bexar County, Texas. Age 35 at time of offense (DOB November 29, 1976), married mother.</p><p>Victim was a 14-year-old male student. The offense date listed on the charge is October 1, 2012. Sotelo was arrested by the Bexar County Sheriff&#39;s Office on November 1, 2012; initial bond was set at $75,000, later reduced to $40,000. She was indicted by a grand jury on June 19, 2013 and assigned to the 379th District Court.</p><p>Charged with indecency with a child — contact (Texas Penal Code § 21.11(a)(1), F2 — 2nd-degree felony), a more serious charge than the standard educator statute (TPC § 21.12). The charge carries an affirmative finding as a 3G offense (Texas Code of Criminal Procedure Art. 42A.054), which would require serving at least 50% of any prison sentence before parole eligibility.</p><p>On January 29, 2015 (arraignment/trial date), Sotelo entered a nolo contendere plea. On March 3, 2015, Judge Ron Rangel sentenced her to 5 years deferred adjudication community supervision, a $1,500 fine, and $689 in court costs (Case DC2013CR5293). Defense attorney: David Andre Woodard (retained).</p><p>The deferred adjudication period was troubled: a first motion to revoke probation was filed August 18, 2016; after multiple hearings, the motion to adjudicate guilt was denied on November 18, 2016 and Sotelo was continued on probation. A second motion to revoke was filed July 10, 2018; again the motion to adjudicate was denied September 24, 2018, with Sotelo continued on probation; she was briefly jailed October–December 2018 while awaiting a treatment bed. On March 6, 2020 — three days after the scheduled end of the 5-year supervision period — the deferred adjudication was dismissed and the case closed. No formal conviction was entered.</p><p>NOTE: contact_type = 1 (TPC § 21.11(a)(1) — indecency by touching; non-penetrative; penetrative conduct would have been charged under § 22.011). sentence_years = 0.0 (deferred adjudication; no prison). Texas deferred adjudication dismissed = no formal conviction on record. 3G offense finding means any future violation or revocation would have required serving 50% of the prison term before parole. Two MTR hearings (2016 and 2018) both denied. The note in the stub about the victim potentially being in Sotelo&#39;s class at least once is plausible given her substitute role; the charge is indecency (§ 21.11), not improper relationship (§ 21.12), suggesting the charging was based on the nature of the contact rather than the educator relationship.</p></blockquote>
+
+
+
+
+
+  <p>
+    
+      <span class="tag">plea</span>
+    
+      <span class="tag">probation</span>
+    
+      <span class="tag">no-prison</span>
+    
+      <span class="tag">charge-reduction</span>
+    
+  </p>
+
+
+<!-- People -->
+
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Woodard, David Andre</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+  
+    <tr>
+      <td>Rangel, Ron</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Charges -->
+
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">1724</td>
+      <td>Indecency with a child — contact (Texas Penal Code § 21.11(a)(1), F2) — nolo contendere; 5-year deferred adjudication; 3G offense finding; case dismissed 03/06/2020 upon completion</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Timeline -->
+
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="dim">2012-11-01</td>
+      <td>arrest</td>
+      <td>Arrested by Bexar County Sheriff; bond set $75,000 (later reduced to $40,000)</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2013-06-19</td>
+      <td>indictment</td>
+      <td>Grand jury indictment; case assigned to 379th District Court</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2015-03-03</td>
+      <td>sentencing</td>
+      <td>Nolo contendere plea; 5-year deferred adjudication community supervision; $1,500 fine; affirmative finding of 3G offense</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2016-08-18</td>
+      <td>other</td>
+      <td>First motion to revoke probation filed; remanded without bond; adjudication denied 11/18/2016; continued on probation</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2018-07-10</td>
+      <td>other</td>
+      <td>Second motion to revoke probation; adjudication denied 09/24/2018; brief jail stay Oct–Dec 2018 (treatment bed); continued on probation</td>
+    </tr>
+  
+    <tr>
+      <td class="dim">2020-03-06</td>
+      <td>other</td>
+      <td>Deferred adjudication dismissed upon completion of 5-year supervision; case closed; no formal conviction</td>
+    </tr>
+  
+  </tbody>
+</table>
+</figure>
+
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+
+  <p class="dim">No entries yet.</p>
+
+
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+    
+  </footer>
+</body>
+</html>
