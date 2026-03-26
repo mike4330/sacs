@@ -6,4 +6,6 @@ This project catalogs criminal cases — charges, dispositions, sentences, and o
 
 **Scope note:** This database covers female-perpetrated cases only. This is a deliberate analytic choice, not a claim about prevalence. Male perpetrators represent the substantial majority of educator sexual abuse cases in available research.
 
+Cases are included when the offender held a formal or functional position of authority over minors in an educational or instructional context — classroom teachers, coaches, aides, and administrators, as well as adjacent trust relationships such as karate instructors, dance teachers, and private tutors. Cases are excluded if the offender's connection to an educational role was incidental to the offense.
+
 The site is generated from a local SQLite database using a Python CLI tool.
