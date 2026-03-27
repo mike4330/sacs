@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trina Rocker — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<p class="dim"><a href="../../index.html">← Cases</a></p>
+<h1>Trina Rocker
+  <span class="dim" style="font-size:0.6em">#815</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>Polk County Circuit Court</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2011-11</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>40</td><td class="lbl">Victim Age</td><td>17</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.21 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former secretary at Landmark Baptist Christian High School, Haines City, Florida (Polk County). Age 41 at arrest (40 at time of offense). Haines City resident. Had worked at the school 2–3 years; husband was also employed at the school; family attended Landmark Baptist Church. Note: Rocker was administrative staff (secretary), not a classroom teacher.</p><p>Victim: 17-year-old male student. Relationship began November 2011 and continued through approximately May 2012 (when the student graduated). Sexual encounters occurred in Rocker&#39;s car, at her home, and during a school class trip to Washington, D.C. The victim&#39;s parents reported the relationship to the sheriff&#39;s office and participated in a controlled phone call in which Rocker asked them not to report it. Detectives obtained text messages between Rocker and the student referencing sex.</p><p>Arrested September 27, 2012. Pleaded guilty January 2014 to 3 counts of unlawful sexual activity with a minor. Sentenced in March 2014 by Circuit Judge Dennis Maloney (retired judge sitting by assignment): 15 years probation with first year in Polk County Jail. The scoresheet calculated the lowest recommended sentence at more than 15 years prison; Maloney went substantially below guidelines, citing criteria allowing a downward departure. Defense attorney Rafael Echemendia argued the victim was a willing participant who aggressively pursued Rocker, that she showed remorse, and that the offenses were unsophisticated and isolated. Polk County Sheriff Grady Judd stated he was &#39;mortified&#39; that Rocker was not serving 15 years.</p><p>After approximately 11 weeks in Polk County Jail, Rocker requested further reduction at a May 21, 2014 hearing. Because of her sexual offender designation she had been held in protective custody rather than general population, which her attorney argued constituted harsher conditions. Judge Maloney, noting he had anticipated general-population confinement, suspended the remaining jail time. The 15-year probation term remains.</p><p>NOTE: sentence_years = 0.21 (approx. 11 weeks jail served, then suspended; original 1-year jail portion was already far below the 15-year guideline floor). contact_type = 3 (Florida &#39;unlawful sexual activity with a minor&#39; = intercourse). Defense&#39;s &#39;willing participant&#39; framing at sentencing.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">sexting</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">private-school</span>
+      <span class="tag">victim-blaming</span>
+      <span class="tag">victim-in-home</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Rocker, Trina</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">1826</td>
+      <td>Unlawful sexual activity with a minor</td>
+      <td>3</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2012-09-27</td>
+      <td>arrest</td>
+      <td>Arrested after parents reported relationship and participated in controlled phone call; text messages referencing sex also obtained</td>
+    </tr>
+    <tr>
+      <td class="dim">2014-01</td>
+      <td>other</td>
+      <td>Pleaded guilty to 3 counts unlawful sexual activity with a minor</td>
+    </tr>
+    <tr>
+      <td class="dim">2014-03</td>
+      <td>sentencing</td>
+      <td>Sentenced by Judge Dennis Maloney: 15 years probation + 1 year Polk County Jail; scoresheet called for 15+ years prison; Maloney departed downward; Sheriff Judd publicly objected</td>
+    </tr>
+    <tr>
+      <td class="dim">2014-05-21</td>
+      <td>other</td>
+      <td>Judge suspended remaining jail time after approx. 11 weeks served; Rocker had been in protective custody due to sex offender designation; 15-year probation remains</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1219.html">1219</a></td>
+      <td class="dim">2012-09-27</td>
+      <td>WFTV</td>
+      <td><a href="entry_1219.html">Christian school secretary arrested on charges of sex with student
+
+POLK COUNTY, Fla. — A secretary </a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">plea</span>
+          <span class="tag">sexting</span>
+          <span class="tag">private-school</span>
+          <span class="tag">victim-in-home</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1220.html">1220</a></td>
+      <td class="dim">2014-05-21</td>
+      <td>Lakeland Ledger</td>
+      <td><a href="entry_1220.html">BARTOW | A judge Wednesday ordered the release from jail of a former Christian school secretary who </a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">victim-blaming</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
