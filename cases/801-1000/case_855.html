@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lindsey Noele Thorson — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_854.html" title="Lyndsay Hamer">← #854 Lyndsay Hamer</a>
+    <a href="../../cases/801-1000/case_856.html" title="Terra Moore">#856 Terra Moore →</a>
+  </span>
+</div>
+<h1>Lindsey Noele Thorson
+  <span class="dim" style="font-size:0.6em">#855</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>Brevard County Circuit Court</td></tr>
+  <tr>
+<td class="lbl">Judge</td><td>Tesha Scolaro Ballou</td><td class="lbl"></td><td></td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>27</td><td class="lbl">Victim Age</td><td>16</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher&#39;s aide at Fieldston Preparatory School, Titusville, Brevard County, Florida. Fieldston Prep specializes in students with special needs. Age 27 at arrest (late 2020). Thorson&#39;s mother was a member of the school&#39;s administration.</p><p>Victim was a 16-year-old male student (initials E.C. per court documents). Thorson sent him several sexually explicit videos and photos of herself via Instagram. The victim shared screenshots with a friend, who then told school officials. The friend later ran away from home fearing he would get in trouble at school for reporting on Thorson.</p><p>Despite the report to school officials, Fieldston Preparatory School Principal Cindy Colletti &#39;appeared to dismiss the allegations&#39; and did not notify law enforcement. Investigation began only after a parent of the victim&#39;s friend contacted police directly. Lead Detective Jessica Cabrera (Titusville PD): &#39;This case provides an important reminder that school officials, by law, are mandatory reporters of suspected abuse, regardless of whether they believe the allegations or not.&#39;</p><p>Case number 05-2020-CF-017114. Charged with transmission of materials harmful to minors (Count 1) and tampering with evidence (Count 2). Defense attorney Kevin J Mawn (Titusville). State Attorney Elena Vazquez. Entered nolo contendere plea to Count 2 only (tampering, F3); adjudication of guilt withheld. Transmission charge dismissed. Sentenced April 12, 2021 by Judge Tesha Scolaro Ballou to 5 years probation. Probation conditions include: sex offender treatment program; psycho-sexual evaluation within 30 days; inpatient drug/alcohol treatment (Glass House, already enrolled at sentencing); 10pm-6am curfew; no unsupervised contact with minors; no contact with victim or victim&#39;s family; no contact via social media with victim; internet access restrictions until probation approves a safety plan; 50 hours community service.</p><p>NOTE: Withheld adjudication on the tampering count means Thorson is not formally convicted. Transmission charge entirely dropped. Sex offender supervision conditions imposed without a sex offense conviction — court acknowledged the sexual nature of the underlying conduct through conditions even as it avoided a qualifying conviction. Prior-warning-ignored: school was notified directly by a student but principal dismissed allegations; police were notified by a parent. Thorson&#39;s mother&#39;s administrative role at the school is a plausible factor in the institutional dismissal. sentence_years=0 (probation only).</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">social-media</span>
+      <span class="tag">explicit-photos</span>
+      <span class="tag">prior-warning-ignored</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">evidence-tampering</span>
+      <span class="tag">behavioral-health</span>
+      <span class="tag">charge-reduction</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Thorson, Lindsey Noele</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_724.html">Sarah Conway</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — behavioral-health, grooming, social-media · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_303.html">Haeli Wey</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      46%
+ — evidence-tampering, grooming, social-media · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_659.html">Dionne Marie Younce</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      45%
+ — explicit-photos, grooming, social-media · victim age 17 · Florida    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_244.html">Lena Stewart</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      45%
+ — evidence-tampering, grooming, social-media · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_41.html">Reagan Anderson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      43%
+ — explicit-photos, grooming · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">1892</td>
+      <td>Transmission of materials harmful to minors (FL § 847.0138)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">1893</td>
+      <td>Tampering or Fabricating with Physical Evidence (FL § 918.13, F3)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2020-11-15</td>
+      <td>arrest</td>
+      <td>Turned herself in to Brevard County Jail after warrant issued; released on bond (arrest date approximate per article context)</td>
+    </tr>
+    <tr>
+      <td class="dim">2021-04-12</td>
+      <td>sentencing</td>
+      <td>Nolo contendere to tampering (F3); adjudication withheld; 5 years probation with sex offender conditions; transmission charge dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1284.html">1284</a></td>
+      <td class="dim">2022-12-02</td>
+      <td>News 6 / Florida Today</td>
+      <td><a href="entry_1284.html">A 27-year-old teacher&#39;s aide at a Titusville school was arrested Friday on allegations of sending ex</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">social-media</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">prior-warning-ignored</span>
+          <span class="tag">evidence-tampering</span>
+          <span class="tag">behavioral-health</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1285.html">1285</a></td>
+      <td class="dim">2021-04-12</td>
+      <td>Brevard County Circuit Court / sentencing order</td>
+      <td><a href="entry_1285.html">Case 05-2020-CF-017114-AXXX-XX. Defendant Lindsey Noele Thorson entered nolo contendere plea to Coun</a>…</td>
+      <td>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">charge-reduction</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

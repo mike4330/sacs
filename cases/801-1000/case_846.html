@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tonya Marie Drueppel — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_845.html" title="Joan Marie Sladky">← #845 Joan Marie Sladky</a>
+    <a href="../../cases/801-1000/case_847.html" title="Amy Lynn Craft">#847 Amy Lynn Craft →</a>
+  </span>
+</div>
+<div style="float:right; margin: 0 0 1rem 1.5rem; text-align:center;">
+  <img src="../../images/drueppel.png" alt="Tonya Marie Drueppel" style="max-width:180px; max-height:220px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.18);">
+</div>
+<h1>Tonya Marie Drueppel
+  <span class="dim" style="font-size:0.6em">#846</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>South Dakota</td><td class="lbl">Court</td><td>Minnehaha County</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2012-01-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>31</td><td class="lbl">Victim Age</td><td>14</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>15.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former sixth-grade teacher, Axtell Park Middle School, Sioux Falls School District (employed 2009–2013). Female victim, age 14. Relationship began 2012 while Drueppel was still employed by the district.</p><p>Investigation began January 22, 2014 after a referral from the Department of Social Services. Arrested and charged January 29, 2014 on three counts of 4th-degree rape and two counts of sexual contact with a child under 16; held on $500,000 cash bond.</p><p>Charged in a five-count indictment. Pleaded guilty February 2015 to two counts of sexual contact with a child younger than 16 (rape counts dropped as part of plea).</p><p>Sentenced May 22, 2015 to 15 years in prison. Both the victim and victim&#39;s mother testified at sentencing. Victim stated she intended to forgive Drueppel &#34;because it&#39;s the right thing to do.&#34;</p><p>DOB November 5, 1980; age 31 at offense, 34 at sentencing. SOR name: Sidel, Tonya M (married name). Minnehaha County conviction.</p></blockquote>
+
+<div style="clear:both;"></div>
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">female-victim</span>
+      <span class="tag">sentenced</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Drueppel, Tonya Marie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_497.html">Lisa DeFluri</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — female-victim · victim age 16    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_402.html">Crystal Nicole Rodriguez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — female-victim · victim age 15    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_45.html">Courtney Horn</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — female-victim · victim age 16    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_212.html">Brooke L. Rosendale</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — female-victim · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_464.html">Jenee A. Blackert</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      54%
+ — female-victim    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">1866</td>
+      <td>Sexual contact with a child younger than 16 (×2)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">1867</td>
+      <td>4th-degree rape (×3)</td>
+      <td>3</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2014-01-29</td>
+      <td>arrest</td>
+      <td>Arrested; charged 3 counts 4th-degree rape + 2 counts sexual contact with child under 16; bond $500,000</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-02-01</td>
+      <td>other</td>
+      <td>Pleaded guilty to two counts sexual contact with child under 16; rape counts dropped</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-05-22</td>
+      <td>sentencing</td>
+      <td>Sentenced to 15 years prison; victim and victim&#39;s mother testified</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1263.html">1263</a></td>
+      <td class="dim">2015-05-22</td>
+      <td>AP / KSL.com</td>
+      <td><a href="entry_1263.html">A former Sioux Falls middle school teacher who admitted to having a sexual relationship with a 14-ye</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">charge-reduction</span>
+          <span class="tag">female-victim</span>
+          <span class="tag">sentenced</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1264.html">1264</a></td>
+      <td class="dim">2014-01-29</td>
+      <td>AP</td>
+      <td><a href="entry_1264.html">A former Sioux Falls middle school teacher is accused of having a sexual relationship with a 14-year</a>…</td>
+      <td>
+          <span class="tag">female-victim</span>
+          <span class="tag">arrest</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
