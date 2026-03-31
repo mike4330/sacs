@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paige M. Simon — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_896.html" title="Jessica B. Herb">← #896 Jessica B. Herb</a>
+    <a href="../../cases/801-1000/case_898.html" title="Elizabeth Wilczek">#898 Elizabeth Wilczek →</a>
+  </span>
+</div>
+<h1>Paige M. Simon
+  <span class="dim" style="font-size:0.6em">#897</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Indiana</td><td class="lbl">Court</td><td>Decatur County Circuit Court</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2023-02-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>15</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at South Decatur High School, Osgood, Decatur County, Indiana. Age 28 at arrest. Resigned approximately three weeks before her arrest, in early April 2023.</p><p>Victim was a 15-year-old male student. Between February and April 2023, Simon sent the student 600+ text messages including lewd jokes, sexual memes, and sexual-related conversations. In the classroom, she told the victim and at least one other student about her use of sex toys. She allowed students to call her derogatory sexual names. Physical contact included frequent touching of the student&#39;s arm or shoulder; on one occasion she ran her fingers through her hair, and on another she reached toward the student&#39;s crotch with her hand lingering in the area. When the student stopped responding to her messages she continued texting him, was found crying on at least two occasions by a colleague, and showed up at one of his baseball games after he blocked her number.</p><p>Investigation began in early April 2023 after reports of inappropriate behavior. Arrested approximately April 28, 2023. Original charges: stalking (Level 6 felony), official misconduct (Level 6 felony), and battery (misdemeanor).</p><p>Pleaded guilty July 29, 2025 in Decatur County Circuit Court to misdemeanor official misconduct and misdemeanor battery; stalking charge dismissed. Sentenced to 18 months jail, 529 days suspended; 8 days accrued/good-time credit per count applied; no jail time served. Placed on probation with a no-contact order regarding the victim.</p><p>NOTE: Charge and severity reduction: both felony charges reduced to or resolved as misdemeanors. No-prison outcome on conduct that included physical contact toward the groin and months of sexual harassment of a minor. sentence_years = 0.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Simon, Paige M.</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_474.html">Casey L. Schaefer</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      63%
+ — sexting, social-media · ct=888 · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_855.html">Lindsey Noele Thorson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — grooming, social-media · ct=888 · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_572.html">Beth Ann Chester</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — grooming, on-campus, sexting · ct=888 · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_508.html">Kimberly Lynn Nelson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — emotional-manipulation, grooming · ct=888 · victim age 16    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_129.html">Imagine Kay Ewer</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — emotional-manipulation, grooming, sexting · ct=888 · victim age 16    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">1995</td>
+      <td>Official misconduct (misdemeanor)</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">1996</td>
+      <td>Battery (misdemeanor) — unwanted sexual touching</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">1997</td>
+      <td>Stalking (Level 6 felony)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2023-04-28</td>
+      <td>arrest</td>
+      <td>Arrested approximately April 28, 2023 (Friday per reporting); booked Decatur County.</td>
+    </tr>
+    <tr>
+      <td class="dim">2025-07-29</td>
+      <td>sentencing</td>
+      <td>Pleaded guilty and sentenced same day: 18 months jail, 529 days suspended, no time served; probation.</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1350.html">1350</a></td>
+      <td class="dim">2023-05-02</td>
+      <td>CBS4/Manthan C.</td>
+      <td><a href="entry_1350.html">A South Decatur High School teacher has been charged with stalking after sending a 15-year-old stude</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">social-media</span>
+          <span class="tag">sexting</span>
+          <span class="tag">surveillance</span>
+          <span class="tag">emotional-manipulation</span>
+          <span class="tag">on-campus</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1351.html">1351</a></td>
+      <td class="dim">2025-07-30</td>
+      <td>Rob Lafary</td>
+      <td><a href="entry_1351.html">A plea agreement was reached yesterday in regards to a Tuesday news story involving a former South D</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">charge-reduction</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

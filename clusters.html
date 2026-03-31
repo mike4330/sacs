@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clusters — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="index.html" id="site-logo"><img src="images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="cases.html" class="nav-btn">Cases</a>
+<a href="people.html" class="nav-btn">People</a><a href="search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="topics.html">Topics</a><a href="clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+
+<h1>Case Clusters</h1>
+<p class="dim" style="max-width:680px; margin-bottom:2rem;">
+  Cases grouped by pairwise similarity score ≥ 0.79 across tags, contact type, victim age, sentence length, and state.
+  5 clusters · 804 scored cases · score threshold 0.79 · min cluster size 3.
+  Analysis written by Claude on demand; membership computed from <code>~/.sacs/similarity.json</code>.
+</p>
+
+<style>
+.cluster { border-left: 3px solid var(--pico-primary); padding: 0 0 0 1.25rem; margin-bottom: 2.5rem; }
+.cluster h2 { margin-bottom: 0.25rem; font-size: 1.1em; }
+.cluster-meta { font-size: 0.82em; color: var(--pico-muted-color); margin-bottom: 0.75rem; }
+.cluster-cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+.cluster p { max-width: 680px; margin-bottom: 0.6rem; font-size: 0.95em; }
+</style>
+
+<div class="cluster">
+  <h2>1 · Same Conduct, Six Outcomes</h2>
+  <p class="cluster-meta">6 cases · intercourse · male victims 15–17 · teachers 23–34 · probation to 10 years prison</p>
+  <div class="cluster-cards">
+    <div style="width:130px; flex-shrink:0;">
+  <a href="cases/0-200/case_174.html">
+    <img src="images/kelsey.png" alt="Stefanie Regine Kelsey"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/0-200/case_174.html">#174 Stefanie Regine Kelsey</a><br>
+    <span class="dim">Iowa, 34→15, 10.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/201-400/case_394.html">
+    <img src="images/burk.jpg" alt="Kendall Burk"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/201-400/case_394.html">#394 Kendall Burk</a><br>
+    <span class="dim">Kentucky, 23→15, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/601-800/case_682.html">
+    <img src="images/david.jpg" alt="Christie David"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/601-800/case_682.html">#682 Christie David</a><br>
+    <span class="dim">Tennessee, 32→15, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/601-800/case_713.html">
+    <img src="images/perez.png" alt="Naomi Perez"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/601-800/case_713.html">#713 Naomi Perez</a><br>
+    <span class="dim">California, 31→17, 0.41 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/601-800/case_723.html">
+    <img src="images/millard.png" alt="Stephanie Suggs Millard"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/601-800/case_723.html">#723 Stephanie Suggs Millard</a><br>
+    <span class="dim">Alabama, 33→17, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/801-1000/case_814.html">
+    <img src="images/maxwell.png" alt="Katrina Maxwell"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/801-1000/case_814.html">#814 Katrina Maxwell</a><br>
+    <span class="dim">Texas, 32→16, 0.0 yr</span>
+  </div>
+</div>
+
+  </div>
+  <p>
+    Six teachers, ages 23–34. Six male students, ages 15–17. Penetrative sexual conduct confirmed in every case.
+    Grooming and emotional investment were present in most. By any behavioral measure these cases are near-identical.
+    The similarity algorithm agrees: each pair in this cluster scores above 0.79.
+  </p>
+  <p>
+    The sentences diverge sharply. <a href="cases/0-200/case_174.html">#174 Stefanie Regine Kelsey</a> in Iowa drew 10 years — the only member of this cluster
+    to receive a substantial prison term. <a href="cases/201-400/case_394.html">#394 Kendall Burk</a> in Kentucky (four counts of rape and sodomy) received
+    five years probation; the judge described the case as "disturbing" before declining to impose incarceration.
+    <a href="cases/601-800/case_682.html">#682 Christie David</a> in Tennessee pleaded guilty to "the least offensive of sexual offenses" and served no
+    prison time. <a href="cases/601-800/case_723.html">#723 Stephanie Suggs Millard</a> in Alabama, <a href="cases/801-1000/case_814.html">#814 Katrina Maxwell</a> in Texas, and <a href="cases/601-800/case_713.html">#713 Naomi Perez</a> in California
+    all resolved to probation, deferred adjudication, or minimal jail measured in months.
+  </p>
+  <p>
+    The variable is not conduct — it is geography. Iowa's sentencing posture for educator sexual abuse is
+    demonstrably heavier than Kentucky's, Tennessee's, Alabama's, or Texas's for functionally identical behavior.
+    This cluster is one of the clearest illustrations in the DB of how state sentencing culture
+    drives outcomes more than the underlying facts.
+  </p>
+</div>
+
+<div class="cluster">
+  <h2>2 · The Adult-Victim Educator Statute</h2>
+  <p class="cluster-meta">4 cases · victims 16–18 · educator-specific prohibition · probation to 2 years prison</p>
+  <div class="cluster-cards">
+    <div style="width:130px; flex-shrink:0;">
+  <a href="cases/201-400/case_216.html">
+    <img src="images/matthews.jpg" alt="Mackenzie Matthews"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/201-400/case_216.html">#216 Mackenzie Matthews</a><br>
+    <span class="dim">Ohio, 30→18, 2.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/201-400/case_220.html">
+    <img src="images/rufener.jpeg" alt="Katie Rufener"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/201-400/case_220.html">#220 Katie Rufener</a><br>
+    <span class="dim">Kansas, 26→18, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/401-600/case_441.html">#441 Kassidy Marie Alexander</a><br>
+    <span class="dim">Kansas, 26→16, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/801-1000/case_825.html">#825 Elizabeth Scroggs</a><br>
+    <span class="dim">Georgia, 32→18, 0.0 yr</span>
+  </div>
+</div>
+
+  </div>
+  <p>
+    Three of these four cases involved victims who were 18 — above the age of consent in every U.S. state.
+    The fourth, <a href="cases/401-600/case_441.html">#441 Kassidy Marie Alexander</a>, involved a 16-year-old above Kansas's consent threshold.
+    None would have been crimes at all absent the defendant's employment as an educator.
+    The cluster is bound together by the same legal theory: the position of authority, not the victim's age,
+    is the harm the statute is designed to address.
+  </p>
+  <p>
+    The outcomes reflect how differently states weigh that theory. Ohio sentenced <a href="cases/201-400/case_216.html">#216 Mackenzie Matthews</a> to
+    two years in prison for a relationship with a consenting 18-year-old senior, with the judge explicitly
+    framing the sentence as a message to educators statewide. Kansas reduced <a href="cases/201-400/case_220.html">#220 Katie Rufener</a>'s
+    felony unlawful-sexual-relations charges to misdemeanor simple battery — the original statute
+    specifically covered consensual teacher-student relationships, but the prosecution agreed to a plea
+    that largely neutralized it. Georgia let <a href="cases/801-1000/case_825.html">#825 Elizabeth Scroggs</a> avoid a conviction entirely under the
+    First Offender Act.
+  </p>
+  <p>
+    These cases expose a genuine policy ambiguity: is an educator who sleeps with a consenting 18-year-old
+    student engaging in exploitation that warrants prosecution, or a relationship that is legal everywhere
+    else? The answer in this cluster is "yes, probably, but the sentence should reflect the difference" —
+    except that in practice the sentences range from two years' imprisonment to no conviction at all.
+  </p>
+</div>
+
+<div class="cluster">
+  <h2>3 · Single Encounter, Age 16, Minimal Jail</h2>
+  <p class="cluster-meta">3 cases · intercourse · male victims 16 · 30-day to 4-month jail · NY / KS / AZ</p>
+  <div class="cluster-cards">
+    <div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/201-400/case_241.html">#241 Christen Hayes</a><br>
+    <span class="dim">New York, 28→16, 0.33 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/401-600/case_448.html">#448 Jeana Fleming</a><br>
+    <span class="dim">Kansas, 31→16, 0.08 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/601-800/case_787.html">#787 Christina Marie Carbone</a><br>
+    <span class="dim">Arizona, 23→16, 0.08 yr</span>
+  </div>
+</div>
+
+  </div>
+  <p>
+    All three cases involve a single sexual encounter (or a small number of encounters) with a male student
+    at age 16, intercourse confirmed, and a sentence of 30 days to 4 months of jail followed by probation
+    and sex offender registration. The algorithm matched them on victim age, sentence length, and
+    contact type — the profiles are functionally identical even across three different states.
+  </p>
+  <p>
+    What distinguishes these cases from heavier-sentenced peers is the absence of extended grooming,
+    the relatively prompt resolution of each case, and the immediate admission or guilty plea in all three.
+    <a href="cases/201-400/case_241.html">#241 Christen Hayes</a> was discovered when the victim was arrested at the defendant's home on an unrelated
+    matter — an unusual disclosure mechanism. <a href="cases/401-600/case_448.html">#448 Jeana Fleming</a> admitted the encounter the day school
+    officials questioned her and resigned on the spot. <a href="cases/601-800/case_787.html">#787 Christina Marie Carbone</a>'s victim was not even in her class;
+    they met at a school social function.
+  </p>
+  <p>
+    The cluster suggests a sentencing logic — perhaps implicit — that distinguishes the brief, unplanned
+    encounter from the sustained grooming-based relationship, even when both involve the same offense
+    category. Whether that distinction is principled or simply a function of how prosecutors and judges
+    perceive individual cases is harder to say.
+  </p>
+</div>
+
+<div class="cluster">
+  <h2>4 · Physical Evidence, Three Outcomes</h2>
+  <p class="cluster-meta">3 cases · male victims 16 · physical/forensic evidence · 15 days to 2 years · WI / IL / AR</p>
+  <div class="cluster-cards">
+    <div style="width:130px; flex-shrink:0;">
+  <a href="cases/0-200/case_89.html">
+    <img src="images/domres.jpg" alt="Sara M. Domres"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/0-200/case_89.html">#89 Sara M. Domres</a><br>
+    <span class="dim">Wisconsin, 28→16, 2.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/0-200/case_168.html">
+    <img src="images/Blumenshine.jpg" alt="Ashley Blumenshine"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/0-200/case_168.html">#168 Ashley Blumenshine</a><br>
+    <span class="dim">Illinois, 27→16, 0.04 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <a href="cases/201-400/case_372.html">
+    <img src="images/vega.png" alt="Chrystal Vega"
+         style="width:125px; height:125px; object-fit:cover; border-radius:4px; display:block; margin-bottom:0.4rem;">
+  </a>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/201-400/case_372.html">#372 Chrystal Vega</a><br>
+    <span class="dim">Arkansas, 40→16, 0.0 yr</span>
+  </div>
+</div>
+
+  </div>
+  <p>
+    All three cases were resolved through direct physical evidence, and all three involved 16-year-old male
+    students with encounters at or near vehicles. <a href="cases/0-200/case_89.html">#89 Sara M. Domres</a> (Wisconsin) was traced through 1,100+ text
+    messages and motel Wi-Fi metadata; the relationship involved more than a dozen encounters across seven
+    months, with Domres booking a motel room under her name while married to another man. She received two
+    years in prison. <a href="cases/0-200/case_168.html">#168 Ashley Blumenshine</a> (Illinois) was caught mid-act when Plainfield police officers spotted
+    two cars alone in a Kohl's parking lot and found Blumenshine partially undressed with the student in
+    her back seat — no investigation required. She received 15 days jail. <a href="cases/201-400/case_372.html">#372 Chrystal Vega</a> (Arkansas) met
+    the victim at a park in Russellville; the victim got into her car and they had sex. He reported five
+    days later. Investigators obtained park security footage corroborating the timing, and Vega admitted
+    texting the student though she denied the sexual contact. She received probation only.
+  </p>
+  <p>
+    The evidence quality across these three cases is roughly comparable — in each, investigators had
+    direct, contemporaneous proof of the encounter. The sentencing gap is not. Two years, fifteen days,
+    and probation for functionally equivalent conduct and evidence weight. The Domres relationship was
+    longer and more deliberate, which accounts for some of the difference. But the distance between
+    Blumenshine and Vega — one caught in the act, one corroborated by security footage and her own
+    partial admission — is difficult to explain on evidentiary or conduct grounds alone. It looks like
+    state sentencing culture again.
+  </p>
+</div>
+
+<div class="cluster">
+  <h2>5 · Texas §21.12, Victim 17, Deferred Adjudication</h2>
+  <p class="cluster-meta">3 cases · Texas · improper relationship · victim 17 · deferred adjudication · no prison</p>
+  <div class="cluster-cards">
+    <div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/0-200/case_186.html">#186 JoAnn Karel</a><br>
+    <span class="dim">Texas, 39→17, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/0-200/case_187.html">#187 Sarah Noel Suggs</a><br>
+    <span class="dim">Texas, 29→17, 0.0 yr</span>
+  </div>
+</div>
+<div style="width:130px; flex-shrink:0;">
+  <div style="width:125px; height:125px; background:var(--pico-card-background-color); border:1px solid var(--pico-muted-border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:0.4rem;">
+    <span style="font-size:2em; opacity:0.25;">?</span>
+  </div>
+  <div style="font-size:0.82em; line-height:1.4;">
+    <a href="cases/601-800/case_697.html">#697 Saralyn Gayle Portwood</a><br>
+    <span class="dim">Texas, 30→17, 0.0 yr</span>
+  </div>
+</div>
+
+  </div>
+  <p>
+    The highest-similarity cluster in the DB by margin. All three cases are in Texas. All three were charged
+    under Tex. Penal Code § 21.12 (improper relationship between educator and student). All three victims
+    were 17. All three resolved to deferred adjudication with no prison time and no formal conviction entered.
+    <a href="cases/0-200/case_186.html">#186 JoAnn Karel</a> and <a href="cases/0-200/case_187.html">#187 Sarah Noel Suggs</a> were arrested within weeks of each other in summer 2018 and
+    sentenced within the same one-year window — their cases running almost in parallel through the
+    Harris/Brazoria County courts.
+  </p>
+  <p>
+    § 21.12 is a second-degree felony carrying up to 20 years, but Texas courts routinely resolve
+    educator cases under this statute with deferred adjudication, particularly when the defendant has no
+    prior record and accepts responsibility. The pattern is consistent enough across cases in this DB
+    that deferred adjudication for a first-offense § 21.12 charge in Texas functions almost as a default
+    outcome absent aggravating factors.
+  </p>
+  <p>
+    <a href="cases/601-800/case_697.html">#697 Saralyn Gayle Portwood</a> is the structural outlier: Portwood's conduct involved physical force — she pushed the
+    student against a desk and performed oral sex on him after he had declined her overtures multiple times.
+    The deferred adjudication outcome, and its early termination in 2018 with no finding of guilt, is
+    difficult to reconcile with the documented facts of the case.
+  </p>
+</div>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+<p class="dim">Generated by <code>sacs render</code> — 2026-03-31 07:47 UTC</p>  </footer>
+</body>
+</html>
