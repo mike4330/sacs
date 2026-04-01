@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alisha Marie George — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_905.html" title="Rhiannon Petty">← #905 Rhiannon Petty</a>
+    <a href="../../cases/801-1000/case_907.html" title="Mary Hanna Mattingly">#907 Mary Hanna Mattingly →</a>
+  </span>
+</div>
+<h1>Alisha Marie George
+  <span class="dim" style="font-size:0.6em">#906</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Utah</td><td class="lbl">Court</td><td>Salt Lake County</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2023-09-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>40</td><td class="lbl">Victim Age</td><td>12</td>  </tr>
+</table>
+
+  <blockquote><p>Teacher at Hawthorn Academy (charter school), West Jordan, Salt Lake County, Utah. Age 40 at time of arrest (December 2025).</p><p>Primary victim was a male student who began attending Hawthorn Academy at age 12 in 7th grade (fall 2022). George cultivated a &#39;mother figure&#39; relationship with the boy, who was struggling at home. In summer 2023 she invited him and other students to a restaurant lunch and was reportedly reprimanded for it. At the start of 8th grade (fall 2023, victim age 13), their relationship intensified. On the day before Christmas break 2023, George brought a blanket to a school movie event in the gym, sat next to him, and grabbed him. During Christmas break she took him to a movie and unlawfully kissed him in the car. Abuse continued through 2024, with the primary location and conduct escalating while the victim&#39;s mother — who was friends with George — recovered from surgery. When George told him not to tell anyone, the victim said he &#39;realized he was at the point of no return.&#39; He described her as a &#39;monster&#39; who &#39;stepped up but took advantage of him&#39; at a time when he needed someone most.</p><p>After George was arrested, multiple additional students reported being groomed by her or witnessing inappropriate behavior. State anticipates additional charges related to additional victims.</p><p>Charged December 2025 with: 4 counts forcible sodomy (1st degree felony), 1 count attempted rape (1st degree felony), 12 counts forcible sexual abuse (2nd degree felony), 1 count distributing pornographic material (3rd degree felony), 4 counts unlawfully kissing a minor (Class A misdemeanor). Arrested by West Jordan Police.</p><p>NOTE: Charter school setting. Grooming began when victim was 12; charges reflect conduct from age 13+. Mother-figure grooming pattern with vulnerable child is a recurring archetype in this DB. Additional victims and charges anticipated; case should be monitored.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">multiple-victims</span>
+      <span class="tag">long-term-relationship</span>
+      <span class="tag">possible-additional-victims</span>
+      <span class="tag">emotional-manipulation</span>
+      <span class="tag">on-campus</span>
+      <span class="tag">young-victim</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>George, Alisha Marie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_344.html">Jennifer Lynn Smith</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      39%
+ — emotional-manipulation, grooming, long-term-relationship, multiple-victims +2 · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_258.html">Idaho v. Beach</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      37%
+ — emotional-manipulation, grooming, long-term-relationship, on-campus · victim age 12    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_524.html">Valynne Bowers</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      31%
+ — grooming, long-term-relationship · victim age 14 · Utah    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_688.html">Marlena Nichole Mints</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      31%
+ — grooming, multiple-victims, on-campus, possible-additional-victims · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_356.html">Lucinda Rodriguez Caldwell</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      31%
+ — grooming, on-campus · victim age 12    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2022</td>
+      <td>Forcible sodomy, 4 counts (Utah, 1st degree felony)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2023</td>
+      <td>Attempted rape, 1 count (Utah, 1st degree felony)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2024</td>
+      <td>Forcible sexual abuse, 12 counts (Utah, 2nd degree felony)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2025</td>
+      <td>Distributing pornographic material, 1 count (Utah, 3rd degree felony)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2026</td>
+      <td>Unlawfully kissing a minor, 4 counts (Utah, Class A misdemeanor)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2025-12-04</td>
+      <td>arrest</td>
+      <td>Arrested by West Jordan Police; charged with 22 sex crimes including forcible sodomy, attempted rape, forcible sexual abuse</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1381.html">1381</a></td>
+      <td class="dim">2025-12-04</td>
+      <td>KUTV (Megan Brugger)</td>
+      <td><a href="entry_1381.html">Teacher charged after using position to &#39;prey upon,&#39; &#39;groom&#39; middle school children.
+
+Alisha Marie G</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">possible-additional-victims</span>
+          <span class="tag">emotional-manipulation</span>
+          <span class="tag">young-victim</span>
+          <span class="tag">arrest</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

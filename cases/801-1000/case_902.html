@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stephanie Forbes — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_901.html" title="Amber Telford">← #901 Amber Telford</a>
+    <a href="../../cases/801-1000/case_903.html" title="Jordan Simon">#903 Jordan Simon →</a>
+  </span>
+</div>
+<h1>Stephanie Forbes
+  <span class="dim" style="font-size:0.6em">#902</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>212th District Court, Galveston County</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2012-12-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>40</td><td class="lbl">Victim Age</td><td>16</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>2.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at Clear Creek High School, League City, Galveston County, Texas. Age 40 at time of arrest (January 2013); age at offense approximately 39-40. Victim was a 16-year-old male student.</p><p>All sexual acts occurred inside the school, some during school hours with other students on the other side of the door. The relationship involved thousands of text messages. The two had a running joke about faking their deaths to run off to Fiji together. The student was a willing participant but was legally a minor.</p><p>Clear Creek ISD officials were notified of allegations in December 2012; Forbes resigned from the district when detectives launched an investigation. Arrested January 10, 2013, in League City on charges of sexual assault of a child and improper relationship between educator and student. Released on $20,000 bond.</p><p>Convicted at trial (verdict approximately October 16, 2015) on both counts. Sentenced to 2 years prison for improper relationship between educator and student, plus 10 years probation for sexual assault of a child. Released on bond pending appeal of both convictions. Husband Kevin Forbes publicly denied the conduct and called the evidence insufficient.</p><p>NOTE: All conduct was on-campus and during/after school hours — no off-campus component documented. Husband&#39;s public post-conviction denial is notable. Sentence structure: 2 years prison on the lesser count, probation-only on the more serious count (sexual assault).</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Forbes, Stephanie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_148.html">Shannon Cardinal</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      67%
+ — long-term-relationship, sexting · penetrative · victim age 16 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_829.html">Jessica Kaplan</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — long-term-relationship, on-campus, sexting · penetrative · victim age 17    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_575.html">Erin Sayar</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      61%
+ — long-term-relationship, on-campus, sexting · penetrative · victim age 16    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_730.html">Marie Johnson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      61%
+ — long-term-relationship, sexting · penetrative · victim age 14 · 3.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_91.html">Elizabeth Dillett</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — long-term-relationship, on-campus, sexting · penetrative · victim age 16 · 2.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2017</td>
+      <td>Sexual assault of a child</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2018</td>
+      <td>Improper relationship between educator and student</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2013-01-10</td>
+      <td>arrest</td>
+      <td>Arrested in League City; charged with sexual assault of a child and improper relationship between educator and student; $20,000 bond</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-10-16</td>
+      <td>verdict</td>
+      <td>Convicted at trial on both counts; husband Kevin Forbes publicly disputed the verdict</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-10-22</td>
+      <td>sentencing</td>
+      <td>2 years prison (improper relationship) + 10 years probation (sexual assault of a child); released on bond pending appeal</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1371.html">1371</a></td>
+      <td class="dim">2015-10-22</td>
+      <td>KTRK (ABC13 Houston)</td>
+      <td><a href="entry_1371.html">Husband defends teacher going to prison for sex with student. A former Clear Creek High School teach</a>…</td>
+      <td>
+          <span class="tag">verdict</span>
+          <span class="tag">sexting</span>
+          <span class="tag">appeal</span>
+          <span class="tag">long-term-relationship</span>
+          <span class="tag">on-campus</span>
+          <span class="tag">victim-blaming</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1372.html">1372</a></td>
+      <td class="dim">2013-01-11</td>
+      <td>ABC7 / Galveston County Sheriff&#39;s Office</td>
+      <td><a href="entry_1372.html">Former Clear Creek ISD teacher accused of having relationship with student. LEAGUE CITY, TX — Stepha</a>…</td>
+      <td>
+          <span class="tag">arrest</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

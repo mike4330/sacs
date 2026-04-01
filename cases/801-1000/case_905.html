@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rhiannon Petty — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_904.html" title="Shelby Clarke">← #904 Shelby Clarke</a>
+    <a href="../../cases/801-1000/case_906.html" title="Alisha Marie George">#906 Alisha Marie George →</a>
+  </span>
+</div>
+<h1>Rhiannon Petty
+  <span class="dim" style="font-size:0.6em">#905</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>Montgomery County District Court</td></tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>41</td><td class="lbl">Victim Age</td><td>17</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>7.5 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former health science teacher at Porter High School, New Caney ISD, Porter, Montgomery County, Texas. Employed with the district for approximately four years. Also known as Rhiannon Ballard Petty (TDCJ name). Age 41 at arrest; 42 at sentencing.</p><p>Victim was a 17-year-old female student. Petty wrote hall passes excusing the victim from other classes so they could spend time together. She provided the victim a dedicated cell phone for communication; numerous texts professing love were exchanged. Sexual abuse occurred at Petty&#39;s home and in her car on multiple occasions (per victim&#39;s forensic interview). Petty gave the victim a &#39;promise ring.&#39;</p><p>On or about February 6, 2020, the victim&#39;s parents filed a complaint after observing Petty and the victim outside school acting as a couple. Cellphone evidence established probable cause. Petty was placed on administrative leave and subsequently resigned. Charged March 2020 with improper relationship between educator and student (Texas PC § 21.12, second-degree felony). Pleaded guilty; sentenced to 7.5 years prison. Prosecutor: Lora Bechman (Montgomery County DA&#39;s office). TDCJ #02350653; approved for mandatory supervision release March 12, 2026.</p><p>NOTE: Female victim — same-sex offense. Promise ring and dedicated phone are markers of high-investment emotional grooming. Parole/mandatory supervision approved March 2026, suggesting release well short of 7.5-year term.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">female-victim</span>
+      <span class="tag">long-term-relationship</span>
+      <span class="tag">early-release</span>
+      <span class="tag">surveillance</span>
+      <span class="tag">emotional-manipulation</span>
+      <span class="tag">love-letters</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Petty, Rhiannon</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Bechman, Lora</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_273.html">Tara Leigh Bagley</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      62%
+ — female-victim, long-term-relationship · ct=999 · victim age 16 · 8.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_711.html">Jennifer Diane Arnold</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — grooming · ct=999 · victim age 17 · 6.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_186.html">JoAnn Karel</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — grooming · ct=999 · victim age 17 · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_296.html">Christine Knudsen</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — female-victim, long-term-relationship · ct=999 · victim age 17    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_508.html">Kimberly Lynn Nelson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — emotional-manipulation, grooming · ct=999 · victim age 16 · 6.0 yr sentence · Texas    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2021</td>
+      <td>Improper relationship between educator and student (Texas PC § 21.12)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2020-03-01</td>
+      <td>arrest</td>
+      <td>Charged with improper relationship between educator and student; placed on administrative leave, subsequently resigned</td>
+    </tr>
+    <tr>
+      <td class="dim">2022-12-01</td>
+      <td>sentencing</td>
+      <td>Pleaded guilty; sentenced to 7.5 years prison (date approximate — December 2022 estimated from TDCJ records and 2026 mandatory supervision approval)</td>
+    </tr>
+    <tr>
+      <td class="dim">2026-03-12</td>
+      <td>other</td>
+      <td>Approved for mandatory supervision release (TDCJ #02350653)</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1379.html">1379</a></td>
+      <td class="dim">2022-12-05</td>
+      <td>KPRC 2 Houston</td>
+      <td><a href="entry_1379.html">Former Porter HS teacher sentenced to 7.5 years in prison after pleading guilty to having an imprope</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">female-victim</span>
+          <span class="tag">love-letters</span>
+          <span class="tag">sentencing</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1380.html">1380</a></td>
+      <td class="dim">2020-03-01</td>
+      <td>KPRC 2 Houston (arrest)</td>
+      <td><a href="entry_1380.html">New Caney ISD teacher resigns after being charged with having an improper relationship with a studen</a>…</td>
+      <td>
+          <span class="tag">female-victim</span>
+          <span class="tag">arrest</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

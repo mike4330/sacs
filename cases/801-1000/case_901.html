@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amber Telford — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_900.html" title="Lindsey Marshall">← #900 Lindsey Marshall</a>
+    <a href="../../cases/801-1000/case_902.html" title="Stephanie Forbes">#902 Stephanie Forbes →</a>
+  </span>
+</div>
+<div style="float:right; margin: 0 0 1rem 1.5rem; text-align:center;">
+  <img src="../../images/telford.jpg" alt="Amber Telford" style="max-width:180px; max-height:220px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.18);">
+</div>
+<h1>Amber Telford
+  <span class="dim" style="font-size:0.6em">#901</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Utah</td><td class="lbl">Court</td><td>—</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2014-09-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>33</td><td class="lbl">Victim Age</td><td>17</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.08 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former owner and instructor of Colette&#39;s Dancing Studio, Taylorsville, Salt Lake County, Utah. Former Utah Jazz NBA dancer. Age 33 at time of offense and arrest. Mother of three.</p><p>Victim was a 17-year-old male student at her dance studio. The relationship began in September 2014, shortly after Telford filed for divorce from her husband. Grooming included flirting during lessons, purchasing clothing for the victim, and arranging a trip to Disneyland for a dance contest. Sexual activity occurred at Telford&#39;s home, her mother&#39;s home, inside her vehicle, and at the studio itself; she picked the victim up in the middle of the night on multiple occasions. Relationship spanned September through December 2014.</p><p>The relationship was discovered in November 2014 by a private detective hired by Telford&#39;s estranged husband to investigate suspected infidelity. The PI found Telford naked with the teenager — his own son — under a blanket, clothing strewn around the room. Telford was arrested in January 2015. Colette&#39;s Dancing Studio subsequently closed.</p><p>Charged with seven counts of unlawful sexual activity with a minor. Pleaded guilty July 2015 to one count; six identical counts dismissed. Sentenced September 3, 2015: 30 days jail, 150 hours community service, probation, sex offender registration.</p><p>NOTE: Non-school setting — dance studio instruction qualifies per DB scope (adjacent instructional authority). Husband-initiated investigation: the PI discovered his own son was the victim. Transactional grooming (clothing, Disneyland trip) documented. sentence_years = 0.08 reflecting 30 days continuous jail.</p></blockquote>
+
+<div style="clear:both;"></div>
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">husband-reported</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">late-night-meetups</span>
+      <span class="tag">gifts</span>
+      <span class="tag">non-school</span>
+      <span class="tag">multiple-venues</span>
+      <span class="tag">transactional-grooming</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Telford, Amber</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_762.html">Megan Sainsbury</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — gifts, grooming · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_914.html">Tiana Sanchez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — grooming, late-night-meetups · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_723.html">Stephanie Suggs Millard</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — grooming · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_877.html">Courtney Rankin</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — grooming · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_424.html">Lisette Veles Ortega</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      57%
+ — grooming · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2015</td>
+      <td>Unlawful sexual activity with a minor (Utah Code § 76-5-401.2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2016</td>
+      <td>Unlawful sexual activity with a minor — 6 additional counts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2015-01-01</td>
+      <td>arrest</td>
+      <td>Arrested; charged with 7 counts unlawful sexual activity with a minor (date approximate)</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-09-03</td>
+      <td>sentencing</td>
+      <td>30 days jail, 150 hours community service, probation, sex offender registration</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1368.html">1368</a></td>
+      <td class="dim">2015-09-05</td>
+      <td>Associated Press / Deseret News</td>
+      <td><a href="entry_1368.html">TAYLORSVILLE, Utah — A former Utah Jazz dancer has been sentenced to 30 days in jail for having sex </a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">husband-reported</span>
+          <span class="tag">charge-reduction</span>
+          <span class="tag">late-night-meetups</span>
+          <span class="tag">gifts</span>
+          <span class="tag">non-school</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

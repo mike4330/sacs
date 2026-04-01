@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katherine Sticklin — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_911.html" title="Joanna Atilano">← #911 Joanna Atilano</a>
+    <a href="../../cases/801-1000/case_913.html" title="Kristy Sanchez-Trujillo">#913 Kristy Sanchez-Trujillo →</a>
+  </span>
+</div>
+<h1>Katherine Sticklin
+  <span class="dim" style="font-size:0.6em">#912</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>13th Judicial Circuit Court, Hillsborough County</td></tr>
+  <tr>
+<td class="lbl"></td><td></td><td class="lbl">Incident Date</td><td>2024-09-01</td>  </tr>
+  <tr>
+<td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>16</td>  </tr>
+  <tr><td class="lbl">Prison Sentence</td><td>10.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Youth counselor at A Kid&#39;s Place of Tampa Bay (group foster home), Hillsborough County, Florida. Age 28 at arrest. Male foster child victim, age 16 or 17 per charge language.</p><p>Conduct: Sticklin initiated contact with the victim via Snapchat, sending explicit images and discussing wanting to perform sexual acts with him. After the victim blocked her on social media, she continued to pressure him into sexual activity. She entered the shared men&#39;s bathroom while he was in it alone and performed sexual acts on him.</p><p>The victim reported the conduct. Hillsborough County Sheriff&#39;s Office Special Victims Section opened investigation September 11, 2024. Sticklin arrested September 13, 2024. Charges: Lewd or Lascivious Touching of a Minor 16 or 17 Years of Age By a Person 24 Years of Age or Older; Unlawful Sexual Activity with a Minor (x3). Prosecutor Mathias Angel Lynn; public defender.</p><p>Plea: Guilty (best interest) January 22, 2026. Sentence: 10 years Florida DOC (all counts concurrent; 22 days credit for time served), followed by 5 years sex offender probation; 50 hours community service. Deemed sexual offender, lifetime designation. No early termination; incarceration followed by probation per plea letter.</p><p>NOTE: Non-school behavioral health setting — group foster home. Victim is state-placed foster child; authority relationship is caretaking, not instructional. court-ordered-victims applies. Victim blocked Sticklin on Snapchat; she escalated to in-person bathroom assault despite rejection — escalation pattern after digital grooming.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Sticklin, Katherine</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_251.html">State v. Lopez-Murray</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      63%
+ — emotional-manipulation, explicit-photos, grooming, sexting · oral · victim age 14 · Florida    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_716.html">Angela Jean Stanton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — explicit-photos, grooming, snapchat · oral · victim age 15 · 8.0 yr sentence · Florida    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_665.html">Jessica Welch Greene</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — emotional-manipulation, grooming, sexting · oral · victim age 17    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_659.html">Dionne Marie Younce</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      57%
+ — explicit-photos, grooming, sexting, snapchat · victim age 17 · Florida    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_404.html">Valeria Ashley Costadoni</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — grooming · oral · victim age 17 · Florida    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2036</td>
+      <td>Lewd or Lascivious Touching of a Minor 16 or 17 Years of Age By a Person 24 Years of Age or Older</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2037</td>
+      <td>Unlawful Sexual Activity with a Minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2024-09-13</td>
+      <td>arrest</td>
+      <td>Arrested; charged with lewd/lascivious touching and unlawful sexual activity with a minor (x3)</td>
+    </tr>
+    <tr>
+      <td class="dim">2026-01-22</td>
+      <td>sentencing</td>
+      <td>Guilty best interest plea; 10 years FL DOC concurrent, 5 years sex offender probation, lifetime sexual offender designation</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1389.html">1389</a></td>
+      <td class="dim">2024-09-13</td>
+      <td>Hillsborough County Sheriff&#39;s Office press release #24-198</td>
+      <td><a href="entry_1389.html">The Hillsborough County Sheriff&#39;s Office has arrested a youth counselor at A Kid&#39;s Place of Tampa Ba</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">snapchat</span>
+          <span class="tag">plea</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">sexting</span>
+          <span class="tag">behavioral-health</span>
+          <span class="tag">court-ordered-victims</span>
+          <span class="tag">emotional-manipulation</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
