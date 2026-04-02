@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caron Michele Escobar — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_922.html" title="Tiffany Rose Williams">← #922 Tiffany Rose Williams</a>
+    <a href="../../cases/801-1000/case_924.html" title="Britney Marie Vernon">#924 Britney Marie Vernon →</a>
+  </span>
+</div>
+<h1>Caron Michele Escobar
+  <span class="dim" style="font-size:0.6em">#923</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>California</td><td class="lbl">Court</td><td>San Bernardino County Superior Court, Victorville District</td></tr>
+  <tr><td class="lbl">Judge</td><td>Miriam I. Morton</td><td class="lbl">Incident Date</td><td>2017-11-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>43</td><td class="lbl">Victim Age</td><td>15</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>2.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Instructional aide at Chaparral High School, Phelan, California (San Bernardino County). Employed at Chaparral since November 2017; previously at Eagle Summit Community Day School. Age 43 at arrest. Two male victims: ages 15 and 16.</p><p>School officials reported alleged sexual relationships to the San Bernardino County Sheriff&#39;s Victor Valley Station on March 1, 2018. Detectives from the Crimes Against Children division investigated; several minors were interviewed. Escobar arrested March 2, 2018. Held on $100,000 bail at Central Detention Center, San Bernardino. Defense: Brian Watson (retained). DA: David Foy. Detectives noted possible additional victims.</p><p>Charges (Case FVI18000925): PC288(C)(1) — lewd/lascivious acts with child 14-15; PC288A(B)(2) — oral copulation with person under 16; PC288.4(B) — arranging meeting with minor for lewd purpose (x2); PC288.2(A)(2) — harmful material to seduce minor (x2); PC311.11(A) — possession of CSAM; PC288A(B)(1) — oral copulation with person under 18; PC261.5(C) — unlawful sexual intercourse with minor (x3); PC136.1(A)(1) — prevent/dissuade witness/victim.</p><p>Sentenced January 10, 2020. Probation denied. Principal count 001 (PC288(C)(1)): 2 years state prison middle term. Count 006 (PC288A(B)(1)): 2 years concurrent. Count 012 (PC136.1(A)(1)): 2 years concurrent. Total determinate term: 2 years. Credit: 331 days actual + 330 days conduct credit (PC4019 1/2 = ~22 months served pre-sentence). Committed to California DOC, California Institution for Women at Frontera.</p><p>NOTE: sentence_years=2 (2-year determinate term; not suspended). PC261.5(C) statutory rape charges filed but not among sentenced counts — plea likely resolved them concurrently or dismissed. PC136.1 conviction indicates she attempted to dissuade a victim from reporting. CSAM found (PC311.11(A)). possible-additional-victims per investigating detectives.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Escobar, Caron Michele</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_677.html">Rachelle Louise Terry</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — csam · ct=888 · victim age 15 · 3.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_579.html">Sheri Maufort</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — concealment, multiple-victims, non-teaching-staff · ct=888 · victim age 17 · 0.96 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_669.html">Alyson Nicole London</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — concealment, sexting · ct=888 · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_611.html">Amy Hamilton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — sexting · ct=888 · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_491.html">Maryann Verdi</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — concealment · ct=888 · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2066</td>
+      <td>Lewd or Lascivious Acts With Child 14 or 15 Years</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2067</td>
+      <td>Oral Copulation With Person Under 18 Years</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2068</td>
+      <td>Prevent/Dissuade Witness/Victim</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2069</td>
+      <td>Oral Copulation With Person Under 16 Years</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2070</td>
+      <td>Arranging Meeting with Minor for Lewd Purpose</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2071</td>
+      <td>Harmful Material to Seduce Minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2072</td>
+      <td>Possession of Child Sexual Abuse Material</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2073</td>
+      <td>Unlawful Sexual Intercourse with Minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2018-03-02</td>
+      <td>arrest</td>
+      <td>Arrested; booked Central Detention Center San Bernardino; $100,000 bail</td>
+    </tr>
+    <tr>
+      <td class="dim">2020-01-10</td>
+      <td>sentencing</td>
+      <td>2 years state prison (concurrent counts); probation denied; committed to CIW Frontera</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1408.html">1408</a></td>
+      <td class="dim">2018-03-02</td>
+      <td>CBS Los Angeles</td>
+      <td><a href="entry_1408.html">An instructional teacher&#39;s aide in Phelan is accused of having sex with two male students. Caron Mic</a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">sexting</span>
+          <span class="tag">csam</span>
+          <span class="tag">possible-additional-victims</span>
+          <span class="tag">concealment</span>
+          <span class="tag">non-teaching-staff</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

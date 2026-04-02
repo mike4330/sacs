@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacqueline Marie Stone — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_944.html" title="Stacy Galema">← #944 Stacy Galema</a>
+    <a href="../../cases/801-1000/case_946.html" title="Sierra Beverly Ann Stigall">#946 Sierra Beverly Ann Stigall →</a>
+  </span>
+</div>
+<h1>Jacqueline Marie Stone
+  <span class="dim" style="font-size:0.6em">#945</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Oklahoma</td><td class="lbl">Court</td><td>Caddo County District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>13</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>10.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Math teacher at Anadarko Middle School, Anadarko, Oklahoma (Caddo County). Also served as music/band teacher at the victim&#39;s church and as an assistant soccer coach. Age 28 at time of charges. Resident of Anadarko.</p><p>Accused of kissing and inappropriately touching a 13-year-old male student. The relationship began during a game of hide and seek at church, when Stone kissed the boy on the lips in a dark room. There were subsequent kissing and sexual touching incidents on several occasions. Stone wrote the boy multiple love letters over the course of the school year, including messages that she loved him, could not imagine life without him, thought about marrying him, and wanted to get pregnant by him — saying they were meant to have three children together. She also gave him Bible scriptures.</p><p>The victim&#39;s parents contacted Superintendent Jerry McCormick with the allegations. The victim&#39;s aunt, also a teacher at the school, had previously reported inappropriate interactions between Stone and the teenager, but no action was taken. The mother had also previously confronted her son and Stone, but both denied it. Following the parents&#39; formal complaint, Stone was placed on administrative leave and submitted her resignation, accepted at the May 12, 2025 board meeting.</p><p>Originally charged in May 2025 with nine felony counts: seven counts of lewd or indecent acts to a child under 16 and two counts of lewd acts. Entered a blind guilty plea on December 16, 2025 to four counts of lewd or indecent acts to a child under 16 and one count of lewd acts. Sentenced to 20 years with 10 years to serve in prison and 10 suspended. Required to register as a sex offender.</p><p>NOTE: Victim is male, age 13. Church connection provided additional access beyond school. Prior warnings ignored — aunt reported concerns but no action taken. Love letters with pregnancy/marriage fantasies are an extreme grooming indicator. Charge reduction from 9 counts to 5.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Stone, Jacqueline Marie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_720.html">Allison Chilton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — emotional-manipulation, grooming, love-letters · non-penetrative · victim age 12    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_569.html">Pamela Rogers</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      57%
+ — grooming · non-penetrative · victim age 13 · 8.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_915.html">Breanna Hernandez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      53%
+ — emotional-manipulation, grooming · non-penetrative · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_817.html">Rebecca Goerdel</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      53%
+ — grooming · non-penetrative · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_463.html">Kari Jean Schwartz</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      52%
+ — emotional-manipulation, grooming, love-letters · non-penetrative · 5.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2123</td>
+      <td>Lewd or indecent acts to a child under 16 (count 1)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2124</td>
+      <td>Lewd or indecent acts to a child under 16 (count 2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2125</td>
+      <td>Lewd or indecent acts to a child under 16 (count 3)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2126</td>
+      <td>Lewd or indecent acts to a child under 16 (count 4)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2127</td>
+      <td>Lewd acts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2128</td>
+      <td>Lewd or indecent acts to a child under 16 (counts 5-7, original charges)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2129</td>
+      <td>Lewd acts (count 2, original charge)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2025-05-01</td>
+      <td>indictment</td>
+      <td>Charged with nine felony counts: seven counts lewd or indecent acts to a child under 16, two counts lewd acts</td>
+    </tr>
+    <tr>
+      <td class="dim">2025-05-12</td>
+      <td>other</td>
+      <td>Stone&#39;s resignation accepted by Anadarko school board</td>
+    </tr>
+    <tr>
+      <td class="dim">2025-12-16</td>
+      <td>sentencing</td>
+      <td>Blind guilty plea to 5 counts. Sentenced to 20 years, 10 to serve, 10 suspended. Sex offender registration required.</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1434.html">1434</a></td>
+      <td class="dim">2025-12-18</td>
+      <td>Manthan C. (news outlet)</td>
+      <td><a href="entry_1434.html">Anadarko Middle School Teacher Admits to Kissing, Inappropriately Touching Her 13-Year-Old Student a</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">prior-warning-ignored</span>
+          <span class="tag">charge-reduction</span>
+          <span class="tag">emotional-manipulation</span>
+          <span class="tag">love-letters</span>
+          <span class="tag">coach</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

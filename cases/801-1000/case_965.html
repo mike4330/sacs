@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrea Mizell — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_964.html" title="Melissa Frances Groleau">← #964 Melissa Frances Groleau</a>
+    <a href="../../cases/801-1000/case_966.html" title="Zana Horton">#966 Zana Horton →</a>
+  </span>
+</div>
+<h1>Andrea Mizell
+  <span class="dim" style="font-size:0.6em">#965</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>South Carolina</td><td class="lbl">Court</td><td>Hanahan</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>45</td><td class="lbl">Victim Age</td><td>unknown</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>unknown</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Dance instructor at a dance school in Hanahan, South Carolina (Berkeley County). Age 45 at time of charges.</p><p>Accused of giving children alcohol (margaritas at her apartment while watching a movie), having vulgar and graphic conversations about her sex life with students, showing students nude photos of herself, and touching students inappropriately during dance practice.</p><p>Multiple students told Hanahan police in May 2025 that Mizell touched them in the private parts on the butt, which was unwanted and nonconsensual. One victim said it happened multiple times during practice and that Mizell would go out of her way to touch the student. Another described the action as smacks and said Mizell placed her hands on the victim&#39;s waist and butt during practices, unrelated to correcting posture or dance moves. Students also claimed Mizell would change clothes in front of them, exposing herself.</p><p>Investigation began in March 2025 when Hanahan police responded to a report of an argument at the dance school. Parents had concerns about a routine that conflicted with their morals. Mizell left in a panic when multiple parents showed up unexpectedly.</p><p>Charged with four counts of second-degree assault and battery, four counts of contributing to the delinquency of a minor, and three counts of disseminating harmful material to minors.</p><p>NOTE: Non-school (private dance studio). Multiple victims. No sex offense charges filed despite the conduct — charges are A&amp;B, contributing to delinquency, and disseminating harmful material. Alcohol provision to minors. Victim ages not specified.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Mizell, Andrea</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_52.html">Leeann Yammarino</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      24%
+ — explicit-photos, multiple-victims, non-school    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_920.html">Audrey Grabarkiewicz</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      23%
+ — alcohol-to-victim, multiple-victims · South Carolina    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_527.html">Sarah Lindsay</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      21%
+ — alcohol-to-victim, multiple-victims · South Carolina    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_883.html">Mandy Evans</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      19%
+ — explicit-photos    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_194.html">Lacey Brooke Oakes</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      18%
+ — explicit-photos, multiple-victims    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2186</td>
+      <td>Assault and battery, second degree (x4)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2187</td>
+      <td>Contributing to the delinquency of a minor (x4)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2188</td>
+      <td>Disseminating harmful material to minors (x3)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2025-07-01</td>
+      <td>arrest</td>
+      <td>Arrested on 11 charges (exact date described as &#39;last month&#39; relative to Jul 24 report)</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1454.html">1454</a></td>
+      <td class="dim">2025-07-24</td>
+      <td>WCSC (Patrick Phillips, Emily Van de Riet)</td>
+      <td><a href="entry_1454.html">Dance teacher charged after parents raise flag on inappropriate routine. A dance teacher in South Ca</a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">non-school</span>
+          <span class="tag">alcohol-to-victim</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

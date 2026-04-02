@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audrey Grabarkiewicz — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_919.html" title="Kara Walton">← #919 Kara Walton</a>
+    <a href="../../cases/801-1000/case_921.html" title="Joyce Faith Brown">#921 Joyce Faith Brown →</a>
+  </span>
+</div>
+<div style="float:right; margin: 0 0 1rem 1.5rem; text-align:center;">
+  <img src="../../images/Grabarkiewicz.jpg" alt="Audrey Grabarkiewicz" style="max-width:180px; max-height:220px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.18);">
+</div>
+<h1>Audrey Grabarkiewicz
+  <span class="dim" style="font-size:0.6em">#920</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>South Carolina</td><td class="lbl">Court</td><td>Spartanburg County General Sessions Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2010-06-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>44</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Preschool teacher at Lake Bowen Baptist Church, Spartanburg County, South Carolina. Age approximately 44 at arrest; 46 at sentencing. Married at time of arrest (divorced shortly after); mother of three.</p><p>Conduct: Beginning summer 2010, Grabarkiewicz and co-defendant Sarah Jane Lindsay (Case #527) hosted parties for middle school and high school students at which they provided alcohol and marijuana to the teens and had sex with several of them. Multiple teen victims.</p><p>Arrested September 2010 along with Lindsay. Lindsay, who taught 4-year-old kindergarten at Boiling Springs Elementary, faced the additional charge of having sex with someone under 14, and was sentenced in April 2012 to serve 40 months of a 10-year prison term.</p><p>Charges: 10 counts contributing to the delinquency of a minor (corrupting a minor). Plea: Guilty to all 10 counts. Sentenced July 2, 2012: 3 years probation; 120 hours community service; no prison time.</p><p>NOTE: sentence_years=0 (probation only). Charges are contributing to delinquency only — no sex offense convictions despite prosecutors&#39; statements about sexual activity with teens. Grabarkiewicz faced no charge of sex with a person under 14 (unlike Lindsay). Non-school setting for offenses (private home parties) though both defendants held educational roles. Facebook posts from the period referenced wild weekends and romantic pining, entered as evidence at trial.</p></blockquote>
+
+<div style="clear:both;"></div>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Grabarkiewicz, Audrey</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_669.html">Alyson Nicole London</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      56%
+ — social-media · ct=888 · victim age 14 · 0.4 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_527.html">Sarah Lindsay</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      55%
+ — alcohol-to-victim, drugs, multiple-victims · ct=888 · South Carolina    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_298.html">Rayna Culver</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      51%
+ — ct=888 · victim age 15 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_923.html">Caron Michele Escobar</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      51%
+ — multiple-victims · ct=888 · victim age 15    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_740.html">Abbie Jane Swogger</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      51%
+ — alcohol-to-victim, drugs, multiple-victims · ct=888 · victim age 15    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2061</td>
+      <td>Contributing to the Delinquency of a Minor (Corrupting a Minor)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2010-09-01</td>
+      <td>arrest</td>
+      <td>Arrested along with co-defendant Sarah Jane Lindsay (#527); 10 counts corrupting a minor</td>
+    </tr>
+    <tr>
+      <td class="dim">2012-07-02</td>
+      <td>sentencing</td>
+      <td>Guilty plea to all 10 counts; 3 years probation, 120 hours community service; no prison</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1405.html">1405</a></td>
+      <td class="dim">2012-07-02</td>
+      <td>New York Daily News</td>
+      <td><a href="entry_1405.html">A former South Carolina preschool teacher who threw booze- and pot-fueled sex parties for local teen</a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">plea</span>
+          <span class="tag">social-media</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">drugs</span>
+          <span class="tag">private-school</span>
+          <span class="tag">group-sex</span>
+          <span class="tag">alcohol-to-victim</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sierra Beverly Ann Stigall — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_945.html" title="Jacqueline Marie Stone">← #945 Jacqueline Marie Stone</a>
+    <a href="../../cases/801-1000/case_947.html" title="Sandra Ortega">#947 Sandra Ortega →</a>
+  </span>
+</div>
+<h1>Sierra Beverly Ann Stigall
+  <span class="dim" style="font-size:0.6em">#946</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Oregon</td><td class="lbl">Court</td><td>Deschutes County Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2025-05-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>22</td><td class="lbl">Victim Age</td><td>13</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>unknown</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former seventh-grade volleyball coach at La Pine Middle School, La Pine, Oregon (Deschutes County). Also coached a traveling U14 baseball team in the La Pine area. Age 22 at time of arrest. Attended La Pine Middle School and graduated from La Pine High School in 2021. Only employed by Bend-La Pine Schools for the six-week volleyball season in fall 2024.</p><p>Originally charged with 20 counts in connection with alleged abuse of a boy under 14, covering incidents between May and July 2025. Court documents allege at least three sexual encounters with the minor during that period. Incidents reportedly took place in a vehicle and a hotel room. Stigall&#39;s coaching role with the alleged victim occurred after her employment with the school district.</p><p>Arrested November 14, 2025. A second victim was subsequently identified. Following a formal grand jury indictment on November 24, 2025, Stigall now faces 39 counts including multiple counts of rape, sexual abuse, sodomy, luring a minor, and online sexual corruption of a child. All are Class B or C felonies except a misdemeanor endangering the welfare of a minor. Prosecutors allege contact with one or both victims may have lasted through November 2025.</p><p>At the November 24 hearing, prosecutors read a letter from an alleged victim&#39;s parent urging the court not to lower bail. Defense requested bail reduction to $50,000; prosecutors recommended $350,000. Judge Raymond Crutchley reduced bail from $500,000 to $100,000 with conditions: surrender passport, electronic monitoring, no contact with minors. Stigall remains in jail. Plea hearing scheduled for December 15, 2025.</p><p>NOTE: Coach role (volleyball and baseball). Two victims identified, both boys under 14. Extremely high charge count (39 counts). Multiple forms of sexual contact alleged including rape and sodomy. Online grooming component (online sexual corruption of a child). Incidents in vehicle and hotel room. Former student of the same school system she coached in.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Stigall, Sierra Beverly Ann</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Crutchley, Raymond</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_707.html">Kaitlyn Renee Granado</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      36%
+ — grooming, multiple-victims · victim age 15    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_640.html">Gabriela Compton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      35%
+ — grooming, multiple-victims · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_33.html">Cassidy Kraus</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      35%
+ — multiple-victims, social-media · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_200.html">Taylor Cruze</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      33%
+ — multiple-victims, social-media · victim age 11    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_199.html">Daena Coreas Delgado</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      33%
+ — grooming, social-media · victim age 13    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2130</td>
+      <td>Sexual abuse in the first degree (x5)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2131</td>
+      <td>Sodomy in the second degree (x2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2132</td>
+      <td>Sexual abuse in the second degree (x8)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2133</td>
+      <td>Rape in the second degree (x2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2134</td>
+      <td>Luring a minor (x2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2135</td>
+      <td>Online sexual corruption of a child in the first degree</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2136</td>
+      <td>Endangering the welfare of a minor (misdemeanor)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2025-11-14</td>
+      <td>arrest</td>
+      <td>Arrested on 20 counts of rape, sexual abuse, sodomy, and luring a minor; held on $500,000 bail</td>
+    </tr>
+    <tr>
+      <td class="dim">2025-11-24</td>
+      <td>indictment</td>
+      <td>Grand jury indictment filed with expanded charges including second victim; now 39 total counts</td>
+    </tr>
+    <tr>
+      <td class="dim">2025-11-24</td>
+      <td>bail</td>
+      <td>Bail reduced from $500,000 to $100,000 by Judge Crutchley; conditions include passport surrender, electronic monitoring, no contact with minors</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1435.html">1435</a></td>
+      <td class="dim">2025-11-24</td>
+      <td>KTVZ (Bend, OR)</td>
+      <td><a href="entry_1435.html">Sierra Stigall, a 22-year-old former La Pine Middle School volleyball coach, went before a judge on </a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">social-media</span>
+          <span class="tag">coach</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

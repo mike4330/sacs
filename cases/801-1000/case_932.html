@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kayla Renee Salcido — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_931.html" title="Amanda Greenwood">← #931 Amanda Greenwood</a>
+    <a href="../../cases/801-1000/case_933.html" title="Sydne Graf">#933 Sydne Graf →</a>
+  </span>
+</div>
+<h1>Kayla Renee Salcido
+  <span class="dim" style="font-size:0.6em">#932</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>New Mexico</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>26</td><td class="lbl">Victim Age</td><td>unknown</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>unknown</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former employee at Mesilla Valley Hospital, a behavioral healthcare facility in Las Cruces, New Mexico (Doña Ana County). Age 26 at arrest. Media reports describe Salcido as a nurse, but a search of a national nursing licensure database did not reveal a record; she may have worked as a care technician or other behavioral health staff member.</p><p>Victim was a juvenile male patient receiving treatment at Mesilla Valley Hospital. Salcido showed the patient nude photographs of herself on her phone, added him on Instagram, and kissed him while he was a patient. After the patient was discharged, Salcido picked him up near the hospital and drove him to her apartment. The affidavit states Salcido and the victim consumed alcohol before she sexually assaulted him multiple times, stopping only when she said guests were expected to arrive. She then drove the patient back near the hospital and he was readmitted. He learned the following day that Salcido had resigned from her position. The discovery left him feeling depressed and used, prompting him to confide in a hospital staff member. The disclosure was reported to law enforcement.</p><p>Arrested March 5, 2026. Charged in Doña Ana County Magistrate Court with seven felonies: three counts of criminal sexual penetration in the second degree (child 13–18, force or coercion), one count of criminal sexual contact of a minor in the second degree (person in position of authority, unclothed, child 13–18), and three counts of contributing to the delinquency of a minor.</p><p>NOTE: Non-school case — behavioral health facility. Victim was a patient, not a student. Alcohol provision to a minor alleged. Explicit photos shown to victim as part of grooming. Salcido resigned the day after the assault, suggesting awareness of wrongdoing. Victim age between 13 and 18 per charge language.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Salcido, Kayla Renee</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_724.html">Sarah Conway</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      26%
+ — behavioral-health, grooming, social-media    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_855.html">Lindsey Noele Thorson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      25%
+ — behavioral-health, explicit-photos, grooming, social-media    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_691.html">Jaimie Dominy Page</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      24%
+ — explicit-photos, grooming, social-media    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_369.html">Madalyn Arnett</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      24%
+ — explicit-photos, grooming, social-media    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_666.html">Laura Nicole Lasek</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      23%
+ — explicit-photos, grooming, social-media    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2085</td>
+      <td>Criminal sexual penetration in the second degree (child 13–18, force or coercion) — 3 counts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2086</td>
+      <td>Criminal sexual contact of a minor in the second degree (person in position of authority, unclothed, child 13–18) — 1 count</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td class="dim">2087</td>
+      <td>Contributing to the delinquency of a minor — 3 counts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2026-03-05</td>
+      <td>arrest</td>
+      <td>Arrested; charged in Doña Ana County Magistrate Court with seven felonies</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1417.html">1417</a></td>
+      <td class="dim">2026-03-12</td>
+      <td>Organ Mountain News / Maria Smith</td>
+      <td><a href="entry_1417.html">Kayla Renee Salcido, 26, was arrested March 5, 2026 and charged in Doña Ana County Magistrate Court </a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">social-media</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">behavioral-health</span>
+          <span class="tag">non-school</span>
+          <span class="tag">alcohol-to-victim</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
