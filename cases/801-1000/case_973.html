@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruthie Anne Carlson — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_972.html" title="Michal Paige Huck">← #972 Michal Paige Huck</a>
+    <a href="../../cases/801-1000/case_974.html" title="Kirstie Noel Russell">#974 Kirstie Noel Russell →</a>
+  </span>
+</div>
+<h1>Ruthie Anne Carlson
+  <span class="dim" style="font-size:0.6em">#973</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>North Dakota</td><td class="lbl">Court</td><td>Cass County District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2021-12-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>19</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>2.5 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former lunch employee at Ben Franklin Middle School, Fargo Public Schools, Fargo, North Dakota (Cass County). Age approximately 19 at time of offense (December 2021); age 20 at guilty plea (January 2023).</p><p>One male victim, age 14. Investigation began December 2021 after a Snapchat video circulated at the school showing Carlson and a shirtless boy brushing their teeth. Court records allege sexual intercourse on December 1, 2021. Video recovered from Carlson&#39;s phone showed the victim and Carlson having sex, smoking marijuana, and holding guns; Carlson discussed getting pregnant with the boy on video. Court records also referenced a student challenge circulating at the school to see who could &#39;get with&#39; Carlson.</p><p>Fired by Fargo Public Schools December 20, 2021. Pleaded guilty January 17, 2023 in Cass County District Court to three felony counts: gross sexual imposition, possession of THC with intent to deliver or manufacture, and child neglect. Dismissed at plea: promoting a sexual performance by a minor and possession of certain materials prohibited by North Dakota law (CSAM). Sentenced March 20, 2023: 30 months prison, 5 years supervised probation; credit for 201 days time served.</p><p>NOTE: CSAM charge (prohibited materials) and promoting a sexual performance by a minor both dismissed at plea despite video evidence. Child neglect charge relates to marijuana paraphernalia accessible to Carlson&#39;s 2-year-old child in the apartment. Gross sexual imposition (ND § 12.1-20-03) requires a sexual act — penetrative by statute.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Carlson, Ruthie A.</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_614.html">Cassandra Elfers</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — explicit-photos, non-teaching-staff · ct=888 · victim age 13 · 1.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_923.html">Caron Michele Escobar</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — csam, non-teaching-staff · ct=888 · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_136.html">Christine McCallum</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — drugs · ct=888 · victim age 13 · 2.4 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_572.html">Beth Ann Chester</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — explicit-photos · ct=888 · victim age 14 · 1.5 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_13.html">Allison Marchese</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — explicit-photos · ct=888 · victim age 14 · 3.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2211</td>
+      <td>Gross sexual imposition (ND § 12.1-20-03)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2212</td>
+      <td>Possession of THC with intent to deliver or manufacture</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2213</td>
+      <td>Child neglect</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2214</td>
+      <td>Promoting a sexual performance by a minor</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2215</td>
+      <td>Possession of certain materials prohibited by North Dakota law (CSAM)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2021-12-20</td>
+      <td>arrest</td>
+      <td>Fired by Fargo Public Schools; investigation began after Snapchat video circulated at school</td>
+    </tr>
+    <tr>
+      <td class="dim">2023-01-17</td>
+      <td>verdict</td>
+      <td>Guilty plea to gross sexual imposition, possession of THC with intent to deliver, and child neglect; CSAM and promoting sexual performance charges dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2023-03-20</td>
+      <td>sentencing</td>
+      <td>30 months prison + 5 years supervised probation; credit for 201 days time served</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1471.html">1471</a></td>
+      <td class="dim">2023-01-17</td>
+      <td>InForum/News Fargo</td>
+      <td><a href="entry_1471.html">FARGO — A former Fargo Public Schools employee accused of having sex with a 14-year-old boy has plea</a>…</td>
+      <td>
+          <span class="tag">snapchat</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">drugs</span>
+          <span class="tag">csam</span>
+          <span class="tag">non-teaching-staff</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1472.html">1472</a></td>
+      <td class="dim">2023-03-20</td>
+      <td>Valley News Live</td>
+      <td><a href="entry_1472.html">Fifteen months after school officials and police opened up an investigation on a former Fargo Public</a>…</td>
+      <td>
+          <span class="tag">snapchat</span>
+          <span class="tag">non-teaching-staff</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

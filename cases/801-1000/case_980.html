@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amanda Leigh Quinonez — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/801-1000/case_979.html" title="Michelle McMillan">← #979 Michelle McMillan</a>
+    <a href="../../cases/801-1000/case_981.html" title="Marie Ellen Donaldson">#981 Marie Ellen Donaldson →</a>
+  </span>
+</div>
+<h1>Amanda Leigh Quinonez
+  <span class="dim" style="font-size:0.6em">#980</span>
+  <span class="status-active" style="font-size:0.55em">active</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>California</td><td class="lbl">Court</td><td>Riverside County Superior Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Joshlyn Pulliam</td><td class="lbl">Incident Date</td><td>2020-09-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>unknown</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former language arts teacher and water polo coach at Eleanor Roosevelt High School, Eastvale, California (Corona-Norco Unified School District, Riverside County). Age approximately 28 at onset of offense (fall 2020); age 34 at guilty plea (March 2026).</p><p>One male victim, under age 15 at time of offense. Communication began in fall 2020, with Quinonez sending the student nude photographs, which led to multiple in-person encounters. Locations of meetings not specified in sources.</p><p>The Riverside County Sheriff&#39;s Department was called to the school in April 2022 following allegations of an inappropriate relationship. Quinonez was arrested on campus April 12, 2022. She remained free on $50,000 bond.</p><p>Pleaded guilty March 16, 2026 under a pretrial agreement with the Riverside County DA&#39;s Office to seven counts: two counts of providing harmful matter to a child (California PC 288.2), two counts of sexual penetration with a foreign object (PC 289), one count of lewd acts with a child under 15 (PC 288), one count of oral copulation of a child (PC 287), and one count of annoying a minor (PC 647.6). Sentencing scheduled May 29, 2026 before Judge Joshlyn Pulliam at Riverside Hall of Justice. Teaching credential suspended per Commission on Teacher Credentialing.</p><p>NOTE: Offense began fall 2020; arrest followed in April 2022 — approximately 18 months between onset and arrest. Nude photos were the initial contact vector, leading to in-person meetings. Victim age stated as under 15; using 14 per convention. Sentencing pending as of April 2026.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Quinonez, Amanda</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_666.html">Laura Nicole Lasek</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      66%
+ — explicit-photos, grooming, sexting, social-media · penetrative · victim age 15 · California    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_580.html">Bridgett Szychulski</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — explicit-photos, grooming, on-campus, sexting · penetrative · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_576.html">Melissa Weber</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — grooming, on-campus, sexting · penetrative · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_864.html">Alexandria Kaluzny</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — explicit-photos, grooming, sexting, social-media · penetrative · victim age 14    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_703.html">Amy Bass Jackson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — explicit-photos, grooming, sexting, social-media · penetrative · victim age 14    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2230</td>
+      <td>Providing harmful matter to a child (California PC 288.2)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2231</td>
+      <td>Sexual penetration with a foreign object (California PC 289)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2232</td>
+      <td>Lewd acts with a child (California PC 288)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2233</td>
+      <td>Oral copulation with a minor (California PC 287)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2234</td>
+      <td>Annoying or molesting a child (California PC 647.6)</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2022-04-12</td>
+      <td>arrest</td>
+      <td>Arrested on campus by Riverside County Sheriff&#39;s Department; allegations of lewd acts and sending explicit photos</td>
+    </tr>
+    <tr>
+      <td class="dim">2026-03-16</td>
+      <td>verdict</td>
+      <td>Guilty plea to 7 counts (6 felonies, 1 misdemeanor)</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(3)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1479.html">1479</a></td>
+      <td class="dim">2026-03-20</td>
+      <td>Press-Enterprise/SCNG</td>
+      <td><a href="entry_1479.html">A woman who taught at Eleanor Roosevelt High in Eastvale has pleaded guilty to seven counts related </a>…</td>
+      <td>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">sexting</span>
+          <span class="tag">on-campus</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1480.html">1480</a></td>
+      <td class="dim">2022-04-15</td>
+      <td>New York Post</td>
+      <td><a href="entry_1480.html">A California teacher and water polo coach has been arrested for allegedly engaging in lewd acts with</a>…</td>
+      <td>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">on-campus</span>
+          <span class="tag">coach</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1481.html">1481</a></td>
+      <td class="dim">2026-03-16</td>
+      <td>City News Service / Patch</td>
+      <td><a href="entry_1481.html">A 34-year-old former Eastvale high school teacher who engaged in sex acts with a boy in one of her c</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">social-media</span>
+          <span class="tag">explicit-photos</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
