@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hannah Parisa Siboyeh — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1018.html" title="Melanie Elizabeth Mobley">← #1018 Melanie Elizabeth Mobley</a>
+    <a href="../../cases/1001-1200/case_1020.html" title="Olivia A. Huerta">#1020 Olivia A. Huerta →</a>
+  </span>
+</div>
+<h1>Hannah Parisa Siboyeh
+  <span class="dim" style="font-size:0.6em">#1019</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>Harris County 337th Criminal District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Ritchie, Herb H.</td><td class="lbl">Incident Date</td><td>2017-07-17</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>23</td><td class="lbl">Victim Age</td><td>15</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former paraprofessional at Labay Middle School, Cypress Fairbanks ISD, Harris County, Texas. Age 23 at time of offense.</p><p>Victim: 15-year-old male student (and former student) at Labay Middle School. Multiple witnesses described the relationship as boyfriend-girlfriend in nature; victim’s sister confirmed victim had told her about the sexual relationship and that she had seen them together on multiple occasions.</p><p>Discovery: April 5, 2018 — an anonymous student tip to AP Kathryn Robinson reported that the student had been at victim’s home, observed defendant and victim lying in bed together, heard noises from the room, and saw them posting photos together on Snapchat.</p><p>Defendant interviewed at school (audio and video recorded, non-custodial): gave a full confession. Stated she and victim kissed and held hands; he had seen her naked and she him (from back); he fondled her breast and touched her vaginal area. Admitted she “lost her virginity” to the victim in the middle of summer 2017. Described the relationship as “one mistake after another” and stated it was her fault because she was the grownup and older. Said her period was late and she was scared. Admitted she loved him “with all of her heart.” Disclosed sexual intercourse occurred at victim’s house, at a park, and at the Palace Inn.</p><p>Hotel records: Palace Inn, 8920 West Road, Houston — defendant rented a room July 17, 2017 and July 20, 2017, two hours each date. Affiant confirmed victim was age 15 on both dates.</p><p>Phone forensics (Oxygen Forensics, consent search): several explicit images of defendant and complainant together; video affiant believes depicts the two having sexual intercourse.</p><p>Complaint filed September 4, 2018 (Cypress Fairbanks ISD PD, Affiant D. Keele). Arrested September 7; no-contact order September 10; bond $10,000. Two bond condition violations November 28 and 30, 2018; protective order with limited access December 17, 2018. Indicted March 8, 2019. Harris County Cause Nos. 160406301010 (§21.12) and 160406401010 (SA child 14–17). Defense: Robert O. Pelton (hired). ADA Williams.</p><p>Deferred adjudication granted June 20, 2019 (Judge Herb H. Ritchie): 10 years, fine $950. SA charge dismissed simultaneously. Early termination granted June 10, 2024 (~5 years into 10-year DADJ).</p><p>NOTE: sentence_years = 0. contact_type = 3 (penetrative; confirmed by confession, hotel records, and video). Two bond violations within 3 months of arrest triggered protective order. Confession was audio/video recorded and obtained voluntarily at school.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">snapchat</span>
+      <span class="tag">plea</span>
+      <span class="tag">probation</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">physical-evidence</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">long-term-relationship</span>
+      <span class="tag">early-release</span>
+      <span class="tag">emotional-manipulation</span>
+      <span class="tag">bond-violation</span>
+      <span class="tag">non-teaching-staff</span>
+      <span class="tag">confession</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Siboyeh, Hannah Parisa</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1020.html">Olivia A. Huerta</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      86%
+ — confession, grooming, non-teaching-staff, physical-evidence +1 · penetrative · victim age 16 · 0.0 yr sentence · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_381.html">Erica Gomez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      78%
+ — confession, physical-evidence, snapchat · penetrative · victim age 15 · 0.0 yr sentence · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_707.html">Kaitlyn Renee Granado</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      75%
+ — confession, grooming · penetrative · victim age 15 · 0.0 yr sentence · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1012.html">April Castillo</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      75%
+ — confession, non-teaching-staff, physical-evidence · penetrative · victim age 15 · 0.0 yr sentence · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_699.html">Maris Alexandra Gonzalez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      74%
+ — confession, grooming · penetrative · victim age 15 · 0.0 yr sentence · Texas    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2321</td>
+      <td>Improper relationship between educator and student (Texas PC §21.12)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2322</td>
+      <td>Sexual assault of child 14–17 (Texas PC §22.011) — cause 160406401010</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2018-09-07</td>
+      <td>arrest</td>
+      <td>Arrested; bond $10,000; no-contact order 9/10/2018; bond violations 11/28 and 11/30/2018</td>
+    </tr>
+    <tr>
+      <td class="dim">2019-03-08</td>
+      <td>indictment</td>
+      <td>Felony indictment</td>
+    </tr>
+    <tr>
+      <td class="dim">2019-06-20</td>
+      <td>sentencing</td>
+      <td>10-year DADJ, $950 fine; SA charge dismissed; Judge Ritchie; defense Pelton; ADA Williams</td>
+    </tr>
+    <tr>
+      <td class="dim">2024-06-10</td>
+      <td>other</td>
+      <td>Early termination of community supervision granted (~5 years into 10-year DADJ)</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+  <p class="dim">No entries yet.</p>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
