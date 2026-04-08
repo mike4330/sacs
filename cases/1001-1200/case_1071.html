@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lynda Chase — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1070.html" title="Bethyl Shepherd">← #1070 Bethyl Shepherd</a>
+    <a href="../../cases/1001-1200/case_1072.html" title="Carlie Attebury">#1072 Carlie Attebury →</a>
+  </span>
+</div>
+<h1>Lynda Chase
+  <span class="dim" style="font-size:0.6em">#1071</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Kentucky</td><td class="lbl">Court</td><td>Madison Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>William Clouse</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>37</td><td class="lbl">Victim Age</td><td>15</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>3.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former school secretary and attendance clerk at Madison Central High School, Richmond, Madison County, Kentucky, employed at the school for at least 10 years. Also served as a volunteer statistician for the boys&#39; basketball teams. Age 37 at time of offense. Male victim, 15 years old, a student at the school. Chase uses a wheelchair due to paralysis from a car crash at age 5.</p><p>Chase engaged in sexual intercourse and oral sex with the victim, including at her home. The prosecution described Chase as having come to view the boy as her soulmate. Following her February 2011 arrest, Chase sent a Facebook message to the victim in violation of a no-contact court order.</p><p>Arrested February 2011. Pleaded guilty May 2011 to one count of third-degree rape and four counts of third-degree sodomy. Sentenced August 25, 2011 by Madison Circuit Judge William G. Clouse: 3 years in state prison; sex offender registration; sex offender treatment. Defense argued for probation or continued home incarceration on the basis of Chase&#39;s disability; prosecution and court rejected this. Judge Clouse stated: &#39;There is a victim in this case, and the victim is a child. The only adult in this relationship was you.&#39; Held at the Kentucky Correctional Institution for Women in Pewee Valley. Shock probation denied November 8, 2011.</p><p>NOTE: contact_type = 3 — plea specifically covers sexual intercourse (third-degree rape) and oral sex (third-degree sodomy); both acts explicitly confirmed in reporting. Defense mitigation centered on Chase&#39;s disability and childhood trauma; rejected by the court.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">emotional-manipulation</span>
+      <span class="tag">victim-in-home</span>
+      <span class="tag">bond-violation</span>
+      <span class="tag">non-teaching-staff</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Chase, Lynda</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_693.html">Melissa Lee Borsch</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      72%
+ — non-teaching-staff, victim-in-home · penetrative · victim age 15 · 3.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_406.html">Toni Nicole Sutton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      70%
+ — emotional-manipulation, victim-in-home · penetrative · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_662.html">Amie Lou Neely</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      65%
+ — victim-in-home · penetrative · victim age 16 · 3.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_685.html">Jenna Tarabelsi</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      62%
+ — emotional-manipulation, non-teaching-staff · penetrative · victim age 15 · 3.5 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_241.html">Christen Hayes</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      62%
+ — non-teaching-staff, victim-in-home · penetrative · victim age 16    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2414</td>
+      <td>Third-degree rape</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2415</td>
+      <td>Third-degree sodomy (4 counts)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2011-02-01</td>
+      <td>arrest</td>
+      <td>Arrested (approximate date — February 2011)</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-05-01</td>
+      <td>other</td>
+      <td>Pleaded guilty to third-degree rape and four counts of third-degree sodomy (approximate date — May 2011)</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-08-25</td>
+      <td>sentencing</td>
+      <td>Sentenced to 3 years in state prison; sex offender registration; shock probation denied</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-11-08</td>
+      <td>other</td>
+      <td>Shock probation denied by Judge Clouse</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1597.html">1597</a></td>
+      <td class="dim">2011-08-25</td>
+      <td>Lexington Herald-Leader</td>
+      <td><a href="entry_1597.html">A former Madison Central High School secretary was sentenced Thursday to three years in prison on ra</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">emotional-manipulation</span>
+          <span class="tag">victim-in-home</span>
+          <span class="tag">bond-violation</span>
+          <span class="tag">non-teaching-staff</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1598.html">1598</a></td>
+      <td class="dim">2011-11-08</td>
+      <td>Richmond Register</td>
+      <td><a href="entry_1598.html">Judge William G. Clouse denied shock probation Tuesday for Lynda Chase, the former high school clerk</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">non-teaching-staff</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

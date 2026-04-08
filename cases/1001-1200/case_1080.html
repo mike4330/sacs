@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kristen Ross — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1079.html" title="Ashley Herre-Bagwell">← #1079 Ashley Herre-Bagwell</a>
+    <a href="../../cases/1001-1200/case_1081.html" title="Christine Williams">#1081 Christine Williams →</a>
+  </span>
+</div>
+<h1>Kristen Ross
+  <span class="dim" style="font-size:0.6em">#1080</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+  <p class="dim">Also known as: Kristen L. Ross</p>
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Ohio</td><td class="lbl">Court</td><td>Cuyahoga County Court of Common Pleas</td></tr>
+  <tr><td class="lbl">Judge</td><td>John Sutula</td><td class="lbl">Incident Date</td><td>2010-01-15</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>40</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>2.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at Riverside Elementary School, Cleveland, Cuyahoga County, Ohio. Age 40 at time of offense. Male victim, 14 years old (8th grade), a student at the school.</p><p>The victim reported that he had sexual intercourse with Ross in her classroom after school on January 15 and January 31, 2010. During this period Ross texted and phoned the victim nearly 4,000 times at all hours of the day and night. After the victim boasted about the relationship to friends who did not believe him, he asked Ross to send photographs of her naked breasts to his cellphone as proof; she complied. The relationship came to light through a blackmail attempt: several students sent Ross a letter threatening to expose the relationship unless she paid them 40 dollars. Ross confronted the students, who backed down. However, a copy of the letter was found by one student&#39;s mother, who brought it to school administrators. Ross was removed from teaching duties April 13, 2010 and arrested June 2010.</p><p>Pleaded guilty to one count of felonious assault arising from psychological harm to the victim; multiple sex-related charges were dismissed as part of the plea deal. The prosecutor stated in court that the victim had sex with Ross and would have testified to that at trial; Ross denied sexual relations at sentencing. Sentenced February 4, 2011 by Judge John Sutula: 2 years in prison (maximum was 8 years; request for probation denied without discussion). The victim did not attend his 8th-grade graduation due to the impact of the relationship.</p><p>NOTE: contact_type = 888 — conviction charge is felonious assault (non-sex charge used as a plea mechanism; prosecutor explicitly confirmed intercourse on record and stated multiple sex charges were dropped to resolve the case and remove her from the classroom). Underlying documented conduct includes sexual intercourse (per victim account and prosecution confirmation) and transmission of nude photographs. This is an unusual use of felonious assault — the &#39;psychological harm&#39; theory bridged a sex misconduct case to a non-sex charge.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">explicit-photos</span>
+      <span class="tag">sexting</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">on-campus</span>
+      <span class="tag">novel-statute</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Ross, Kristen</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_13.html">Allison Marchese</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      68%
+ — explicit-photos, on-campus, sexting · ct=888 · victim age 14 · 3.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_611.html">Amy Hamilton</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — sexting · ct=888 · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1059.html">Shannon Hirchert</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      62%
+ — explicit-photos, on-campus, sexting · ct=888    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_491.html">Maryann Verdi</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — ct=888 · victim age 15 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_572.html">Beth Ann Chester</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — explicit-photos, on-campus, sexting · ct=888 · victim age 14 · 1.5 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2428</td>
+      <td>Felonious assault (psychological harm)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2429</td>
+      <td>Sex-related charges (multiple, unspecified)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2010-06-01</td>
+      <td>arrest</td>
+      <td>Arrested; removed from teaching duties April 13, 2010 (approximate arrest date)</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-02-04</td>
+      <td>sentencing</td>
+      <td>Pleaded guilty to felonious assault; sentenced 2 years in prison; request for probation denied</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1614.html">1614</a></td>
+      <td class="dim">2011-02-04</td>
+      <td>The Plain Dealer</td>
+      <td><a href="entry_1614.html">Cuyahoga County Common Pleas Judge John Sutula sentenced a sobbing former Cleveland teacher to two y</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">sexting</span>
+          <span class="tag">charge-reduction</span>
+          <span class="tag">on-campus</span>
+          <span class="tag">novel-statute</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carlie Attebury — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1071.html" title="Lynda Chase">← #1071 Lynda Chase</a>
+    <a href="../../cases/1001-1200/case_1073.html" title="Barbara Anderson">#1073 Barbara Anderson →</a>
+  </span>
+</div>
+<h1>Carlie Attebury
+  <span class="dim" style="font-size:0.6em">#1072</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>California</td><td class="lbl">Court</td><td>Orange County Superior Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2007-11-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>15</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>1.33 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former band director at El Modena High School, Orange Unified School District, Orange, Orange County, California. Age 28 at time of offense. Male victim, 15 years old, a student in her band program.</p><p>Between November 2007 and September 2008, Attebury engaged in sexual intercourse with the victim at her home in Orange on multiple occasions, and exchanged hundreds of sexually explicit text messages with him. She groomed the victim and his family by befriending them, including having dinner at their home. The relationship came to light in October 2008 when the El Modena principal contacted police after witnesses observed Attebury sitting behind the student in school bleachers with her legs straddled around him, caressing his hair, in view of parents and other students.</p><p>Separately, a former student (not the victim in this case) attempted to extort Attebury, threatening to report both a prior relationship with an 18-year-old former student and the relationship with the 15-year-old victim unless she paid him 3,500 dollars and sent him explicit photos. That individual was separately charged, pleaded guilty, and received three years of probation.</p><p>Charged November 2008 with eight felony counts of unlawful sexual intercourse and dissuading a witness from reporting a crime; placed on unpaid leave by Orange Unified School District. Sentenced March 4, 2011 in Orange County Superior Court: 16 months in state prison; sex offender registration; stay-away order from victim.</p><p>NOTE: contact_type = 3 — charge is unlawful sexual intercourse; multiple sources confirm sexual intercourse at defendant&#39;s home. Discovery came through public observation at a school event rather than student disclosure or digital evidence.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">sexting</span>
+      <span class="tag">long-term-relationship</span>
+      <span class="tag">victim-in-home</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Attebury, Carlie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1028.html">Stephanie Cobb</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      79%
+ — grooming, long-term-relationship, sexting · penetrative · victim age 16 · 2.5 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_91.html">Elizabeth Dillett</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      77%
+ — grooming, long-term-relationship, sexting, victim-in-home · penetrative · victim age 16 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_580.html">Bridgett Szychulski</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      74%
+ — grooming, long-term-relationship, sexting · penetrative · victim age 14 · 0.96 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_869.html">Cynthia Hartopp</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      73%
+ — grooming, sexting · penetrative · victim age 16 · 1.25 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_169.html">Lindsey Jarvis</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      72%
+ — grooming, long-term-relationship, victim-in-home · penetrative · victim age 14    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2416</td>
+      <td>Unlawful sexual intercourse</td>
+      <td>1</td>
+      <td>—</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2417</td>
+      <td>Dissuading a witness from reporting a crime (original charge)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2008-10-31</td>
+      <td>arrest</td>
+      <td>Charged with eight felony counts of unlawful sexual intercourse and dissuading a witness; placed on unpaid leave</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-03-04</td>
+      <td>sentencing</td>
+      <td>Sentenced to 16 months in state prison; sex offender registration; stay-away order</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1599.html">1599</a></td>
+      <td class="dim">2011-03-04</td>
+      <td>ABC13 (KTRK)</td>
+      <td><a href="entry_1599.html">Carlie Attebury, 31, was a band director at El Modena high school in Orange. Between November 2007 a</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">sexting</span>
+          <span class="tag">long-term-relationship</span>
+          <span class="tag">victim-in-home</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1600.html">1600</a></td>
+      <td class="dim">2008-11-01</td>
+      <td>Orange County Register</td>
+      <td><a href="entry_1600.html">A high school band director in Orange County has been charged with having sex with one of her studen</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">long-term-relationship</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

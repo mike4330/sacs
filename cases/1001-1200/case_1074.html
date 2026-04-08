@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mandy Jared — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1073.html" title="Barbara Anderson">← #1073 Barbara Anderson</a>
+    <a href="../../cases/1001-1200/case_1075.html" title="Denise Fitch">#1075 Denise Fitch →</a>
+  </span>
+</div>
+<h1>Mandy Jared
+  <span class="dim" style="font-size:0.6em">#1074</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Indiana</td><td class="lbl">Court</td><td>Boone Superior Court 1</td></tr>
+  <tr><td class="lbl">Judge</td><td>Matthew Kincaid</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>33</td><td class="lbl">Victim Age</td><td>unknown</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former fine arts (visual arts) teacher at Zionsville Community High School, Zionsville, Boone County, Indiana. Age 33 at time of offense. Female victim, age not documented, a student at the school.</p><p>Incidents occurred on school property and were initiated by Jared. The female student confided in another teacher, who reported to school administrators; administrators confronted Jared and she resigned December 9, 2010 — the same day the school was made aware of the allegations. The district stated officials had no prior knowledge of inappropriate conduct and that investigation revealed no other victims.</p><p>Case investigated by the Zionsville Police Department; charging information filed February 10, 2011 on two counts of child seduction (Class D felony). Arrested on bench warrant February 15, 2011; bonded out. Initial hearing February 22, 2011 with no-contact order issued. Jury trial originally set June 15, 2011; continued to October 2011. Pleaded guilty September 30, 2011 to one count of child seduction (Class D felony) before Judge Matthew C. Kincaid; second count dismissed. Sentenced the same day to probation with Indiana Recommended Special Probation Conditions for Adult Sex Offenders; barred from teaching. Released from probation March 26, 2013. Conviction reduced to Class A misdemeanor June 7, 2013 under Indiana alternative misdemeanor sentencing. No-contact order dismissed February 8, 2021. Boone County Cause No. 06D01-1102-FD-000037.</p><p>NOTE: sentence_years = 0 — probation only. contact_type = 1 — Indiana child seduction Class D felony covers fondling or touching intended to arouse sexual desire; intercourse or deviate sexual conduct would have been charged as Class C. Incidents occurred on school property.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">female-victim</span>
+      <span class="tag">on-campus</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Jared, Mandy</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_419.html">Emily B. Patterson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      57%
+ — on-campus · non-penetrative · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_846.html">Tonya Marie Drueppel</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      53%
+ — female-victim · non-penetrative    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_544.html">Andrea Conners</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      53%
+ — on-campus · non-penetrative · 0.25 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_45.html">Courtney Horn</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      53%
+ — female-victim · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_759.html">Jenifer Stitzel</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      52%
+ — on-campus · non-penetrative · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2419</td>
+      <td>Child seduction (Class D felony)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2420</td>
+      <td>Child seduction (second count, original)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2011-02-15</td>
+      <td>arrest</td>
+      <td>Arrested on bench warrant</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-02-22</td>
+      <td>arraignment</td>
+      <td>Initial hearing; no-contact order issued; jury trial set for June 15, 2011</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-09-30</td>
+      <td>sentencing</td>
+      <td>Pleaded guilty; sentenced to probation with Indiana sex offender conditions</td>
+    </tr>
+    <tr>
+      <td class="dim">2013-06-07</td>
+      <td>other</td>
+      <td>Conviction reduced to Class A misdemeanor under Indiana alternative misdemeanor sentencing</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1603.html">1603</a></td>
+      <td class="dim">2026-04-07</td>
+      <td>Indiana Court Portal (Boone Superior Court 1)</td>
+      <td><a href="entry_1603.html">Docket: State of Indiana vs. Mandy Jared, Case 06D01-1102-FD-000037. Filed 02/10/2011. Two counts Ch</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">no-prison</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1604.html">1604</a></td>
+      <td class="dim">2011-02-19</td>
+      <td>WTHR/Private Officer (Indy News Channel)</td>
+      <td><a href="entry_1604.html">A former Zionsville High School teacher has been arrested, accused of having inappropriate contact w</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">female-victim</span>
+          <span class="tag">on-campus</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
