@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haylie Smart — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1100.html" title="Fatima Grupico">← #1100 Fatima Grupico</a>
+    <a href="../../cases/1001-1200/case_1102.html" title="Michelle Mellinger">#1102 Michelle Mellinger →</a>
+  </span>
+</div>
+<h1>Haylie Smart
+  <span class="dim" style="font-size:0.6em">#1101</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Oklahoma</td><td class="lbl">Court</td><td>Rogers County District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Kassie McCoy</td><td class="lbl">Incident Date</td><td>2017-11-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>17</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at Oologah-Talala High School, Oologah-Talala Public Schools (School District I-004), Rogers County, Oklahoma. Age 28 at time of first sexual contact.</p><p>One male student victim, age 17 at onset of sexual contact (turned 18 in December 2017). Inappropriate behavior began in October 2017 — Smart rubbed the student&#39;s back, placed her head on his shoulder, and hugged him in front of other students on multiple occasions. Sexual contact began in November 2017. Smart and the student had sex both after class at the school and at his home. During the two-week statewide Oklahoma teacher walkout in April 2018, Smart continued to have sex with the student at his home. Regardless of the student&#39;s age at any point, sexual contact between a teacher and student is prohibited under Oklahoma state law. In May 2018, Smart texted a friend about the relationship and acknowledged that she believed the school would find sufficient evidence to terminate her.</p><p>Smart was suspended from the school district in May 2018; she resigned several days later. Employment ended May 29, 2018. Arrest warrant issued August 17, 2018. Smart turned herself in August 24, 2018 and was released on $25,000 bond. Charged with second-degree rape (Rogers County Sheriff&#39;s Office). Case filed January 31, 2020 (CF-2020, Rogers County District Court).</p><p>Pleaded nolo contendere January 30, 2020 to assault with intent to commit a felony (21 O.S. 681), a significant charge reduction from second-degree rape. Received a 5-year deferred sentence; $500 fine, $250 victim compensation assessment, and court costs; 250 hours community service; psychological evaluation required; no contact with victim; no employment at any school. Supervised DOC probation. Judge Kassie McCoy; prosecutor Kali Strain; defense attorney J. Price.</p><p>NOTE: Charge reduction from second-degree rape to assault with intent to commit a felony removes this from sex offense territory — Smart likely avoids SORA registration entirely. The Oklahoma deferred sentence = no final conviction if supervision completed. The walkout (April 2018) appears as an access opportunity in at least one other case in this dataset — Keri Hoffman #384 (Clinton Public Schools, Custer County), same walkout, unconnected cases.</p></blockquote>
+
+
+  <p>
+      <span class="tag">grooming</span>
+      <span class="tag">plea</span>
+      <span class="tag">probation</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">on-campus</span>
+      <span class="tag">victim-in-home</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Smart, Haylie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_727.html">Alexandra Elizabeth McLean</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      66%
+ — grooming · ct=888 · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_528.html">Sonya Horn</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — on-campus, victim-in-home · ct=888 · victim age 18    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_503.html">Carrie McCandless</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — grooming · ct=888 · victim age 17 · 0.1 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_897.html">Paige M. Simon</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — grooming, on-campus · ct=888 · victim age 15 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_502.html">Sarah Jones</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      64%
+ — grooming · ct=888 · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2476</td>
+      <td>Second-degree rape</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2477</td>
+      <td>Assault with intent to commit a felony (21 O.S. 681)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2018-08-24</td>
+      <td>arrest</td>
+      <td>Turned herself in; released on $25,000 bond; charged with second-degree rape</td>
+    </tr>
+    <tr>
+      <td class="dim">2020-01-30</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+  <p class="dim">No entries yet.</p>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

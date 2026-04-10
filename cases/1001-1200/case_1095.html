@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trisha Anderson Rogers — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1094.html" title="Brittany von Stein">← #1094 Brittany von Stein</a>
+    <a href="../../cases/1001-1200/case_1096.html" title="Michelle Yeh">#1096 Michelle Yeh →</a>
+  </span>
+</div>
+<h1>Trisha Anderson Rogers
+  <span class="dim" style="font-size:0.6em">#1095</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>North Carolina</td><td class="lbl">Court</td><td>New Hanover County Superior Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2016-02-29</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>45</td><td class="lbl">Victim Age</td><td>13</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.67 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former student teacher at Murray Middle School, New Hanover County Schools, Wilmington, North Carolina (New Hanover County). Age 45 at time of offense. Also previously served as a substitute teacher for the school system.</p><p>One victim, age 13. Between February 29 and May 5, 2016, while Rogers was completing a student teaching internship at Murray Middle School, she used her cell phone to attempt to arrange a meetup with the student for an unlawful sexual act. When the school district became aware of the issue, law enforcement was immediately notified and Rogers&#39;s internship was terminated; she was removed from the substitute teacher list on May 5, 2016. Arrested July 28, 2016; bail set at $20,000.</p><p>Originally charged with soliciting a child by computer, indecent liberties with a child, and indecent liberties with a student. Pleaded guilty January 9, 2018 to three counts of indecent liberties with a child. Sentenced to 8 months in prison and three consecutive suspended sentences of 20–33 months, with 60 months supervised probation; required to register as a sex offender. Teacher certificate relinquished.</p><p>NOTE: Student teacher intern, not a credentialed teacher. Soliciting by computer charge dismissed at plea. Sentence_years = 8 months active; three 20–33 month suspended NC structured sentencing ranges activate only on probation violation. Victim sex not stated in available sources.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">sexting</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">substitute-teacher</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Rogers, Trisha Anderson</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1067.html">Dianne Leach</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      73%
+ — substitute-teacher · ct=999 · victim age 13 · 1.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_471.html">Stephanie Mechelle Woods</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — sexting · ct=999 · 2.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_534.html">Shannon Heslip</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — sexting · ct=999 · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_509.html">Cheryl Clark</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      51%
+ — sexting · ct=999 · 0.2 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_349.html">Heather Amanda Butts</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — sexting · ct=999 · victim age 13 · 0.33 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2458</td>
+      <td>Soliciting a child by computer</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2459</td>
+      <td>Indecent liberties with a student</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2460</td>
+      <td>Indecent liberties with a child (x3)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2016-07-28</td>
+      <td>arrest</td>
+      <td>Arrested; bail 0,000</td>
+    </tr>
+    <tr>
+      <td class="dim">2018-01-09</td>
+      <td>sentencing</td>
+      <td>Guilty plea; 8 months prison + 3 consecutive suspended sentences 20–33 months; 60 months supervised probation; SORA registration</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+  <p class="dim">No entries yet.</p>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
