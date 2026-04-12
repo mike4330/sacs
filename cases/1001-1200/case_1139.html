@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hillary Malcolm — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1138.html" title="Virginia Ann Homberg">← #1138 Virginia Ann Homberg</a>
+    <a href="../../cases/1001-1200/case_1140.html" title="Jennifer Holmgren">#1140 Jennifer Holmgren →</a>
+  </span>
+</div>
+<h1>Hillary Malcolm
+  <span class="dim" style="font-size:0.6em">#1139</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Ohio</td><td class="lbl">Court</td><td>Morrow County Common Pleas Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>unknown</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>unknown</td><td class="lbl">Victim Age</td><td>unknown</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.33 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at Cardington Lincoln Local Schools, Cardington, Morrow County, Ohio.</p><p>Male victim, a high school student at Cardington Lincoln High School but not a student in Malcolm&#39;s own classroom. Contact was conducted through Snapchat, during which Malcolm sent explicit images (identified as hers by distinctive fingernail patterns recognized by other students) and developed plans to engage in sexual activity with the victim. The victim reciprocated by exchanging images. Before law enforcement involvement, the victim deleted an image of Malcolm from his phone out of fear of repercussions; neither that image nor the Snapchat conversation was recoverable due to delays in Snapchat&#39;s legal compliance response. Screenshots of the conversation captured on the victim&#39;s phone showed Malcolm making sexual advances; discovery of those screenshots apparently alerted Malcolm, who abandoned her plan to meet the victim after school at either the school or his residence.</p><p>A second suspected victim was identified in summer 2024 but denied any solicitation or inappropriate contact. Prosecutor noted credible rumors of additional victims who may now be adults.</p><p>Indicted March 2024 (24 CR 27) on 2 counts illegal use of minor in nudity-oriented material (ORC 2907.323), 2 counts attempted sexual battery (ORC 2907.03 + 2923.02), and 2 counts disseminating matter harmful to juveniles. None of the original charges were viable for trial: the nudity counts required the victim to testify about the image and the family declined; the attempted sexual battery counts lacked the required &#39;significant step&#39; under Ohio law; and the disseminating matter counts were misdemeanors that would have merged at sentencing with no sex offender registration requirement. Prosecutor Andrew Wick offered and Malcolm pleaded to Attempted Pandering, misdemeanor 1st degree — the charge that triggered Tier I sex offender registration.</p><p>Sentenced May 29, 2025 to 180 days jail with 60 days suspended (120 days continuous), 2 years community control, Tier I sex offender registration for 15 years (annual reporting), and permanent teaching license revocation. Defense attorney not named in sources. Prosecutor: Andrew Wick (Morrow County).</p><p>NOTE: sentence_years=0.33 — 120 days continuous jail; immediately remanded, no work-release mentioned. contact_type=0 — no physical contact; conduct was Snapchat image exchange and sexual solicitation. charge-reduction reflects collapse from original 6 charges (2 felonies) to single misdemeanor; decision was explicitly driven by evidence insufficiency and the prosecutor&#39;s priority of securing sex offender registration over a higher nominal conviction. Prosecutor&#39;s statement strongly criticized Ohio&#39;s grooming law and advocated for legislative change; cited ORC 2907.071 (effective April 9, 2025) as partial but insufficient remedy. Victim was not one of Malcolm&#39;s own classroom students.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Malcolm, Hillary</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Wick, Andrew</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1021.html">Helen Page</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — explicit-photos, grooming, sexting, snapchat · non-contact · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_858.html">Ramsey Hinkle</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — explicit-photos, grooming, sexting, snapchat · non-contact · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_719.html">Stephannie Lianne Figueroa</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — explicit-photos, grooming, possible-additional-victims, sexting · non-contact · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_586.html">Claire Wright Mitchell</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — explicit-photos, grooming, possible-additional-victims, sexting · non-contact · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_545.html">Kristin McKee Brown</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — explicit-photos, grooming, sexting, snapchat · non-contact · 1.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2572</td>
+      <td>Attempted pandering (misdemeanor, 1st degree)</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2573</td>
+      <td>Illegal use of minor in nudity-oriented material (ORC 2907.323)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2574</td>
+      <td>Attempted sexual battery (ORC 2907.03 + 2923.02)</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2575</td>
+      <td>Disseminating matter harmful to juveniles</td>
+      <td>2</td>
+      <td>misdemeanor</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2024-03-01</td>
+      <td>indictment</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2025-05-29</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1712.html">1712</a></td>
+      <td class="dim">2025-06-10</td>
+      <td>Marion County Now (Kathy Laird)</td>
+      <td><a href="entry_1712.html">Hillary Malcolm, a former teacher, was sentenced on May 29, 2025, by the Morrow County Common Pleas </a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">snapchat</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">sexting</span>
+          <span class="tag">charge-reduction</span>
+          <span class="tag">possible-additional-victims</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1713.html">1713</a></td>
+      <td class="dim">2025-06-10</td>
+      <td>Morrow County Prosecutor&#39;s Office press release</td>
+      <td><a href="entry_1713.html">On May 29, 2025, the Morrow County Common Pleas Court sentenced Hillary Malcolm, to 180 days in jail</a>…</td>
+      <td>
+          <span class="tag">grooming</span>
+          <span class="tag">snapchat</span>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">charge-reduction</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

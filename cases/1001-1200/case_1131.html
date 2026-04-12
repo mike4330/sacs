@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veronica Pezdan — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1130.html" title="Andrea Cardosa">← #1130 Andrea Cardosa</a>
+    <a href="../../cases/1001-1200/case_1132.html" title="Abby Dibbs">#1132 Abby Dibbs →</a>
+  </span>
+</div>
+<h1>Veronica Pezdan
+  <span class="dim" style="font-size:0.6em">#1131</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>New York</td><td class="lbl">Court</td><td>Suffolk County Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Steven Pilewski</td><td class="lbl">Incident Date</td><td>2021-03-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>15</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former mathematics teacher at Shoreham-Wading River (SWR) High School, Shoreham, Suffolk County, New York. Age 28 at time of offense.</p><p>Victim was a 15-year-old male student. Pezdan had been employed by the district since 2018 after graduating St. Joseph&#39;s College in Patchogue in 2017. Conduct began in late February or early March 2021 and continued to April 16, 2021. She engaged in sexual intercourse with the student on March 24 and April 8 at locations outside school property.</p><p>A staff member tip triggered an internal district investigation. Pezdan was arrested April 19, 2021 by Suffolk County Police Department Seventh Precinct detectives on William Floyd Parkway in Shoreham shortly before noon, after she received a letter informing her of her termination. When confronted, she stated &#39;something happened outside of school&#39; and declined to elaborate, then added &#39;I told my fiance and he is trying not to hate me. He doesn&#39;t know the whole story,&#39; before invoking counsel. She had been in a relationship with her fiance for approximately six years at the time of the offense.</p><p>Arraigned April 20, 2021; remanded and held in custody through sentencing. Indicted on a 12-count indictment including third-degree rape and promoting a sexual performance by a child. Pleaded guilty December 8, 2021 to two counts of third-degree rape before Suffolk County Judge Chris Anne Kelley. Sentenced March 15, 2022 by Judge Steven Pilewski to 10 years probation, permanent order of protection, sex offender registration, and a surcharge of $1,425. No additional prison time beyond pre-sentence detention.</p><p>At the SORA hearing, ADA Melissa Grier stated Pezdan scored 85 on the SORA risk assessment, equating to Level 2. Defense attorney John LoTurco argued for downward departure. Judge Pilewski adjourned the SORA level determination without deciding. The victim was forced to change schools after fellow students learned of the relationship.</p><p>NOTE: sentence_years = 0; sentence is 10 years probation. No-prison outcome despite pre-trial detention from April 2021 through March 2022. The victim&#39;s mother&#39;s statement at sentencing: &#39;no amount of sentencing can erase the damage done.&#39;</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Pezdan, Veronica</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_876.html">Dixie McCollough</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — penetrative · victim age 15 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_790.html">Stacy Hopkins</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      59%
+ — penetrative · victim age 15 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_576.html">Melissa Weber</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — penetrative · victim age 14 · 0.0 yr sentence · New York    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_469.html">Andrea Melba Rodriguez</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — penetrative · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_240.html">Amber Stroda</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — penetrative · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2549</td>
+      <td>Promoting a sexual performance by a child</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2550</td>
+      <td>Endangering the welfare of a child</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2551</td>
+      <td>Third-degree rape (x2)</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2021-04-19</td>
+      <td>arrest</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2021-04-20</td>
+      <td>arraignment</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2021-05-01</td>
+      <td>indictment</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2021-12-08</td>
+      <td>verdict</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2022-03-15</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1696.html">1696</a></td>
+      <td class="dim">2021-12-08</td>
+      <td>The North Shore Sun / SWR Schools coverage</td>
+      <td><a href="entry_1696.html">Former SWR math teacher Veronica Pezdan pleaded guilty December 8, 2021 to two counts of third-degre</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">no-prison</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1697.html">1697</a></td>
+      <td class="dim">2022-03-15</td>
+      <td>The North Shore Sun / SWR Schools coverage</td>
+      <td><a href="entry_1697.html">Veronica Pezdan sentenced March 15, 2022 to 10 years probation by Suffolk County Judge Steven Pilews</a>…</td>
+      <td>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">probation</span>
+          <span class="tag">no-prison</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
