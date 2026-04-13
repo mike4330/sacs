@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrienne Laflamme — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1001-1200/case_1142.html" title="Michelle Maynard">← #1142 Michelle Maynard</a>
+    <a href="../../cases/1001-1200/case_1144.html" title="Amanda Maria Athey">#1144 Amanda Maria Athey →</a>
+  </span>
+</div>
+<h1>Adrienne Laflamme
+  <span class="dim" style="font-size:0.6em">#1143</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>Brevard County Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Robert T. Burger</td><td class="lbl">Incident Date</td><td>2008-05-16</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>60</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former science teacher at the Brevard County Juvenile Detention Center (JDC), 5225 Dewitt Avenue, Cocoa, Brevard County, Florida. Students at the facility are adjudicated youth in secure detention. Primary victim was a male student-inmate, age 17, incarcerated at JDC from April 19 to May 13, 2008, during which time Laflamme was his teacher. A second victim (male, age 14) was involved in at least one incident. Age 60 at time of offense (born 1947).</p><p>The sexual relationship began May 16, 2008, three days after the primary victim&#39;s release from JDC, and continued until approximately June 19, 2008, when Laflamme left the state for a vacation — approximately five weeks. She regularly picked the victim up from his mother&#39;s home and drove him to her own residence in Palm Bay for sex. The victim stated the relationship involved oral and vaginal sex approximately 15 times. At least one encounter included a 14-year-old second victim. Laflamme and the victim also used drugs together; text messages between them referenced drug dealing.</p><p>When Laflamme left for vacation on June 19, she told the victim he could use her vehicle. The victim&#39;s mother had discovered the relationship and reported it to JDC authorities. A co-worker then notified Laflamme that the relationship had been discovered and inquired whether the vehicle had been stolen. On June 23, 2008, Laflamme reported her vehicle stolen to Palm Bay PD (DR#08-006096) as cover. During a subsequent controlled phone call arranged by investigators, the victim asked Laflamme whether he should lie about having sex with her; she replied yes, because she was in trouble and might lose her job and retirement. She also instructed him to lie about their drug use and about the third party involved in the three-way encounter.</p><p>Arrested June 25, 2008 by Palm Bay PD Detective J. Campbell (CID/SVU). The Information filed July 28, 2008 charged 27 counts: 20 counts of unlawful sexual activity with a minor, 4 lewd or lascivious counts related to the under-16 victim (conduct, exhibition, molestation, battery), delivery of cannabis to a minor, contributing to the delinquency of a minor, and the false report count. Bond was $5,000 per count; she posted bond November 7, 2008 after approximately five months in pre-trial detention.</p><p>Laflamme was found indigent in March 2009; retained counsel withdrew November 2009 and the public defender was appointed. New retained counsel (John R. Hefferan Jr.) appeared April 2010 and represented her through sentencing. She pleaded guilty on February 7, 2011 to three counts of unlawful sexual activity with a minor and the false report misdemeanor (count 27). The remaining 23 counts were nolle prossed. Judge: Robert T. Burger. Prosecutor: Julia A. Lynch.</p><p>The court imposed 2 years DOC on each of counts 1-3, concurrent, with 136 days jail credit — but immediately stayed and withheld the prison sentence under the Order of Probation, placing Laflamme directly on 13-year sex offender probation supervised by the Department of Corrections. Count 27 (false report misdemeanor) was resolved as 136 days county jail, all credited. No prison was served; she transitioned directly from pre-trial detention to probation supervision.</p><p>Following a series of modification hearings from 2012 through 2015, the court re-sentenced Laflamme on June 8, 2016 to 13 years sex offender probation effective that date. Probation was terminated early on January 23, 2019 — approximately 2.5 years into the modified term, and approximately 8 years after the original sentencing.</p><p>NOTE: Defendant age 60 at arrest is among the highest in the DB. Juvenile detention context: victims were court-ordered residents, amplifying predatory access and vulnerability. Cannabis delivery charge (nolle prossed) and drug use with victim confirm substance involvement. Controlled phone call captured Laflamme directing victim to lie to investigators — evidence tampering through a minor. Charge reduction substantial: 3 convictions of 27 original counts. sentence_years=0: the 2-year DOC prison term was stayed and withheld at sentencing; no incarceration beyond pre-trial detention.</p></blockquote>
+
+
+  <p>
+      <span class="tag">multiple-victims</span>
+      <span class="tag">plea</span>
+      <span class="tag">sex-offender-registration</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">drugs</span>
+      <span class="tag">evidence-tampering</span>
+      <span class="tag">court-ordered-victims</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">early-release</span>
+      <span class="tag">victim-in-home</span>
+      <span class="tag">non-school</span>
+      <span class="tag">concealment</span>
+      <span class="tag">defendant role:alternative-school</span>
+      <span class="tag">defendant role:residential-school</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Laflamme, Adrienne</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Jr., John R. Hefferan</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Burger, Robert T.</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Lynch, Julia A.</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_803.html">Gay Davidson-Shepard</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      50%
+ — victim-in-home · ct=888 · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_920.html">Audrey Grabarkiewicz</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      49%
+ — drugs, multiple-victims · ct=888 · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1029.html">Jessica Ann Kelley</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — alternative-school, drugs, multiple-victims, non-school +1 · ct=888 · 0.5 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_306.html">Cara Labus</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — multiple-victims · ct=888 · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_511.html">Holly A. Smith</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      46%
+ — concealment, evidence-tampering, victim-in-home · ct=888 · victim age 15    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2586</td>
+      <td>Unlawful Sexual Activity with a Minor</td>
+      <td>3</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2587</td>
+      <td>Filing a False Police Report</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2588</td>
+      <td>Unlawful Sexual Activity with Certain Minors</td>
+      <td>17</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2589</td>
+      <td>Lewd or Lascivious Conduct/Battery/Molestation/Exhibition (victim under 16)</td>
+      <td>4</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2590</td>
+      <td>Delivery of Cannabis to a Minor</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2591</td>
+      <td>Contributing to the Delinquency of a Minor</td>
+      <td>1</td>
+      <td>misdemeanor</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2008-06-25</td>
+      <td>arrest</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2008-11-07</td>
+      <td>bail</td>
+      <td>Bond posted, $5,000 per count x 27 counts</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-02-07</td>
+      <td>sentencing</td>
+      <td>Plea to counts 1-3 (unlawful sexual activity) and count 27 (false report); 24 counts nolle prossed; prison + sex offender probation ordered on counts 1-3</td>
+    </tr>
+    <tr>
+      <td class="dim">2016-06-08</td>
+      <td>other</td>
+      <td>Re-sentenced: 13-year sex offender probation (counts 1-3); probation effective date 06/08/2016</td>
+    </tr>
+    <tr>
+      <td class="dim">2019-01-23</td>
+      <td>other</td>
+      <td>Probation terminated early; satisfaction of judgment recorded July 2019</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(2)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1721.html">1721</a></td>
+      <td class="dim">2008-06-25</td>
+      <td>News report (source unspecified)</td>
+      <td><a href="entry_1721.html">Adrienne Laflamme, 60: Science teacher at the Brevard County Juvenile Detention Center in Cocoa, Fla</a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">court-ordered-victims</span>
+          <span class="tag">victim-in-home</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1722.html">1722</a></td>
+      <td class="dim">2008-06-25</td>
+      <td>Arrest Affidavit, Palm Bay PD, Agency Report 08-006179, Detective J. Campbell CID/SVU</td>
+      <td><a href="entry_1722.html">The defendant is a Science teacher at the JDC located in Cocoa, FL. The victim was incarcerated betw</a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">drugs</span>
+          <span class="tag">evidence-tampering</span>
+          <span class="tag">court-ordered-victims</span>
+          <span class="tag">concealment</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
