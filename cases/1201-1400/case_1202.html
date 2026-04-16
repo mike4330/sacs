@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deborah Reeder — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1201-1400/case_1201.html" title="Christine Jouini">← #1201 Christine Jouini</a>
+    <a href="../../cases/1201-1400/case_1203.html" title="Janet Hughes">#1203 Janet Hughes →</a>
+  </span>
+</div>
+<h1>Deborah Reeder
+  <span class="dim" style="font-size:0.6em">#1202</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Florida</td><td class="lbl">Court</td><td>Broward County Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Marc H. Gold</td><td class="lbl">Incident Date</td><td>2006-12-21</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>45</td><td class="lbl">Victim Age</td><td>17</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Substitute teacher from Coral Springs, Broward County, Florida. Born 1961 in New Haven, Connecticut. Age 45 at time of arrest. Male victim, age 17, a friend of one of her three children. The victim told police they had sex at least four times — in her car, her bed, on the floor of her bedroom, and in the master bedroom shower.</p><p>Arrested December 21, 2006 by Coral Springs PD on four counts of Unlawful Sexual Activity (794.05(1), F2). Bond $5,000 surety per count ($20,000 total). Count 4 dropped by state (No Information filed January 29, 2007). Remaining three counts amended to Child Abuse (827.03(1), F3). Arraigned January 30, 2007; written plea of not guilty. Defense attorney Michael Metz.</p><p>Changed plea to nolo contendere on Counts 1-3 on November 26, 2007. Adjudicated guilty on all three counts by Judge Marc H. Gold. Sentenced to 18 months community control with electronic monitor followed by 12 years state probation on each count, concurrent. Conditions: community service, no contact with victim, psychological evaluation. Sentenced under sentencing guidelines. Restitution amount reserved.</p><p>Violated probation: warrant issued July 7, 2010 (no bond hold). Warrant served July 13, 2010 in open court. After multiple VOP hearings, resentenced March 30, 2011 by Judge David A. Haimes. Amended sentence: 18 months community control (without electronic monitor) followed by 4 years probation on Counts 1-2, consecutive to each other; Count 3 concurrent. GPS monitor costs waived November 28, 2012. Multiple reprimand hearings in 2012-2013. Motion for early termination of probation filed December 2014; granted December 1, 2015.</p><p>NOTE: Charge reduction from F2 to F3 on three counts, fourth count dropped entirely. No prison despite adjudication on three felony counts and a subsequent probation violation. Victim accessed through defendant&#39;s own children — the dating-parent-for-access pattern inverted (children as social access vector rather than romantic relationship). Sex in multiple locations within the home suggests victim was a regular presence.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">probation</span>
+      <span class="tag">no-prison</span>
+      <span class="tag">charge-reduction</span>
+      <span class="tag">early-release</span>
+      <span class="tag">victim-in-home</span>
+      <span class="tag">home-confinement</span>
+      <span class="tag">substitute-teacher</span>
+      <span class="tag">parole-violation</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Reeder, Deborah</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Gold, Marc H.</td>
+      <td class="dim">judge</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_596.html">Samantha Fisher</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      66%
+ — home-confinement, victim-in-home · penetrative · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_563.html">Laura M. Ernst</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      63%
+ — victim-in-home · penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_224.html">Nikki Varney</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — home-confinement · penetrative · victim age 15 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_732.html">Cynthia Chapogas Horvath</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — penetrative · victim age 17 · 0.0 yr sentence · Florida    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_175.html">Erin Ward</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — penetrative · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2685</td>
+      <td>Child Abuse (FL 827.03(1)), 3rd Degree Felony, 3 counts</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2686</td>
+      <td>Unlawful Sexual Activity (FL 794.05(1)), 2nd Degree Felony</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2006-12-21</td>
+      <td>arrest</td>
+      <td>Arrested by Coral Springs PD; 4 counts Unlawful Sexual Activity (F2); bond $20,000</td>
+    </tr>
+    <tr>
+      <td class="dim">2007-02-15</td>
+      <td>arraignment</td>
+      <td>Arraignment held</td>
+    </tr>
+    <tr>
+      <td class="dim">2007-11-26</td>
+      <td>sentencing</td>
+      <td>Nolo contendere on 3 counts; 18 months community control + 12 years probation; no prison</td>
+    </tr>
+    <tr>
+      <td class="dim">2010-07-07</td>
+      <td>other</td>
+      <td>Violation of probation warrant issued</td>
+    </tr>
+    <tr>
+      <td class="dim">2011-03-30</td>
+      <td>sentencing</td>
+      <td>Resentenced by Judge Haimes; 18 months CC + 4 years probation</td>
+    </tr>
+    <tr>
+      <td class="dim">2015-12-01</td>
+      <td>other</td>
+      <td>Early termination of probation granted</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(0)</span></h2>
+  <p class="dim">No entries yet.</p>
+
+<!-- Documents -->
+<h2>Documents <span class="dim">(1)</span></h2>
+<ul>
+    <li><a href="../../docs/reeder_docket.pdf">Broward County Clerk of Courts docket — 06022765CF10A</a></li>
+</ul>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
