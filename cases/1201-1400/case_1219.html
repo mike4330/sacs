@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darcie Esson — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1201-1400/case_1218.html" title="Christine Ellen Schwarz">← #1218 Christine Ellen Schwarz</a>
+    <a href="../../cases/1201-1400/case_1220.html" title="Emily Elizabeth Housley">#1220 Emily Elizabeth Housley →</a>
+  </span>
+</div>
+<h1>Darcie Esson
+  <span class="dim" style="font-size:0.6em">#1219</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Colorado</td><td class="lbl">Court</td><td>Ninth Judicial District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Denise Lynch</td><td class="lbl">Incident Date</td><td>2006-10-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>32</td><td class="lbl">Victim Age</td><td>17</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.25 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former teacher at Elizabeth High School, Front Range, Colorado. Male student victim, age 17 (high school football player).</p><p>Offense: Fall 2006 in Glenwood Springs - invited student to hotel room, offered alcohol, had sex with him twice on the floor while defendant&#39;s 4-year-old and 8-year-old daughters and 17-year-old babysitter slept in same room. Afterward pressured victim to lie and keep silent, called victim repeatedly emphasizing it was his responsibility to stay quiet.</p><p>Defendant: Darcie Esson, age 32-33 at offense. Mother of two young daughters (4 and 8). Going through divorce at time of offense.</p><p>Charged: Three counts of sexual assault on child (age 15-17) by person in position of trust, one with pattern of abuse allegation.</p><p>Pleaded guilty (June 2007) to one count; two counts dropped in plea agreement.</p><p>Sentenced (December 14, 2007): 90 days jail + 10 years to life supervised probation as sex offender. Additional: random urine tests, substance abuse/alcohol treatment, mental health evaluation, sex offender registration (within 5 days), sex offender-specific treatment, 7,000+ restitution.</p><p>Victim impact: Lost interest in school and athletics; depression, ran away from home; completed junior year via online schooling; required counseling. School administration threatened disciplinary action against victim even after disclosure. Peers ridiculed victim.</p><p>Defense claimed drunk (prosecutor noted she remembered other details). Defense emphasized remorse and impact on her children. Prosecutor sought 2 years to life, noting community corrections rejected her.</p><p>Judge Denise Lynch noted: Esson was 33-year-old woman in position of trust as teacher; she should have said no.</p><p>NOTE: Victim impact statement emphasized how offense changed victim&#39;s life trajectory. Pattern of grooming (alcohol provision, isolation in hotel room with sleeping children, post-assault manipulation and coercion to silence) indicates premeditation despite defense framing as isolated drunk act.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Esson, Darcie</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Mackey, Pamela</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Beeson, Martin</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1022.html">Megan Weaver</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      47%
+ — alcohol-to-victim · victim age 18 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1193.html">Robin Winkis</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      45%
+ — alcohol-to-victim · victim age 17 · 0.17 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_616.html">Taryn Fairbanks</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      44%
+ — alcohol-to-victim · victim age 17 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1173.html">Shannon Best</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      44%
+ — alcohol-to-victim · victim age 18 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_589.html">Ashley Rison</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      43%
+ — alcohol-to-victim · victim age 17 · 0.75 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2722</td>
+      <td>Sexual assault on a child, age 15-17 years old, by a person in a position of trust</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2723</td>
+      <td>Sexual assault on a child, age 15-17 years old, by a person in a position of trust</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2724</td>
+      <td>Sexual assault on a child by a person in a position of trust with pattern of abuse</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2006-10-01</td>
+      <td>incident</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2007-06-01</td>
+      <td>verdict</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2007-12-14</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1772.html">1772</a></td>
+      <td class="dim">2007-12-14</td>
+      <td>Aspen Times / Pete Fowler</td>
+      <td><a href="entry_1772.html">Teacher sentenced for sex with teen
+
+A Front Range teacher who admitted having sex with a high schoo</a>…</td>
+      <td>
+          <span class="tag">guilty</span>
+          <span class="tag">plea</span>
+          <span class="tag">sex-offender-registration</span>
+          <span class="tag">alcohol-to-victim</span>
+          <span class="tag">victim-impact</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

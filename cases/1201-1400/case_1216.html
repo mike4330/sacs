@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jennifer Rice — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1201-1400/case_1215.html" title="Melissa Bare">← #1215 Melissa Bare</a>
+    <a href="../../cases/1201-1400/case_1217.html" title="Pamela Balogh">#1217 Pamela Balogh →</a>
+  </span>
+</div>
+<h1>Jennifer Rice
+  <span class="dim" style="font-size:0.6em">#1216</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Washington</td><td class="lbl">Court</td><td>Pierce County Superior Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Gary Steiner</td><td class="lbl">Incident Date</td><td>2007-07-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>31</td><td class="lbl">Victim Age</td><td>10</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>25.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Teacher at McKinley Elementary School, Tacoma (primary school for offense) and Yelm Community Schools (2005-2006 school year). Wife and mother of three. Age 33 at sentencing; age 31 at time of offense.</p><p>Multiple victims:
+1. Male student, age 10. Sexual relationship lasted several months at McKinley Elementary. August 2007: Rice sneaked victim out of home, drove to Ellensburg, had sex at rest stop.
+2. Victim&#39;s older brother, age 15. Two sexual encounters in July 2007.</p><p>Charges: First-degree kidnapping (predatory), first-degree child molestation (predatory), two counts third-degree rape. All guilty verdicts April 2009.</p><p>Sentenced July 25, 2009 to 25 years to life (mandatory minimum 25 years). Predatory designation on kidnapping and molestation charges required under Washington state law (passed 2006, nine years after Mary Kay Letourneau case). Credited ~2 years jail time served awaiting trial. After 25 years, eligible for release via Indeterminate Sentencing Review Board.</p><p>Civil suit filed by families against Tacoma, Bethel, and Yelm school districts alleging negligent hiring/supervision and failure to protect students.</p><p>Court: Pierce County Superior Court, Judge Gary Steiner.</p><p>Appeal filed by attorney Gary Clower regarding predatory designation.</p><p>NOTE: Offense conduct discovered when Rice attempted to remove student from home in August 2007; victim told investigators full extent of sexual abuse. No remorse noted; Rice apologized at sentencing but framed actions as &#39;careless, impulsive and selfish&#39; rather than acknowledging predatory conduct.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Rice, Jennifer</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_644.html">Malia Brooks</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      33%
+ — victim age 11    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_437.html">Ethel Anderson</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      31%
+ — victim age 12 · 38.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/601-800/case_625.html">Barbara Lynn Orpineda</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      29%
+ — victim age 12    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_26.html">State v. Lauren King</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      29%
+ — victim age 12    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_420.html">Deidre R. Smith</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      29%
+ — victim age 10    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2713</td>
+      <td>First-degree kidnapping (predatory offense)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2714</td>
+      <td>First-degree child molestation (predatory offense)</td>
+      <td>1</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+    <tr>
+      <td class="dim">2715</td>
+      <td>Third-degree rape</td>
+      <td>2</td>
+      <td>felony</td>
+      <td>guilty</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2007-07-01</td>
+      <td>incident</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2009-04-01</td>
+      <td>verdict</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2009-07-25</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1767.html">1767</a></td>
+      <td class="dim">2009-07-25</td>
+      <td>The News Tribune</td>
+      <td><a href="entry_1767.html">Teacher gets 25 years to life for sex crimes
+
+There was no debate over Jennifer Rice&#39;s sentence.
+
+Un</a>…</td>
+      <td>
+          <span class="tag">verdict</span>
+          <span class="tag">civil-lawsuit</span>
+          <span class="tag">maximum-sentence</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
