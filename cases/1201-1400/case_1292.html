@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebecca Jo Moore — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1201-1400/case_1291.html" title="Stephanie Almand">← #1291 Stephanie Almand</a>
+    <a href="../../cases/1201-1400/case_1293.html" title="Kori Brown">#1293 Kori Brown →</a>
+  </span>
+</div>
+<h1>Rebecca Jo Moore
+  <span class="dim" style="font-size:0.6em">#1292</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Arkansas</td><td class="lbl">Court</td><td>Pulaski County Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>Cathleen V. Compton</td><td class="lbl">Incident Date</td><td>2020-01-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>34</td><td class="lbl">Victim Age</td><td>14</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>10.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former substitute teacher at North Little Rock High School, Pulaski County, Arkansas. Age 34 at time of offense. Male victim, age 14, a student at the school.</p><p>Criminal information filed September 24, 2020 in Pulaski County Circuit Court (case 60CR-20-3347). Initial bond set at $50,000 surety; reduced to $2,500 surety with ankle monitor after a revocation and reinstatement hearing in February 2021. Defense counsel Debra Joan Cheatham Reece filed motions for fitness-to-proceed and criminal responsibility examinations; Act III forensic evaluation returned fit to proceed in November 2021. A companion case (60CR-20-3286) was filed concurrently.</p><p>Charged with three counts of sexual assault in the first degree (Class A felony). Entered a negotiated guilty plea November 7, 2022. Sentenced December 2, 2022 by Judge Cathleen V. Compton (3rd Division, 6th Circuit) to 10 years Arkansas Department of Corrections plus 10 years suspended imposition of sentence. Prosecuted by William Martin Jones.</p><p>NOTE: Substitute teacher. Victim age 14. Three counts, Class A felony. Sentence structure: 10 years ADC (active prison) + 10 years SIS (suspended, activates on violation). sentence_years = 10. contact_type = 999 (specific acts not documented in available sources). Fitness to proceed evaluation filed at defense request; returned fit.</p></blockquote>
+
+
+  <p>
+      <span class="tag">plea</span>
+      <span class="tag">substitute-teacher</span>
+  </p>
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Moore, Rebecca Jo</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Reece, Debra Joan Cheatham</td>
+      <td class="dim">defense_attorney</td>
+      <td class="dim"></td>
+    </tr>
+    <tr>
+      <td>Jones, William Martin</td>
+      <td class="dim">prosecutor</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1067.html">Dianne Leach</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      72%
+ — substitute-teacher · ct=999 · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1069.html">Patricia Gallegos</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — substitute-teacher · ct=999    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1190.html">Michelle Kush</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — substitute-teacher · ct=999 · victim age 15    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1095.html">Trisha Anderson Rogers</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      54%
+ — substitute-teacher · ct=999 · victim age 13    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_570.html">Anessa Paige Gower</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      54%
+ — ct=999 · victim age 15 · 4.7 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2881</td>
+      <td>Sexual assault in the first degree</td>
+      <td>3</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2020-01-01</td>
+      <td>incident</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2020-10-07</td>
+      <td>arraignment</td>
+      <td>Initial hearing; bond set at ,500 surety with ankle monitor</td>
+    </tr>
+    <tr>
+      <td class="dim">2022-11-07</td>
+      <td>verdict</td>
+      <td>Negotiated guilty plea entered</td>
+    </tr>
+    <tr>
+      <td class="dim">2022-12-02</td>
+      <td>sentencing</td>
+      <td>10 years ADC + 10 years SIS; Judge Cathleen V. Compton</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1864.html">1864</a></td>
+      <td class="dim">2022-12-02</td>
+      <td>Arkansas Judiciary — case 60CR-20-3347</td>
+      <td><a href="entry_1864.html">Case 60CR-20-3347 docket — Pulaski County Circuit Court. Filed 09/24/2020. Negotiated guilty plea 11</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>

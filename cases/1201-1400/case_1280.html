@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patricia Rush — SACS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    /* ── Layout / chrome ───────────────────────────────────────────────── */
+    body { background: #e9ebef; }
+    main.container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.875rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer.container {
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+
+    /* ── Gradient headings ─────────────────────────────────────────────── */
+    main h1, main h2 {
+      padding: 0.15em 0.5em 0.15em 0.4em;
+      border-radius: 5px;
+      margin-left: -0.4em;
+    }
+    main h1 {
+      background-image: linear-gradient(90deg, rgba(0,47,249,0.3) 0%, rgba(26,58,92,0) 40%);
+    }
+    main h2 {
+      background-image: linear-gradient(90deg, rgba(30,72,164,0.09) 0%, rgba(30,72,118,0) 80%);
+    }
+
+    /* ── Header / navbar ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 0 4px 1.5rem;
+      padding: 0.3rem 1rem;
+    }
+    #site-logo { line-height: 0; flex-shrink: 0; }
+    #site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 5px;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      background: #f0f2f5;
+      border: 1px solid #dde0e5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+    /* ── Navbar dropdown ───────────────────────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde0e5;
+      border-radius: 6px;
+      padding: 0.25rem 0;
+      padding-top: calc(0.25rem + 4px);
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.84em;
+      font-weight: 500;
+      text-decoration: none;
+      color: #444;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #4a90d9; color: #fff; }
+
+    /* ── Misc ──────────────────────────────────────────────────────────── */
+    .status-active     { color: #2d7a2d; font-weight: bold; }
+    .status-trial      { color: #b36a00; font-weight: bold; }
+    .status-verdict    { color: #7a2db3; font-weight: bold; }
+    .status-sentenced  { color: #1a1a99; font-weight: bold; }
+    .status-closed     { color: #555; }
+    .status-appeal     { color: #c00; font-weight: bold; }
+    .tag { display: inline-block; background: #e8edf2; border-radius: 4px;
+           padding: 1px 7px; font-size: 0.82em; margin: 1px 2px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.92em;
+          background: #f5f5f5; padding: 1rem; border-radius: 6px; }
+    .dim { color: #888; font-size: 0.9em; }
+    .notes-cell { max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+    /* ── Case datablock table ───────────────────────────────────────────────── */
+    table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
+    table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <a href="../../index.html" id="site-logo"><img src="../../images/sacsicon.svg" width="82" height="82" alt="SACS"></a>
+    <nav id="site-nav">
+      <a href="../../cases.html" class="nav-btn">Cases</a>
+<a href="../../people.html" class="nav-btn">People</a><a href="../../search.html" class="nav-btn">Search</a><div class="nav-dropdown">
+        <a href="../../insights.html" class="nav-btn">Insights ▾</a>
+        <div class="nav-dropdown-menu">
+<a href="../../topics.html">Topics</a><a href="../../clusters.html">Clusters</a>        </div>
+      </div>    </nav>
+  </header>
+  <main class="container">
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.4rem;">
+  <span class="dim"><a href="../../index.html">← Cases</a></span>
+  <span style="display:flex; gap:1.25rem; font-size:0.88em;">
+    <a href="../../cases/1201-1400/case_1279.html" title="Courtney Clark Kay">← #1279 Courtney Clark Kay</a>
+    <a href="../../cases/1201-1400/case_1281.html" title="Shelby Dawn Lashombe">#1281 Shelby Dawn Lashombe →</a>
+  </span>
+</div>
+<h1>Patricia Rush
+  <span class="dim" style="font-size:0.6em">#1280</span>
+  <span class="status-sentenced" style="font-size:0.55em">sentenced</span>
+</h1>
+
+
+<table class="datablock">
+  <tr><td class="lbl">State</td><td>Texas</td><td class="lbl">Court</td><td>McLennan County District Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2006-09-01</td></tr>
+  <tr><td class="lbl">Defendant Age</td><td>unknown</td><td class="lbl">Victim Age</td><td>13</td></tr>
+  <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
+</table>
+
+  <blockquote><p>Former physical education teacher at Hallsburg Elementary School, Hallsburg Independent School District, Hallsburg, McLennan County, Texas. Defendant age not established from available sources. Male victim, age 13 (charged as younger than 14), a student enrolled in Hallsburg ISD.</p><p>Rush was arrested in November 2007. A grand jury indicted her on 18 counts: five counts of aggravated sexual assault of a child, five counts of improper relationship between educator and student by deviate sexual intercourse, four counts of indecency with a child, and four counts of improper relationship between educator and student by sexual contact. The specific conduct underlying the ten oral sex counts was Rush performing oral sex on the victim. The victim testified at trial to five incidents in early 2007: (1) February or early March 2007, Rush&#39;s kitchen; (2) days later, Rush&#39;s truck in the school gym parking lot; (3) March 2007, Rush&#39;s swimming pool; (4) Rush&#39;s shop, victim seated on an ATV; (5) Rush&#39;s shop while looking for a gas can.</p><p>At trial in December 2011 (19th District Court, cause no. 2011-1857-C1A), the jury acquitted Rush on 10 counts and hung on 8. The trial court declared a mistrial on the 8 hung counts. Rush filed a pretrial writ of habeas corpus alleging double jeopardy barred retrial. The Tenth Court of Appeals affirmed denial of habeas relief on August 23, 2012 (No. 10-12-00119-CR; Chief Justice Gray, Justice Davis, Justice Scoggins), holding that no election was required because the jury heard no more offenses than counts in the indictment, and that the hung counts were plainly the first two oral sex incidents (counts 1-4, March 1 and March 5). Retrial was authorized.</p><p>Following the appeal, Rush entered a plea agreement. She pleaded guilty to one count of injury to a child (mental or emotional injury, a non-sex charge). Sentenced to 8 years deferred probation, a $2,000 fine, and 300 hours of community service. Teaching certificate permanently surrendered. No sex offender registration required.</p><p>NOTE: Final conviction was for injury to a child rather than any sex offense — 18-count indictment anchored to aggravated sexual assault of a child under 14 resolved to a non-sex deferred probation outcome, one of the most extreme charge reductions in the DB. Underlying oral sex acts are contact_type 2; conviction charge is contact_type 888. Defendant age not established from available sources.</p></blockquote>
+
+
+
+<!-- People -->
+<h2>People</h2>
+<figure>
+<table>
+  <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Rush, Patricia</td>
+      <td class="dim">defendant</td>
+      <td class="dim"></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Related Cases -->
+<h2>Related Cases</h2>
+<ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1201-1400/case_1232.html">Emily Durden</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      44%
+ — ct=888 · victim age 13 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1002.html">Traci Storie</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      44%
+ — ct=888 · victim age 13 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/201-400/case_389.html">Kaitlin Grimley</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      44%
+ — ct=888 · victim age 13 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1201-1400/case_1267.html">Sophia Canales</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      42%
+ — ct=888 · victim age 12 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1201-1400/case_1239.html">Loretta Dawn Nelsen</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      42%
+ — ct=888 · victim age 14 · 0.0 yr sentence    </span>
+  </li>
+</ul>
+
+<!-- Charges -->
+<h2>Charges</h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2862</td>
+      <td>Injury to a child</td>
+      <td>1</td>
+      <td>—</td>
+      <td>plea</td>
+    </tr>
+    <tr>
+      <td class="dim">2863</td>
+      <td>Aggravated Sexual Assault of a Child</td>
+      <td>5</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2864</td>
+      <td>Indecency with a child</td>
+      <td>4</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2865</td>
+      <td>Improper relationship between educator and student by sexual contact</td>
+      <td>4</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2894</td>
+      <td>Improper relationship between educator and student</td>
+      <td>5</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Timeline -->
+<h2>Timeline</h2>
+<figure>
+<table>
+  <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim">2006-09-01</td>
+      <td>incident</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2007-11-01</td>
+      <td>arrest</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2011-12-01</td>
+      <td>trial_start</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="dim">2012-06-01</td>
+      <td>appeal</td>
+      <td>Tenth Court of Appeals affirmed denial of habeas relief (No. 10-12-00119-CR); retrial on counts 1–4 authorized; Rush&#39;s double jeopardy challenge overruled on both issues</td>
+    </tr>
+    <tr>
+      <td class="dim">2013-01-01</td>
+      <td>sentencing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Entries -->
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table>
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1856.html">1856</a></td>
+      <td class="dim">2013-01-01</td>
+      <td>Waco Tribune / KTEM News</td>
+      <td><a href="entry_1856.html">Former Hallsburg Elementary PE teacher Patricia Rush was arrested in November 2007 and indicted on 1</a>…</td>
+      <td>
+          <span class="tag">verdict</span>
+          <span class="tag">plea</span>
+          <span class="tag">appeal</span>
+          <span class="tag">no-prison</span>
+          <span class="tag">charge-reduction</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+
+<!-- Documents -->
+<h2>Documents <span class="dim">(1)</span></h2>
+<ul>
+    <li><a href="../../docs/rush_appeal.pdf">Ex parte Rush — Tenth Court of Appeals No. 10-12-00119-CR (Aug 23, 2012)</a></li>
+</ul>
+
+  </main>
+  <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+  </footer>
+</body>
+</html>
