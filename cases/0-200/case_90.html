@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -150,7 +152,7 @@
   <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former teacher at Encore High School for the Arts, Riverside, California. Age 31-32 at time of offense/arrest. Female victim age 14; second student also involved (misdemeanor count). Months-long relationship; communication included text messages. Arrested February 6, 2017 at school on suspicion of lewd or lascivious acts with a minor and annoying or molesting a child under 18. Victim&#39;s mother had contacted police over the weekend prior. Pleaded guilty May 17, 2019 (two years post-arrest) to 1 felony count contacting a child with intent to commit a crime + 2 misdemeanor counts child molestation. Sentence: 120 days jail (weekends only); sex offender registration; sex offender classes. No prison time. Victim&#39;s mother subsequently filed civil suit against Riverside Unified School District for failure to protect; alleged school did not follow up on email she sent regarding excessive tardies of her daughter. NOTE: Female victim, female defendant. Weekend-only jail is effectively no-prison outcome for a felony + two misdemeanor plea. Two-year gap between arrest and plea unusual but unexplained in coverage.</p></blockquote>
+  <blockquote><p>Former teacher at Encore High School for the Arts, Riverside, California (Riverside County). Age 31 at time of offense; 32 at arrest. Resident of Corona at the time.</p><p>Female victim age 14, with a second female student involved on a misdemeanor count. The relationship lasted several months, with communication including text messages. Arrested February 6, 2017 at school on suspicion of lewd or lascivious acts with a minor and annoying or molesting a child under 18; the victim&#39;s mother had contacted police the prior weekend. School officials &#34;fully cooperated&#34; with the investigation.</p><p>Pleaded guilty May 17, 2019 — two years after arrest — to one felony count of contacting a child with intent to commit a crime plus two misdemeanor counts of child molestation. Sentenced same day to 120 days jail on weekends, sex offender registration, and sex offender classes. No prison time.</p><p>The victim&#39;s mother subsequently filed a civil suit against Riverside Unified School District alleging failure to protect, citing an unanswered email she had sent the school about her daughter&#39;s excessive tardies.</p><p>NOTE: Female-victim, female-defendant case. Weekend-only jail is effectively a no-prison outcome for a felony plus two misdemeanors. The two-year gap between arrest and plea is unusual and not explained in available coverage. The civil suit alleging the school ignored a tardy-notification signal makes this a notable institutional-failure case — the misdemeanor &#34;child molestation&#34; plea is to a non-contact statute (annoying/molesting) so contact_type is coded 999 despite the months-long relationship pattern.</p></blockquote>
 
 
   <p>
@@ -168,7 +170,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -184,60 +186,67 @@
 <h2>Related Cases</h2>
 <ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/201-400/case_307.html">Ashley Casiday</a>
+    <a href="../../cases/0-200/case_61.html">Summer Hansen</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      67%
- — sexting · non-contact · victim age 14 · 0.5 yr sentence    </span>
+      68%
+ — lenient-sentence, multiple-victims, sexting · ct=999 · victim age 14 · California    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/601-800/case_696.html">Caron Elizabeth Blanton</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      63%
- — multiple-victims, sexting · non-contact · victim age 13 · 0.05 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/1001-1200/case_1064.html">Jennifer Smith</a>
+    <a href="../../cases/401-600/case_402.html">Crystal Nicole Rodriguez</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       63%
- — multiple-victims, sexting · non-contact · victim age 15 · 0.0 yr sentence    </span>
+ — female-victim · ct=999 · victim age 15 · 0.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/0-200/case_45.html">Courtney Horn</a>
+    <a href="../../cases/0-200/case_54.html">Stacy Michelle Walker</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      63%
+ — female-victim, lenient-sentence, sexting · ct=999 · victim age 15 · California    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1079.html">Ashley Herre-Bagwell</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      63%
+ — female-victim, multiple-victims, sexting · ct=999 · victim age 16 · 0.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/801-1000/case_811.html">Dorothy Elizabeth Dixon</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       62%
- — female-victim · non-contact · victim age 16 · 0.0 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/601-800/case_664.html">Shannon Handy Wood</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      61%
- — multiple-victims · non-contact · victim age 14 · 0.0 yr sentence    </span>
+ — sexting · ct=999 · victim age 15 · 0.0 yr sentence    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">199</td>
-      <td>Contacting a child with intent to commit a crime (1 felony count)</td>
+      <td>Contacting a child with intent to commit a crime</td>
       <td>1</td>
       <td>—</td>
       <td>plea</td>
     </tr>
     <tr>
       <td class="dim">200</td>
-      <td>Child molestation (2 misdemeanor counts)</td>
-      <td>1</td>
+      <td>Child molestation</td>
+      <td>2</td>
       <td>—</td>
       <td>plea</td>
     </tr>
     <tr>
       <td class="dim">201</td>
-      <td>Lewd or lascivious acts with a minor; annoying or molesting a child under 18</td>
+      <td>Lewd or lascivious acts with a minor</td>
+      <td>1</td>
+      <td>—</td>
+      <td>dismissed</td>
+    </tr>
+    <tr>
+      <td class="dim">2926</td>
+      <td>Annoying or molesting a child under 18</td>
       <td>1</td>
       <td>—</td>
       <td>dismissed</td>
@@ -249,7 +258,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -279,7 +288,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>

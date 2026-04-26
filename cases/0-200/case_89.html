@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -153,7 +155,7 @@
   <tr><td class="lbl">Prison Sentence</td><td>2.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former English teacher at New Berlin West High School, New Berlin, Wisconsin. Age 28 at time of first offense. Male victim age 16 (turned 17 during incident period); was in her sophomore English class 2014-15. Relationship developed through frequent texting (1,100+ messages April 2015–January 2016). First sexual encounter July 2015 in Domres&#39; car at park-and-ride lot on Moorland Road, New Berlin (victim age 16). Second documented encounter October 2015 at Motel 6, Brookfield (victim age 17); Domres reserved room with single bed, paid cash. Evidence: victim&#39;s phone connected to motel WiFi matching room reservation date. More than a dozen total encounters. Charges filed April 2016; pleaded guilty August 2016 to 2 counts sexual assault of a student by school staff. Sentenced December 7, 2016 by Judge Lee S. Dreyfus Jr.: Count 1: 2 years prison + 3 years extended supervision; Count 2: 2 years prison + 2 years supervision suspended in favor of 3 years probation (re-exposure to Count 2 if probation violated). Sex offender registration. Domres married her high school sweetheart August 2015, mid-offense period. NOTE: Prosecutor noted teacher-victim relationship elevates what would otherwise be misdemeanor conduct to felony. Judge stated offense went &#39;well beyond a mistake in judgment&#39; and was &#39;to meet your needs, and not those of a child.&#39; Victim&#39;s family submitted no impact statement and did not appear at sentencing.</p></blockquote>
+  <blockquote><p>Former English teacher at New Berlin West High School, New Berlin, Wisconsin (Waukesha County). Age 28 at time of first offense; single at offense onset, married her high school sweetheart in August 2015 mid-offense.</p><p>Male victim age 16 at the first encounter (turned 17 during the incident period); was a student in her sophomore English class during the 2014-15 school year. The relationship developed through frequent texting — more than 1,100 messages exchanged April 2015 through January 2016. The first sexual encounter (intercourse) occurred July 2015 in Domres&#39; car at a park-and-ride lot on Moorland Road in New Berlin (victim age 16). A second documented encounter took place October 2015 at a Motel 6 in Brookfield (victim age 17), where Domres reserved a single-bed room and paid cash; the victim&#39;s phone connected to motel WiFi on the matching reservation date. More than a dozen encounters in total.</p><p>Charges were filed April 2016. Pleaded guilty August 2016 to two counts of sexual assault of a student by school staff. Sentenced December 7, 2016 by Judge Lee S. Dreyfus Jr. — Count 1: 2 years prison plus 3 years extended supervision; Count 2: 2 years prison plus 2 years supervision suspended in favor of 3 years probation, with re-exposure to Count 2 if probation is violated. Sex offender registration.</p><p>Prosecutor Ted Szczupakiewicz noted that, but for the teacher-student relationship, the conduct would have been misdemeanors rather than felonies. Judge Dreyfus characterized the offense as going &#34;well beyond a mistake in judgment,&#34; stating it was &#34;to meet your needs, and not those of a child.&#34; The victim&#39;s family declined to appear at sentencing and submitted no impact statement.</p><p>NOTE: Marriage during the offense period (August 2015) means Domres was unmarried at the time of the first documented encounter but married for subsequent encounters — recorded as single per offense-onset convention. Physical evidence (motel WiFi connection logs matched to a cash-paid room reservation) is unusually concrete for a teacher-student case in this DB.</p></blockquote>
 
 <div style="clear:both;"></div>
   <p>
@@ -166,7 +168,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -216,23 +218,23 @@
  — physical-evidence, sexting · penetrative · victim age 15 · 2.5 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/1001-1200/case_1028.html">Stephanie Cobb</a>
+    <a href="../../cases/401-600/case_486.html">Megan Denman</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      68%
- — sexting · penetrative · victim age 16 · 2.5 yr sentence    </span>
+      67%
+ — physical-evidence · penetrative · victim age 17    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">198</td>
-      <td>Sexual assault of a student by school staff (2 counts, Wis. Stat. § 948.095)</td>
-      <td>1</td>
+      <td>Sexual assault of a student by school staff</td>
+      <td>2</td>
       <td>—</td>
       <td>guilty</td>
     </tr>
@@ -243,7 +245,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -278,7 +280,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>

@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -147,7 +149,7 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Pennsylvania</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">State</td><td>Pennsylvania</td><td class="lbl">Court</td><td>Northampton County Court of Common Pleas</td></tr>
   <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2015-09-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>49</td><td class="lbl">Victim Age</td><td>15</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>3.0 yrs</td><td class="lbl"></td><td></td></tr>
@@ -173,7 +175,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -199,6 +201,12 @@
 <h2>Related Cases</h2>
 <ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
   <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1102.html">Michelle Mellinger</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      58%
+ — extreme-age-difference, non-teaching-staff · penetrative · victim age 15 · Pennsylvania    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/801-1000/case_820.html">Denise Nagle</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       58%
@@ -209,12 +217,6 @@
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       57%
  — extreme-age-difference · penetrative · victim age 16 · 1.5 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/1001-1200/case_1102.html">Michelle Mellinger</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      56%
- — extreme-age-difference, non-teaching-staff · penetrative · victim age 15 · Pennsylvania    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/201-400/case_370.html">Stacy Slamka</a>
@@ -233,7 +235,7 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -250,7 +252,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -280,7 +282,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>

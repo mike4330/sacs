@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -165,7 +167,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -193,7 +195,7 @@
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/401-600/case_582.html">Katie Cross</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      67%
+      69%
  — private-school · ct=999 · victim age 17 · 0.0 yr sentence · Pennsylvania    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
@@ -209,23 +211,23 @@
  — ct=999 · victim age 17 · 0.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/1001-1200/case_1193.html">Robin Winkis</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      61%
+ — ct=999 · victim age 17 · 0.17 yr sentence · Pennsylvania    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/201-400/case_324.html">Mandy Lynn Davenport</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       60%
  — ct=999 · victim age 17 · 0.0 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/1001-1200/case_1193.html">Robin Winkis</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      59%
- — ct=999 · victim age 17 · 0.17 yr sentence · Pennsylvania    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -249,7 +251,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -284,7 +286,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>

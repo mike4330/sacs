@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,13 +146,13 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>South Carolina</td><td class="lbl">Court</td><td>unknown</td></tr>
-  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2023-10</td></tr>
+  <tr><td class="lbl">State</td><td>South Carolina</td><td class="lbl">Court</td><td>Orangeburg County Court of General Sessions</td></tr>
+  <tr><td class="lbl">Judge</td><td>Charles J. McCutchen (disposition); Valerie J. Lawrence (assigned)</td><td class="lbl">Incident Date</td><td>2023-10</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>28</td><td class="lbl">Victim Age</td><td>16</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former teacher at Holly Hill Academy, Orangeburg County SC (private school). Sent nude photos of herself to 16/17yo male student to lure him into a sexual relationship; incidents occurred Oct 2023 at a Pizza Hut in Santee and a home on Bunch Ford Rd. Fired after school head notified law enforcement following student disclosures. Victim&#39;s mother stated he was not the only victim. Originally charged with 2 counts sexual battery of a 16/17yo (2023); plea reduced to second-degree assault and battery. Sentence: 5 years probation, sex offender counseling, permanent restraining order. No prison, no sex offender registration — unless probation violated (then up to 8 years + registration). NOTE: Unusually favorable resolution — no prison, no sex offender registration unless probation violated. Victim&#39;s mother stated &#34;he was not the only one,&#34; suggesting additional unreported victims.</p></blockquote>
+  <blockquote><p>Former teacher at Holly Hill Academy, a private school in Orangeburg County, South Carolina. Age 28 at time of offense.</p><p>The victim was a 16- or 17-year-old male student. Anderson sent nude photos of herself to the victim to lure him into a sexual relationship; the documented incidents occurred in October 2023 at a Pizza Hut in Santee and at a residence on Bunch Ford Road. Anderson was fired after the school head notified law enforcement following student disclosures. The victim&#39;s mother stated publicly that her son was not the only victim, suggesting additional unreported victims.</p><p>Arrested November 15, 2023 on two counts of sexual battery of a 16- or 17-year-old. The case was filed in the Orangeburg County Court of General Sessions on November 27, 2023 (Case No. 2023A3810701075) and indicted in 2024 (Indictment No. 2024GS3800088). Judge Valerie J. Lawrence was assigned. On April 10, 2025, before Disposition Judge Charles J. McCutchen, Anderson pleaded guilty to a reduced charge of second-degree assault and battery.</p><p>Sentenced to a 3-year South Carolina Department of Corrections term, suspended after one day of time served, plus five years of probation, sex offender counseling, and a permanent restraining order from the victim and family. Anderson was placed on the Central Registry of Child Abuse and Neglect. Sex offender registration applies only if she violates probation, in which case the unsuspended balance of the SCDC term and registration would attach.</p><p>NOTE: An unusually favorable disposition for the conduct described — the original two-count sexual battery charge was reduced to a single second-degree assault and battery charge, and the 3-year SCDC term was almost entirely suspended. CRCAN placement is a substitute civil consequence for sex offender registration in cases where the conduct fits the abuse-by-position-of-trust framework. The &#34;not the only one&#34; claim from the victim&#39;s mother was not pursued in the charging document. The penetrative-contact coding (3) reflects the conduct described in the original sexual-battery charge rather than the reduced assault-and-battery plea label, which understates the underlying act.</p></blockquote>
 
 
   <p>
@@ -167,7 +169,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -217,7 +219,7 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -241,7 +243,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -250,23 +252,23 @@
       <td></td>
     </tr>
     <tr>
-      <td class="dim">2023</td>
+      <td class="dim">2023-11-15</td>
       <td>arrest</td>
-      <td>Arrested on 2 counts sexual battery of a 16/17-year-old; school head notified law enforcement after students came forward</td>
+      <td>Arrested by law enforcement following student disclosures relayed by the school head; charged with two counts of sexual battery of a 16- or 17-year-old. Case filed in General Sessions on 2023-11-27 (Case No. 2023A3810701075).</td>
     </tr>
     <tr>
       <td class="dim">2025-04-10</td>
       <td>sentencing</td>
-      <td>Pleads guilty to second-degree assault and battery; sentenced to 5 years probation, sex offender counseling, permanent restraining order from victim and family</td>
+      <td>Pleaded guilty before Disposition Judge Charles J. McCutchen to a reduced charge of second-degree assault and battery. Sentenced to a 3-year SCDC term, suspended after 1 day time served, with 5 years of probation, sex offender counseling, and a permanent restraining order from the victim and family. Placed on the Central Registry of Child Abuse and Neglect; sex offender registration applies only if probation is violated.</td>
     </tr>
   </tbody>
 </table>
 </figure>
 
 <!-- Entries -->
-<h2>Entries <span class="dim">(1)</span></h2>
+<h2>Entries <span class="dim">(2)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>
@@ -284,6 +286,17 @@ WIS — Apri</a>…</td>
           <span class="tag">charge-reduction</span>
           <span class="tag">private-school</span>
           <span class="tag">possible-additional-victims</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="dim"><a href="entry_1899.html">1899</a></td>
+      <td class="dim">2025-04-10</td>
+      <td>Orangeburg County General Sessions docket — Case No. 2023A3810701075</td>
+      <td><a href="entry_1899.html">South Carolina Court of General Sessions — Orangeburg County
+The State of South Carolina vs. Reagan </a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">charge-reduction</span>
       </td>
     </tr>
   </tbody>
