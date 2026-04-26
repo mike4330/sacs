@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,13 +146,13 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Tennessee</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">State</td><td>Tennessee</td><td class="lbl">Court</td><td>Shelby County Criminal Court</td></tr>
   <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2010-09-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>29</td><td class="lbl">Victim Age</td><td>15</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former physical education teacher and coach at Arlington High School, Arlington, Tennessee (Shelby County). Age 29 at time of offense.</p><p>Multiple victims — at least two minor students. In addition to physical sexual conduct, Hopkins sent nude photographs of herself to students. Original charges (Shelby County): 3 counts of statutory rape by an authority figure (TCA § 39-13-532) and 2 counts of soliciting sexual exploitation of a minor. One alleged victim was determined to be 18 at the time of the offense; that count was dropped.</p><p>In approximately July 2012, Hopkins pleaded guilty to 2 counts of aggravated statutory rape (a reduced charge). On August 24, 2012, she was sentenced to 4 years probation with no jail time. She was required to register as a sex offender within 48 hours of sentencing, prohibited from teaching, and prohibited from employment involving anyone under 18. No-contact orders were issued for the two student victims.</p><p>NOTE: contact_type = 3 (statutory rape — intercourse confirmed). sentence_years = 0.0 (probation only). Multiple victims confirmed (two counts; third alleged victim was 18). Charge-reduction: statutory rape by authority figure reduced to aggravated statutory rape per plea. Explicit photos sent to students (sexting element).</p></blockquote>
+  <blockquote><p>Former physical education teacher and coach at Arlington High School, Arlington, Tennessee (Shelby County). Hopkins had taught at Arlington for nearly six years at the time of her arrest. Age 29 at time of offense.</p><p>Multiple victims, at least two minor students. Hopkins texted nude pictures of herself to the students, and the students admitted to having sex with her. The third student to come forward described a sexual relationship beginning in early 2011 with each incident occurring at Hopkins&#39; Cordova home.</p><p>Initial arrest in May 2011 on charges of statutory rape by an authority figure. After the first arrest, Hopkins&#39; ex-boyfriend approached investigators with information that led a third student to come forward. Charges expanded to three counts of statutory rape by an authority figure and two counts of soliciting sexual exploitation of a minor. Shelby County Schools confirmed Hopkins&#39; termination on May 26, 2011. One alleged victim was later determined to have been 18 at the time of the offense and that count was dropped.</p><p>In approximately July 2012, Hopkins pleaded guilty to two counts of aggravated statutory rape. On August 24, 2012, she was sentenced to four years of probation with no jail time. She was required to register as a sex offender within 48 hours of sentencing, was prohibited from teaching, and was prohibited from any employment involving people under 18. No-contact orders were issued for the two student victims.</p><p>NOTE: Statutory rape with confirmed intercourse places contact_type at 3. Probation only with no jail term yields sentence_years 0.0. Charge reduction from statutory rape by an authority figure to aggravated statutory rape per plea, plus the dismissal of the count involving the 18-year-old. Sexting with explicit photos sent to students alongside the in-person conduct. The ex-boyfriend disclosure pattern is unusual; reporting most often originates from a parent, peer, or school administrator rather than a former intimate partner of the defendant.</p></blockquote>
 
 
   <p>
@@ -163,12 +165,13 @@
       <span class="tag">probation</span>
       <span class="tag">no-prison</span>
       <span class="tag">charge-reduction</span>
+      <span class="tag">victim-in-home</span>
   </p>
 
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -184,47 +187,47 @@
 <h2>Related Cases</h2>
 <ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
   <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_458.html">Jessica Saienni</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      83%
+ — explicit-photos, sexting, victim-in-home · penetrative · victim age 14 · 0.5 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/0-200/case_40.html">Shannon Pavlansky-Wojtowicz</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      88%
+      79%
  — explicit-photos, multiple-victims, sexting · penetrative · victim age 16    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/401-600/case_431.html">Meghan Baumann</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      81%
+      74%
  — explicit-photos, multiple-victims, sexting · penetrative · victim age 17 · Tennessee    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/401-600/case_458.html">Jessica Saienni</a>
+    <a href="../../cases/801-1000/case_876.html">Dixie McCollough</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      75%
- — explicit-photos, sexting · penetrative · victim age 14 · 0.5 yr sentence    </span>
+      72%
+ — multiple-victims, victim-in-home · penetrative · victim age 15 · 0.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/601-800/case_782.html">Kimme A. Woolf</a>
+    <a href="../../cases/201-400/case_240.html">Amber Stroda</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      73%
- — multiple-victims, sexting · penetrative · victim age 16 · 0.0 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/0-200/case_170.html">Lindsay Himmelspach</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      73%
- — explicit-photos, multiple-victims, sexting · penetrative · victim age 17 · 0.16 yr sentence    </span>
+      71%
+ — multiple-victims, victim-in-home · penetrative · victim age 14 · 0.0 yr sentence    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">1702</td>
-      <td>Aggravated statutory rape (TCA § 39-13-532) — 2 counts, guilty plea; original charges: 3 counts statutory rape by authority figure + 2 counts soliciting sexual exploitation</td>
-      <td>1</td>
+      <td>Aggravated statutory rape</td>
+      <td>2</td>
       <td>felony</td>
       <td>plea</td>
     </tr>
@@ -235,7 +238,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -246,7 +249,7 @@
     <tr>
       <td class="dim">2011-05-01</td>
       <td>arrest</td>
-      <td></td>
+      <td>Initial arrest on charges of statutory rape by an authority figure; ex-boyfriend later reported additional information that led a third student to come forward, expanding charges to three counts of statutory rape by an authority figure and two counts of sexual exploitation of a minor. Termination by Shelby County Schools confirmed May 26, 2011.</td>
     </tr>
     <tr>
       <td class="dim">2012-08-24</td>
@@ -258,8 +261,27 @@
 </figure>
 
 <!-- Entries -->
-<h2>Entries <span class="dim">(0)</span></h2>
-  <p class="dim">No entries yet.</p>
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table class="case-rows">
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1893.html">1893</a></td>
+      <td class="dim">2011-05-26</td>
+      <td>WMC-TV (Memphis)</td>
+      <td><a href="entry_1893.html">SCS fires Arlington teacher charged with rape of 3 students
+WMC-TV — Published May 26, 2011 at 9:54 </a>…</td>
+      <td>
+          <span class="tag">multiple-victims</span>
+          <span class="tag">explicit-photos</span>
+          <span class="tag">sexting</span>
+          <span class="tag">victim-in-home</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
 
 <!-- Documents -->
 

@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,13 +146,13 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Kentucky</td><td class="lbl">Court</td><td>unknown</td></tr>
-  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2008-06-01</td></tr>
+  <tr><td class="lbl">State</td><td>Kentucky</td><td class="lbl">Court</td><td>Pulaski Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>David Tapp</td><td class="lbl">Incident Date</td><td>2008-06-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>29</td><td class="lbl">Victim Age</td><td>14</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>1.5 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former teacher&#39;s aide at Southern Middle School, Somerset, Kentucky (Pulaski County). Age approximately 29 at time of first offense (Summer 2008); age 34 at arrest (2012).</p><p>Victim was a 14-year-old male student who was also her daughter&#39;s former boyfriend — a personal/social grooming vector outside the classroom. The sexual relationship reportedly began Summer 2008 when the victim was 14 and continued approximately 3 years. The victim&#39;s family eventually discovered the relationship and contacted Kentucky State Police; Detective Tracy Haynes presented the case to the grand jury.</p><p>On July 2012, a Pulaski County grand jury indicted Wilson on four counts: two counts of second-degree rape (KRS § 510.050) and two counts of third-degree rape (KRS § 510.060), before Judge David Tapp in Pulaski Circuit Court. Trial was originally set for October 5, 2012.</p><p>Wilson subsequently pleaded guilty to one count of third-degree rape (KRS § 510.060). Sentencing was scheduled for November 16, 2012; the prosecutor argued against probation. Wilson is confirmed on the Kentucky sex offender registry.</p><p>NOTE: contact_type = 3 (rape — sexual intercourse). sentence_years = NULL — actual sentence not confirmed in available sources. Defendant age corrected to ~29 (age at offense onset, 2008); DB stub listed 34 which was age at arrest. Long-term relationship spanning approximately 3 years. Charge-reduction: four-count indictment resolved to single count.</p></blockquote>
+  <blockquote><p>Former teacher&#39;s aide at Southern Middle School, Somerset, Kentucky (Pulaski County). Age approximately 29 at time of first offense (summer 2008); age 34 at arrest in 2012.</p><p>The victim was a 14-year-old male student who was also her daughter&#39;s former boyfriend, a personal and social grooming vector outside the classroom. The sexual relationship reportedly began in the summer of 2008 when the victim was 14 and continued for approximately three years. The victim&#39;s family eventually discovered the relationship and contacted the Kentucky State Police; Detective Tracy Haynes presented the case to the grand jury.</p><p>In July 2012, a Pulaski County grand jury indicted Wilson on four counts: two counts of second-degree rape and two counts of third-degree rape, before Judge David Tapp in Pulaski Circuit Court. Trial was originally set for October 5, 2012.</p><p>Wilson subsequently pleaded guilty to one count of third-degree rape; the second-degree counts were dismissed per the plea agreement. Sentencing was held November 16, 2012, with the prosecutor arguing against probation. Wilson is confirmed on the Kentucky sex offender registry.</p><p>NOTE: Penetrative intercourse under the Kentucky rape statutes places contact_type at 3. The specific sentence imposed at the November 2012 hearing is not fully documented in available sources; the database carries a provisional sentence_years of 1.5 pending verification of the actual disposition. Long-term relationship spanning approximately three years. Charge reduction from a four-count indictment to a single conviction count.</p></blockquote>
 
 
   <p>
@@ -165,7 +167,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -215,20 +217,20 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">1697</td>
-      <td>Third-degree rape (KRS § 510.060)</td>
+      <td>Rape, third degree</td>
       <td>1</td>
       <td>felony</td>
       <td>plea</td>
     </tr>
     <tr>
       <td class="dim">1729</td>
-      <td>Second-degree rape (KRS § 510.050, two counts)</td>
-      <td>1</td>
+      <td>Rape, second degree</td>
+      <td>2</td>
       <td>—</td>
       <td>dismissed</td>
     </tr>
@@ -239,7 +241,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -248,14 +250,19 @@
       <td></td>
     </tr>
     <tr>
-      <td class="dim">2012-07</td>
+      <td class="dim">2012-07-01</td>
       <td>indictment</td>
-      <td>Grand jury indictment: 2 counts second-degree rape, 2 counts third-degree rape; Judge David Tapp</td>
+      <td>Pulaski County grand jury indictment on four counts: two counts of second-degree rape and two counts of third-degree rape (Judge David Tapp)</td>
     </tr>
     <tr>
       <td class="dim">2012-07-01</td>
       <td>arrest</td>
-      <td></td>
+      <td>Arrested by Kentucky State Police following family disclosure to Detective Tracy Haynes; case presented to Pulaski County grand jury</td>
+    </tr>
+    <tr>
+      <td class="dim">2012-11-16</td>
+      <td>sentencing</td>
+      <td>Sentenced following guilty plea to one count of third-degree rape; prosecutor argued against probation</td>
     </tr>
   </tbody>
 </table>

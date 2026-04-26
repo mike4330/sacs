@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -147,13 +149,13 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Alabama</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">State</td><td>Alabama</td><td class="lbl">Court</td><td>Colbert County Circuit Court</td></tr>
   <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2009-12</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>37</td><td class="lbl">Victim Age</td><td>15</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>10.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former 8th-grade English teacher at Sheffield Junior High School, Sheffield, Alabama (Colbert County). Age approximately 37 at time of offense.</p><p>Victim was a 15-year-old male student. In December 2009, Muscle Shoals police discovered Watkins and the student having sexual intercourse in the backseat of her car in a school parking lot — an in-flagrante discovery. She did not accept a plea and was tried by jury.</p><p>On November 3, 2011, a Colbert County Circuit Court jury convicted Watkins of second-degree rape (Alabama) and second-degree sodomy (Alabama). On February 15, 2012, she was sentenced to two 20-year split sentences with 5 years active on each count, to run consecutively — 10 years total active imprisonment. She was transferred from Tutwiler Prison to Franklin County due to overcrowding. After approximately 2 years served, she was released with consent of the victim and district attorney, with the remainder served under supervision.</p><p>NOTE: contact_type = 3 (rape and sodomy — intercourse and penetrative acts). sentence_years = 10.0 (total active time imposed; 2 counts × 5 active years each, consecutive). Verdict (jury trial, not plea). In-flagrante discovery by police at a school parking lot.</p></blockquote>
+  <blockquote><p>Former eighth-grade English teacher at Sheffield Junior High School, Sheffield, Alabama (Colbert County). Approximately age 37 at time of offense.</p><p>The victim was a 15-year-old male student. In December 2009, Muscle Shoals police discovered Watkins and the student having sexual intercourse in the backseat of her car in a school parking lot, an in-flagrante discovery rather than a delayed-disclosure investigation. Watkins did not accept a plea and was tried by jury.</p><p>On November 3, 2011, a Colbert County Circuit Court jury convicted Watkins of second-degree rape and second-degree sodomy. On February 16, 2012, she was sentenced to two 20-year split sentences with 5 years active on each count, to run consecutively, for 10 years total active imprisonment. She was remanded immediately to custody for transfer to Julia Tutwiler Prison for Women, the state&#39;s all-female prison, and was later moved to Franklin County due to overcrowding. After approximately two years served, she was released with the consent of the victim and the district attorney, with the remainder of the term served under supervision.</p><p>Several witnesses, including her treating psychiatrist, testified at sentencing asking for leniency so Watkins could continue treatment for mental illness. Defense doctors described diagnoses of depression, dissociative disorder, and PTSD; the psychiatrist&#39;s central concern was regression if Watkins were sent to prison. The judge took approximately an hour of testimony before imposing sentence. District Attorney Bryce Graham said he was pleased with the disposition and noted that Watkins would be able to seek treatment while incarcerated. Defense attorney Ralph Holt declined to comment on camera and said any decision to appeal would be discussed with the family. Watkins testified for the first time on the afternoon of sentencing.</p><p>NOTE: Penetrative rape and sodomy convictions place contact_type at 3. The 10 years of total active imprisonment imposed across the two consecutive 5-year split components yields sentence_years 10.0. Jury verdict rather than plea. The in-flagrante discovery in a school parking lot is the structural anomaly of the case. The mental-illness mitigation argument was robustly developed at sentencing but did not displace incarceration.</p></blockquote>
 
 <div style="clear:both;"></div>
   <p>
@@ -166,7 +168,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -216,12 +218,12 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">1721</td>
-      <td>Second-degree rape (Alabama) + second-degree sodomy (Alabama) — jury verdict; two 20-year split sentences, 5 years active each (10 years total active)</td>
+      <td>Rape, second degree; Sodomy, second degree</td>
       <td>2</td>
       <td>felony</td>
       <td>guilty</td>
@@ -233,7 +235,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -244,7 +246,7 @@
     <tr>
       <td class="dim">2009-12-19</td>
       <td>arrest</td>
-      <td></td>
+      <td>Discovered in flagrante by Muscle Shoals police in the backseat of her vehicle in a school parking lot with the victim</td>
     </tr>
     <tr>
       <td class="dim">2011-11-03</td>
@@ -252,17 +254,33 @@
       <td>Jury verdict: guilty of second-degree rape and second-degree sodomy; Colbert County Circuit Court</td>
     </tr>
     <tr>
-      <td class="dim">2012-02-15</td>
+      <td class="dim">2012-02-16</td>
       <td>sentencing</td>
-      <td>Sentenced: two 20-year split sentences, 5 years active each; 10 years total active; transferred Tutwiler Prison</td>
+      <td>Sentenced by the court to two 20-year split terms with 5 years active on each count to run consecutively (10 years total active imprisonment) and remanded immediately to custody for transfer to Julia Tutwiler Prison for Women. Psychiatric and lay witnesses testified for leniency, citing depression, dissociative disorder, and PTSD diagnoses; the judge took roughly an hour of testimony before imposing sentence. DA Bryce Graham; defense Ralph Holt.</td>
     </tr>
   </tbody>
 </table>
 </figure>
 
 <!-- Entries -->
-<h2>Entries <span class="dim">(0)</span></h2>
-  <p class="dim">No entries yet.</p>
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table class="case-rows">
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1898.html">1898</a></td>
+      <td class="dim">2012-02-16</td>
+      <td>WAFF (Huntsville)</td>
+      <td><a href="entry_1898.html">Amanda Watkins sentenced to 10 years for sodomy and rape
+WAFF — Published Feb. 16, 2012 at 8:44 PM E</a>…</td>
+      <td>
+          <span class="tag">verdict</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
 
 <!-- Documents -->
 

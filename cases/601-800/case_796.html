@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,24 +146,25 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Michigan</td><td class="lbl">Court</td><td>unknown</td></tr>
-  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2011-09-01</td></tr>
+  <tr><td class="lbl">State</td><td>Michigan</td><td class="lbl">Court</td><td>Calhoun County Circuit Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2011-06-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>32</td><td class="lbl">Victim Age</td><td>14</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>7.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former teacher&#39;s aide at Kellogg Middle School, Battle Creek, Michigan (Calhoun County). Age 32 at time of arrest and sentencing.</p><p>The victim was a 14-year-old student. Convicted of two counts of third-degree criminal sexual conduct, which covers sexual penetration with a person aged 13 to 15 or with someone in a position of authority. Sentenced to 7 years in prison.</p><p>NOTE: The Michigan third-degree criminal sexual conduct statute requires sexual penetration, so contact_type is coded 3. Michigan uses indeterminate sentencing, and the 7-year figure likely represents the minimum of a guidelines range (e.g. 7 to 15 years); the maximum is not confirmed in available sources. Offense dates and sentencing date are also unconfirmed. Court of record is Calhoun County Circuit Court. Stub from calist.txt. Sentencing structure and plea vs. verdict still need verification.</p></blockquote>
+  <blockquote><p>Former teacher&#39;s aide at WK Kellogg Middle School, Battle Creek, Michigan (Calhoun County). Patzkowsky had worked at the middle school for approximately five years before the investigation. Age 32 at time of arrest and sentencing. Married to Mike Patzkowsky for 13 years at the time of arrest, with two children; her husband filed for divorce after the allegations surfaced.</p><p>The victim was a 14-year-old student. Police confirmed that the abuse occurred off school grounds, and the specific case details were not released by investigators in pre-trial reporting. Convicted of two counts of third-degree criminal sexual conduct, which covers sexual penetration with a person aged 13 to 15 or with someone in a position of authority.</p><p>The investigation began in September 2011 and Patzkowsky was placed on administrative leave at that time. She subsequently relocated to Brownsville, Texas, and lived with relatives there for approximately eight months. U.S. marshals apprehended her in Brownsville on June 3, 2012, with extradition to Battle Creek to follow. Initial charging was four counts of sexual assault per local TV reporting; the case ultimately resolved on two counts. Sentenced to 7 years in prison.</p><p>NOTE: The Michigan third-degree criminal sexual conduct statute requires sexual penetration, so contact_type is coded 3. Michigan uses indeterminate sentencing, and the 7-year figure likely represents the minimum of a guidelines range (e.g., 7 to 15 years); the maximum is not confirmed in available sources. The eight-month relocation to Brownsville before apprehension supports a concealment tag. The four-to-two count reduction between initial reporting and conviction implies a charge reduction, though specific motion or plea-bargain documents are not in the case file. Marital status at time of offense is married; the divorce was filed after arrest and is recorded here in the notes per project convention rather than overwriting the field.</p></blockquote>
 
 
   <p>
       <span class="tag">guilty</span>
       <span class="tag">sex-offender-registration</span>
+      <span class="tag">concealment</span>
   </p>
 
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -177,46 +180,46 @@
 <h2>Related Cases</h2>
 <ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/401-600/case_507.html">Rochelle L. Cressman</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      59%
- — penetrative · victim age 14 · 5.0 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/0-200/case_172.html">Brooke Dinkel</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      59%
+      63%
  — penetrative · victim age 13 · 6.8 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/0-200/case_74.html">Kayla Tindall</a>
+    <a href="../../cases/201-400/case_365.html">Laura Lynn Cross</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      58%
- — penetrative · victim age 13 · 6.0 yr sentence    </span>
+      62%
+ — concealment · penetrative · victim age 14    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/201-400/case_376.html">Karla Winterfeld</a>
+    <a href="../../cases/1001-1200/case_1092.html">Rachel Holt</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      58%
- — penetrative · victim age 15 · 8.0 yr sentence    </span>
+      62%
+ — concealment · penetrative · victim age 13 · 10.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/0-200/case_159.html">Abigail Simon</a>
+    <a href="../../cases/801-1000/case_895.html">Ashli Gilley</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      57%
- — penetrative · victim age 15 · 8.0 yr sentence · Michigan    </span>
+      61%
+ — penetrative · victim age 15 · 10.0 yr sentence    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_593.html">Brittney McKenna</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      61%
+ — concealment · penetrative · victim age 15 · 10.0 yr sentence    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">1708</td>
-      <td>Third-degree criminal sexual conduct (Michigan MCL § 750.520d) — 2 counts; 7 years prison (Michigan minimum; maximum not confirmed — indeterminate sentencing)</td>
+      <td>Criminal sexual conduct, third degree</td>
       <td>2</td>
       <td>felony</td>
       <td>plea</td>
@@ -228,26 +231,48 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
-      <td class="dim">2011-09-01</td>
+      <td class="dim">2011-06-01</td>
       <td>incident</td>
       <td></td>
     </tr>
     <tr>
-      <td class="dim">2012-08-01</td>
+      <td class="dim">2011-09-01</td>
+      <td>other</td>
+      <td>Investigation initiated; Patzkowsky placed on administrative leave by Battle Creek Public Schools (had worked at WK Kellogg Middle School for five years prior). Approximate date based on local TV reporting that investigation began in September.</td>
+    </tr>
+    <tr>
+      <td class="dim">2012-06-03</td>
       <td>arrest</td>
-      <td></td>
+      <td>Apprehended in Brownsville, Texas by U.S. marshals after eight months living with relatives there. Awaiting extradition to Battle Creek.</td>
     </tr>
   </tbody>
 </table>
 </figure>
 
 <!-- Entries -->
-<h2>Entries <span class="dim">(0)</span></h2>
-  <p class="dim">No entries yet.</p>
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table class="case-rows">
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1896.html">1896</a></td>
+      <td class="dim">2012-06-04</td>
+      <td>Local TV news (YouTube video, AI summary)</td>
+      <td><a href="entry_1896.html">[AI summary of local TV news YouTube video]
+
+This video reports on the arrest of April Patzkowsky, a</a>…</td>
+      <td>
+          <span class="tag">concealment</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
 
 <!-- Documents -->
 

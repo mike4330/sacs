@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,18 +146,18 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Ohio</td><td class="lbl">Court</td><td>unknown</td></tr>
-  <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2011-09-01</td></tr>
+  <tr><td class="lbl">State</td><td>Ohio</td><td class="lbl">Court</td><td>Fulton County Common Pleas Court</td></tr>
+  <tr><td class="lbl">Judge</td><td>James Barber</td><td class="lbl">Incident Date</td><td>2012-02-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>44</td><td class="lbl">Victim Age</td><td>18</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
 </table>
 
-  <blockquote><p>Former psychology teacher at Swanton High School, Swanton, Ohio (Fulton County). Age 44 at time of case.</p><p>Charged with attempting to engage in sexual conduct with a student. Swanton Local Schools placed Blosser on paid administrative leave following an internal investigation concluding that she had inappropriate sexual relations with the student. The case proceeded to trial rather than a plea.</p><p>Blosser was found guilty. She was sentenced to 1 year of community control and 10 days in the Corrections Center of Northwest Ohio.</p><p>NOTE: sentence_years = 0.0 (community control; the 10-day jail term is likely non-continuous given the community control framework, consistent with 0.0 per DB convention). contact_type = NULL — the charge is for &#34;attempting&#34; sexual conduct; the specific nature of the attempted act is not described in available sources. Victim age not confirmed in sources. Stub from calist.txt — victim age and exact statute need research. victim_age = 18 (estimated — high school student (max 18); specific age not documented).</p></blockquote>
+  <blockquote><p>Former psychology, sociology, and AP psychology teacher at Swanton High School, Swanton, Ohio (Fulton County). Resident of Wauseon. Age 44 at time of offense.</p><p>The victim was a student at Swanton High School; specific age and sex are not disclosed in available reporting. The conduct was an attempt to engage in sexual conduct with the student in February 2012; Swanton Local Schools placed Blosser on paid administrative leave following an internal investigation.</p><p>Indicted in March 2012 in Fulton County Common Pleas Court. Pleaded guilty to attempted sexual battery as part of a plea agreement that also required her to permanently surrender her Ohio teaching license. Judge James Barber sentenced her on August 24, 2012 to one year of community control and ten days at the Corrections Center of Northwest Ohio near Stryker, with a mental health assessment and a no-contact order. The plea included a one-year suspended prison term that becomes active if she fails to comply with community control conditions.</p><p>NOTE: The charge is an attempt offense, with the specific intended act not described in available sources, so contact_type is coded 999 (undetermined). Community control with a brief jail term consistent with no-prison disposition under the project convention yields sentence_years 0.0. Victim age is recorded as 18 in the database as a high-school upper-bound estimate (the AP psychology context suggests an 11th- or 12th-grade student); specific age is not documented and the value should be revised if confirmed.</p></blockquote>
 
 
   <p>
-      <span class="tag">verdict</span>
       <span class="tag">guilty</span>
+      <span class="tag">plea</span>
       <span class="tag">probation</span>
       <span class="tag">no-prison</span>
       <span class="tag">extreme-age-difference</span>
@@ -164,7 +166,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -194,7 +196,7 @@
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/401-600/case_509.html">Cheryl Clark</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      69%
+      71%
  — extreme-age-difference · ct=999 · victim age 18 · 0.2 yr sentence · Ohio    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
@@ -214,15 +216,15 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
       <td class="dim">1701</td>
-      <td>Attempting to engage in sexual conduct with a student (Ohio, verdict)</td>
+      <td>Attempted sexual battery</td>
       <td>1</td>
       <td>felony</td>
-      <td>guilty</td>
+      <td>plea</td>
     </tr>
   </tbody>
 </table>
@@ -231,26 +233,51 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
-      <td class="dim">2011-09-01</td>
+      <td class="dim">2012-02-01</td>
       <td>incident</td>
       <td></td>
     </tr>
     <tr>
       <td class="dim">2012-03-01</td>
-      <td>arrest</td>
-      <td></td>
+      <td>indictment</td>
+      <td>Indicted on attempted sexual battery in Fulton County Common Pleas Court</td>
+    </tr>
+    <tr>
+      <td class="dim">2012-08-24</td>
+      <td>sentencing</td>
+      <td>Sentenced by Judge James Barber to one year of community control and 10 days at the Corrections Center of Northwest Ohio (Stryker), with mental health assessment and no-contact order; 1-year suspended prison term conditional on probation compliance</td>
     </tr>
   </tbody>
 </table>
 </figure>
 
 <!-- Entries -->
-<h2>Entries <span class="dim">(0)</span></h2>
-  <p class="dim">No entries yet.</p>
+<h2>Entries <span class="dim">(1)</span></h2>
+<figure>
+<table class="case-rows">
+  <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="dim"><a href="entry_1892.html">1892</a></td>
+      <td class="dim">2012-08-25</td>
+      <td>The Blade (Toledo)</td>
+      <td><a href="entry_1892.html">Swanton teacher sentenced in sex case
+The Blade — Blade Staff
+August 25, 2012, 12:32 AM
+
+WAUSEON — A</a>…</td>
+      <td>
+          <span class="tag">plea</span>
+          <span class="tag">no-prison</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
 
 <!-- Documents -->
 

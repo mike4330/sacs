@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,7 +146,7 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Illinois</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">State</td><td>Illinois</td><td class="lbl">Court</td><td>Champaign County Circuit Court (6th Judicial Circuit)</td></tr>
   <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2011-01-31</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>44</td><td class="lbl">Victim Age</td><td>17</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>0.0 yrs</td><td class="lbl"></td><td></td></tr>
@@ -165,7 +167,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -187,16 +189,16 @@
  — extreme-age-difference · oral · victim age 17 · 0.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/401-600/case_415.html">Sarah L. Myers</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      73%
+ — extreme-age-difference · oral · Illinois    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/601-800/case_789.html">Michelle Blosser</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       73%
  — extreme-age-difference · victim age 18 · 0.0 yr sentence    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/401-600/case_415.html">Sarah L. Myers</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      71%
- — extreme-age-difference · oral · Illinois    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/1001-1200/case_1043.html">Lisa Placek</a>
@@ -215,7 +217,7 @@
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -232,7 +234,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
