@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -164,7 +166,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -180,6 +182,12 @@
 <h2>Related Cases</h2>
 <ul style="list-style:none; padding:0; margin:0 0 1rem 0;">
   <li style="margin-bottom:0.35rem;">
+    <a href="../../cases/0-200/case_77.html">Annaleigh Andrews</a>
+    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
+      60%
+ — penetrative · victim age 14 · 2.0 yr sentence · Texas    </span>
+  </li>
+  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/601-800/case_658.html">Kristen Nicole Sullivan</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       60%
@@ -192,29 +200,23 @@
  — penetrative · victim age 14 · 3.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/0-200/case_77.html">Annaleigh Andrews</a>
-    <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      58%
- — penetrative · victim age 14 · 2.0 yr sentence · Texas    </span>
-  </li>
-  <li style="margin-bottom:0.35rem;">
     <a href="../../cases/0-200/case_169.html">Lindsey Jarvis</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
       58%
  — penetrative · victim age 14 · 5.0 yr sentence    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/1001-1200/case_1133.html">Lindsey Quednow</a>
+    <a href="../../cases/0-200/case_6.html">State v. Katherine Harper</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      57%
- — penetrative · victim age 14 · 5.0 yr sentence    </span>
+      58%
+ — penetrative · victim age 15 · 6.0 yr sentence · Texas    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -231,7 +233,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -256,7 +258,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>
