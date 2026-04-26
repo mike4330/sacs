@@ -115,6 +115,8 @@
     table.datablock { border-collapse: collapse; margin-bottom: 1rem; font-size: 0.88em; width: auto; }
     table.datablock td { border: 1px solid #ccc; padding: 0.2rem 0.6rem; white-space: nowrap; }
     table.datablock td.lbl { font-weight: 600; color: #555; background: #f7f8fa; }
+    /* ── Case page tables (people, charges, timeline, entries) ─────────────── */
+    table.case-rows :where(th, td) { padding-top: 0.375rem; padding-bottom: 0.375rem; }
   </style>
 </head>
 <body>
@@ -144,7 +146,7 @@
 
 
 <table class="datablock">
-  <tr><td class="lbl">State</td><td>Alabama</td><td class="lbl">Court</td><td>unknown</td></tr>
+  <tr><td class="lbl">State</td><td>Alabama</td><td class="lbl">Court</td><td>Madison County Circuit Court</td></tr>
   <tr><td class="lbl">Judge</td><td>unknown</td><td class="lbl">Incident Date</td><td>2024-04-01</td></tr>
   <tr><td class="lbl">Defendant Age</td><td>unknown</td><td class="lbl">Victim Age</td><td>15</td></tr>
   <tr><td class="lbl">Prison Sentence</td><td>unknown</td><td class="lbl"></td><td></td></tr>
@@ -157,7 +159,7 @@
 <!-- People -->
 <h2>People</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
   <tbody>
     <tr>
@@ -187,7 +189,7 @@
   <li style="margin-bottom:0.35rem;">
     <a href="../../cases/801-1000/case_896.html">Jessica B. Herb</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      35%
+      37%
  — non-teaching-staff · Alabama    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
@@ -197,17 +199,17 @@
  — non-teaching-staff · victim age 14    </span>
   </li>
   <li style="margin-bottom:0.35rem;">
-    <a href="../../cases/801-1000/case_986.html">Chelsea N. Lorson</a>
+    <a href="../../cases/0-200/case_189.html">Leslie Nicole Rains</a>
     <span class="dim" style="font-size:0.85em; margin-left:0.5rem;">
-      32%
- — non-teaching-staff · victim age 15    </span>
+      33%
+ — non-teaching-staff · victim age 16 · Alabama    </span>
   </li>
 </ul>
 
 <!-- Charges -->
 <h2>Charges</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Description</th><th>Count</th><th>Severity</th><th>Status</th></tr></thead>
   <tbody>
     <tr>
@@ -245,7 +247,7 @@
 <!-- Timeline -->
 <h2>Timeline</h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>Date</th><th>Type</th><th>Description</th></tr></thead>
   <tbody>
     <tr>
@@ -270,7 +272,7 @@
 <!-- Entries -->
 <h2>Entries <span class="dim">(1)</span></h2>
 <figure>
-<table>
+<table class="case-rows">
   <thead><tr><th>#</th><th>Date</th><th>Source</th><th>Preview</th><th>Tags</th></tr></thead>
   <tbody>
     <tr>
