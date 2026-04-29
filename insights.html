@@ -160,7 +160,7 @@
   <div style="flex:1; min-width:140px; padding:1rem 1.25rem; border-radius:8px; background:#f0f4f9; border:1px solid #dde4ee;">
     <div style="font-size:0.78em; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:#6b7a8d; margin-bottom:0.35rem;">Avg Sentence</div>
     <div style="font-size:2rem; font-weight:700; color:#1a3a5c; line-height:1;">2.8</div>
-    <div style="font-size:0.8em; color:#888; margin-top:0.3rem;">years &nbsp;·&nbsp; 639/1098 received prison</div>
+    <div style="font-size:0.8em; color:#888; margin-top:0.3rem;">years &nbsp;·&nbsp; 640/1099 received prison</div>
   </div>
 </div>
 
@@ -190,7 +190,7 @@
       data: {
         labels: ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
         datasets: [{
-          data: [2, 25, 31, 56, 53, 54, 50, 77, 65, 51, 69, 68, 78, 83, 71, 42, 26, 53, 54, 47, 39, 4],
+          data: [2, 26, 31, 55, 52, 55, 50, 77, 65, 51, 69, 68, 78, 83, 71, 42, 26, 53, 54, 47, 39, 4],
           backgroundColor: "rgba(74,144,217,0.75)",
           borderRadius: 3,
         }]
@@ -241,7 +241,7 @@ new Chart(document.getElementById("rateChart"), {
   data: {
     labels: ["2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
     datasets: [{
-      data: [0.979, 1.762, 1.646, 1.709, 1.613, 2.476, 2.083, 1.629, 2.197, 2.158, 2.461, 2.619, 2.24, 1.32, 0.814, 1.649, 1.672, 1.456, 1.208, 0.124],
+      data: [0.979, 1.731, 1.615, 1.741, 1.613, 2.476, 2.083, 1.629, 2.197, 2.158, 2.461, 2.619, 2.24, 1.32, 0.814, 1.649, 1.672, 1.456, 1.208, 0.124],
       borderColor: "rgba(26,58,92,0.85)",
       backgroundColor: "rgba(26,58,92,0.08)",
       borderWidth: 2,
@@ -273,7 +273,7 @@ new Chart(document.getElementById("rateChart"), {
       data: {
         labels: ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
         datasets: [{
-          data: [4, 10, 19, 39, 48, 36, 48, 67, 65, 46, 65, 54, 60, 70, 70, 49, 49, 45, 54, 68, 76, 24],
+          data: [4, 11, 19, 39, 48, 36, 48, 67, 65, 46, 65, 54, 60, 70, 70, 49, 49, 45, 54, 68, 76, 24],
           backgroundColor: "rgba(106,191,105,0.75)",
           borderRadius: 3,
         }]
@@ -313,7 +313,7 @@ new Chart(document.getElementById("rateChart"), {
           tooltip: {
             callbacks: {
               afterLabel: (ctx) => {
-                const ns = [4, 9, 18, 39, 48, 36, 47, 67, 65, 46, 65, 54, 60, 70, 70, 47, 49, 45, 53, 68, 76, 23];
+                const ns = [4, 10, 18, 39, 48, 36, 47, 67, 65, 46, 65, 54, 60, 70, 70, 47, 49, 45, 53, 68, 76, 23];
                 return `N=${ns[ctx.dataIndex]}`;
               }
             }
@@ -355,8 +355,8 @@ new Chart(document.getElementById("rateChart"), {
           tooltip: {
             callbacks: {
               afterLabel: (ctx) => {
-                const ns = [50, 247, 438, 325];
-                const means = [9.79, 4.92, 2.23, 0.97];
+                const ns = [50, 247, 439, 325];
+                const means = [9.79, 4.92, 2.24, 0.97];
                 return `mean: ${means[ctx.dataIndex]} yrs  |  N=${ns[ctx.dataIndex]}`;
               }
             }
@@ -370,7 +370,7 @@ new Chart(document.getElementById("rateChart"), {
       }
     });
     </script>
-    <p class="dim" style="font-size:0.82em; margin:0.5rem 0 0;">N=1060 convicted cases with known victim age and sentence. ≤12 group is small (N=50).</p>
+    <p class="dim" style="font-size:0.82em; margin:0.5rem 0 0;">N=1061 convicted cases with known victim age and sentence. ≤12 group is small (N=50).</p>
   </div>
   <div style="flex:1; min-width:280px;" id="offender-age">
     <p style="margin:0 0 0.4rem; font-weight:600; font-size:0.92em; color:#555;">Offender Age Distribution</p>
@@ -382,7 +382,7 @@ new Chart(document.getElementById("rateChart"), {
       data: {
         labels: ["\u226421", "22\u201323", "24\u201325", "26\u201327", "28\u201329", "30\u201331", "32\u201333", "34\u201335", "36\u201337", "38\u201339", "40\u201341", "42\u201343", "44\u201345", "46\u201347", "48\u201349", "50+"],
         datasets: [{
-          data: [20, 84, 130, 156, 139, 119, 119, 106, 87, 74, 64, 44, 46, 17, 6, 26],
+          data: [20, 84, 130, 156, 139, 119, 121, 104, 87, 74, 64, 44, 46, 17, 6, 26],
           backgroundColor: "rgba(74,144,217,0.75)",
           borderRadius: 3,
         }]
@@ -412,7 +412,7 @@ new Chart(document.getElementById("maritalChart"), {
   data: {
     labels: ["unknown", "married", "divorced", "single", "separated", "widowed"],
     datasets: [{
-      data: [1065, 159, 13, 11, 6, 1],
+      data: [1063, 161, 13, 11, 6, 1],
       backgroundColor: ["#ccc", "#4a90d9", "#e07b39", "#6abf69", "#9b59b6"],
       borderWidth: 1,
     }]
@@ -777,6 +777,6 @@ new Chart(document.getElementById("urbanChart"), {
 
   </main>
   <footer class="container" style="margin-top:2rem; border-top:1px solid #ddd; padding-top:0.5rem;">
-<p class="dim">Generated by <code>sacs render</code> — 2026-04-27 18:26 UTC</p>  </footer>
+<p class="dim">Generated by <code>sacs render</code> — 2026-04-29 11:02 UTC</p>  </footer>
 </body>
 </html>
