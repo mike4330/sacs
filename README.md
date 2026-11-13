@@ -1,5 +1,7 @@
 # SACS — Sexual Abuse Case Study
 
+Main site at https://mike4330.github.io/sacs/index.html
+
 A structured database and static reference site documenting cases of educator sexual abuse of students in the United States, focusing on female perpetrators.
 
 This project catalogs criminal cases — charges, dispositions, sentences, and outcomes — drawn from court records, news archives, and sex offender registries. The goal is to support factual, data-driven analysis of case patterns, sentencing outcomes, and institutional responses.
@@ -8,4 +10,3 @@ This project catalogs criminal cases — charges, dispositions, sentences, and o
 
 Cases are included when the offender held a formal or functional position of authority over minors in an educational or instructional context — classroom teachers, coaches, aides, and administrators, as well as adjacent trust relationships such as karate instructors, dance teachers, and private tutors. Cases are excluded if the offender's connection to an educational role was incidental to the offense.
 
-The site is generated from a local SQLite database using a Python CLI tool.
